@@ -1,0 +1,8 @@
+<basti890>
+
+	<setattribute xpath="/materials/material[@id='Mcobblestone_shapes']/property[@name='MaxDamage']" name="value">2500</setattribute>
+	<setattribute xpath="/materials/material[@id='Mcobblestone']/property[@name='MaxDamage']" name="value">2500</setattribute>
+	<setattribute xpath="/materials/material[@id='Mbrick_shapes']/property[@name='MaxDamage']" name="value">1500</setattribute>
+	<setattribute xpath="/materials/material[@id='Mbrick']/property[@name='MaxDamage']" name="value">1500</setattribute>
+
+</basti890>

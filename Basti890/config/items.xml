@@ -1,7 +1,14 @@
-<configs>
+<basti890>
+	<!-- Quicker Crafting with Nerd glasses -->
+	<setattribute xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.5</setattribute>
+	<!-- Quicker smelting -->
+	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
+	
 	<!-- ammo -->
 	<setattribute xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']" name="value">1000</setattribute>
-	<setattribute xpath="/items/item[@name='ammo44MagnumBulletBall']/property[@name='Stacknumber']" name="value">750</setattribute>
+	<append xpath="/items/item[@name='ammo44MagnumBulletBall']">
+		<property name="Stacknumber" value="750"/>
+	</append>
 	<setattribute xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']" name="value">250</setattribute>
@@ -19,6 +26,14 @@
 	<setattribute xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='thrownAmmoFlare']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']" name="value">2500</setattribute>
+	<setattribute xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']" name="value">20000</setattribute>
+	
+	<!-- Guns -->
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">100</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">15</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
 	
 	<!-- medicals  -->
 	<setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -70,9 +85,20 @@
 	<setattribute xpath="/items/item[@name='foodCropMushrooms']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='foodCropYuccaFruit']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='foodCropPumpkin']/property[@name='Stacknumber']" name="value">500</setattribute>
+	<append xpath="/items">
+		<item name="foodCropPeas">
+			<property name="Extends" value="foodCropBlueberries"/>
+			<property name="CustomIcon" value="foodCropBlueberries"/>
+			<property name="CustomIconTint" value="9eff99"/>
+			<property name="Stacknumber" value="500"/><!-- STK resource -->
+		</item>
+	</append>
 	
 	<!-- drinks -->
-	<setattribute xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='drinkJarEmpty']/property[@name='Stacknumber']" name="value">200</setattribute>
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_6" value="workingGranitSink"/>
+	</append>
 	<setattribute xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarPureMineralWater']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -86,10 +112,13 @@
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
+	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='SellableToTrader']" name="value">true</setattribute>
 	
 	<!-- resources -->
 	<setattribute xpath="/items/item[@name='resourceAcid']/property[@name='Stacknumber']" name="value">500</setattribute>
-	<setattribute xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']" name="value">8000</setattribute>
+	<setattribute xpath="/items/item[@name='resourceWood']/property[@name='Stacknumber']" name="value">6400</setattribute>
+	<setattribute xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']" name="value">20000</setattribute>
+	<setattribute xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']" name="value">5000</setattribute>
 	<setattribute xpath="/items/item[@name='resourceScrapPolymers']/property[@name='Stacknumber']" name="value">6000</setattribute>
 	<setattribute xpath="/items/item[@name='resourceSewingKit']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -110,4 +139,4 @@
 	<setattribute xpath="/items/item[@name='resourceLockPick']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='bookFiremansAlmanacHeat']/property[@name='Stacknumber']" name="value">100</setattribute>
 	
-</configs>
+</basti890>

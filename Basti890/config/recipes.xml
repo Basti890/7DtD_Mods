@@ -1,6 +1,12 @@
-<configs>
+<basti890>
 
 	<setattribute xpath="/recipes/recipe[starts-with(@name,'planted')]/ingredient" name="count">1</setattribute>
+	
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoCrossbowBolt')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoBundleCrossbowBolt')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoBundleArrow')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoArrow')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
+
 
 	<set xpath="/recipes/recipe[@name='ammo9mmBulletBall']">
 		<ingredient name="resourceBulletTip" count="2"/>
@@ -8,33 +14,28 @@
 		<ingredient name="resourceBulletCasing" count="2"/>
 	</set>
 	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletBall']" name="count">2</setattribute>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="40"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo9mmBulletHP']">
 		<ingredient name="resourceBulletTip" count="2"/>
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceBulletCasing" count="2"/>
 	</set>
 	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletHP']" name="count">2</setattribute>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="40"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo9mmBulletAP']">
 		<ingredient name="resourceBulletTip" count="2"/>
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceBulletCasing" count="2"/>
 	</set>
 	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletAP']" name="count">2</setattribute>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="40"/>
@@ -46,31 +47,26 @@
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="80"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletHP']">
 		<ingredient name="resourceBulletTip" count="1"/>
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="80"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletAP']">
 		<ingredient name="resourceBulletTip" count="1"/>
 		<ingredient name="resourceGunPowder" count="1"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="80"/>
@@ -82,61 +78,62 @@
 		<ingredient name="resourceGunPowder" count="2"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="160"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo762mmBulletHP']">
 		<ingredient name="resourceBulletTip" count="1"/>
 		<ingredient name="resourceGunPowder" count="2"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="160"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammo762mmBulletAP']">
 		<ingredient name="resourceBulletTip" count="1"/>
 		<ingredient name="resourceGunPowder" count="2"/>
 		<ingredient name="resourceBulletCasing" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']">
 		<ingredient name="resourceBulletTip" count="80"/>
 		<ingredient name="resourceGunPowder" count="160"/>
 		<ingredient name="resourceBulletCasing" count="80"/>
 	</set>
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletAP" count="5">
+			<ingredient name="ammo762mmBulletBall" count="5"/>
+			<ingredient name="resourceForgedSteel" count="1"/>
+		</recipe>
+		<recipe name="ammoBundle762mmBulletAP" count="5">
+			<ingredient name="ammo762mmBulletBall" count="500"/>
+			<ingredient name="resourceForgedSteel" count="100"/>
+		</recipe>
+	</append>
 
 	<set xpath="/recipes/recipe[@name='ammoShotgunShell']">
 		<ingredient name="resourceBuckshot" count="1"/>
 		<ingredient name="resourceGunPowder" count="3"/>
 		<ingredient name="resourcePaper" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']">
 		<ingredient name="resourceBuckshot" count="80"/>
 		<ingredient name="resourceGunPowder" count="240"/>
 		<ingredient name="resourcePaper" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoShotgunSlug']">
 		<ingredient name="resourceBulletTip" count="2"/>
 		<ingredient name="resourceGunPowder" count="3"/>
 		<ingredient name="resourceScrapPolymers" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']">
 		<ingredient name="resourceBulletTip" count="160"/>
 		<ingredient name="resourceGunPowder" count="240"/>
 		<ingredient name="resourceScrapPolymers" count="80"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='ammoShotgunBreachingSlug']">
 		<ingredient name="resourceForgedSteel" count="1"/>
 		<ingredient name="resourceClayLump" count="2"/>
@@ -144,7 +141,6 @@
 		<ingredient name="resourceScrapPolymers" count="5"/>
 	</set>
 	<setattribute xpath="/recipes/recipe[@name='ammoShotgunBreachingSlug']" name="count">5</setattribute>
-
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']">
 		<ingredient name="resourceForgedSteel" count="80"/>
 		<ingredient name="resourceClayLump" count="160"/>
@@ -159,31 +155,26 @@
 		<ingredient name="ammoGasCan" count="300"/>
 		<ingredient name="drinkJarEmpty" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='thrownAmmoPipeBomb']">
 		<ingredient name="resourceYuccaFibers" count="1"/>
 		<ingredient name="resourceGunPowder" count="6"/>
 		<ingredient name="resourceMetalPipe" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='thrownGrenade']">
 		<ingredient name="resourceGunPowder" count="5"/>
 		<ingredient name="resourceForgedIron" count="4"/>
 		<ingredient name="resourceSpring" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='thrownGrenadeContact']">
 		<ingredient name="resourceGunPowder" count="5"/>
 		<ingredient name="resourceForgedIron" count="4"/>
 		<ingredient name="resourceSpring" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='thrownTimedCharge']">
 		<ingredient name="resourceScrapIron" count="20"/>
 		<ingredient name="resourceGunPowder" count="5"/>
 		<ingredient name="resourceElectricParts" count="1"/>
 	</set>
-
 	<set xpath="/recipes/recipe[@name='thrownDynamite']">
 		<ingredient name="resourceYuccaFibers" count="1"/>
 		<ingredient name="resourceGunPowder" count="10"/>
@@ -191,128 +182,170 @@
 		<ingredient name="resourcePaper" count="5"/>
 	</set>
 
+	<!-- Food -->
+	<setattribute xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='drinkJarGrandpasAwesomeSauce']/ingredient[@name='foodHoney']" name="count">2</setattribute>
+
 	<setattribute xpath="/recipes/recipe[@name='resourceConcreteMix']" name="count">2</setattribute>
 	
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedIron']" name="count">2</setattribute>
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedSteel']" name="count">2</setattribute>
 
 	<append xpath="/recipes">
+		<!--Working Ovens and Sinks Mod -->
+		<recipe name="workstationOven" count="1" scrapable="False">
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="toolCookingGrill" count="2"/>
+		</recipe>
+		<recipe name="workingGranitSink" count="1" scrapable="False">
+			<ingredient name="resourceWood" count="15"/>
+			<ingredient name="resourceCobblestones" count="5"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		
+		<!-- Craft Bricks -->
+		<recipe name="brickShapes:VariantHelper" count="1">
+			<ingredient name="resourceCobblestones" count="5"/>
+		</recipe>
 
+		<!-- Extract Gunpowdser from Mines -->
+		<recipe name="resourceGunPowder" count="4">
+			<ingredient name="mineCandyTin" count="1"/>
+		</recipe>
+		<recipe name="resourceGunPowder" count="8">
+			<ingredient name="mineHubcap" count="1"/>
+		</recipe>
+		<recipe name="resourceGunPowder" count="12">
+			<ingredient name="mineAirFilter" count="1"/>
+		</recipe>
+		<recipe name="resourceGunPowder" count="5">
+			<ingredient name="mineCookingPot" count="1"/>
+		</recipe>
+		
+		<!-- Additional Resources -->
 		<recipe name="resourcePaper" count="1">
-			<ingredient name="resourceYuccaFibers" count="10"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
+		</recipe>
+		<recipe name="resourceAcid" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceGunPowder" count="10"/>
+		</recipe>
+		<recipe name="resourceMechanicalParts" count="1" craft_area="forge" material_based="true" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
+			<ingredient name="unit_iron" count="20"/>
+			<ingredient name="unit_clay" count="5"/>
+		</recipe>
+		<recipe name="resourceElectricParts" count="10" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="2"/>
+			<ingredient name="resourceScrapLead" count="50"/>
+		</recipe>
+		<recipe name="resourceScrapPolymers" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceYuccaFibers" count="1"/>
+		</recipe>
+		<recipe name="drinkJarGrandpasForgettingElixir" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceAcid" count="1"/>
+			<ingredient name="foodCanCatfood" count="1"/>
+			<ingredient name="drinkJarBlackStrapCoffee" count="5"/>
+			<ingredient name="drinkYuccaJuiceSmoothie" count="5"/>
+			<ingredient name="drinkJarBeer" count="10"/>
+		</recipe>
+		<recipe name="foodCanPeas" count="1">
+			<ingredient name="foodCropPeas" count="5"/>
+			<ingredient name="drinkCanEmpty" count="1"/>
+		</recipe>
+		<recipe name="plantedPeas1" count="1">
+			<ingredient name="foodCropPeas" count="1"/>
 		</recipe>
 		
 		<!-- Junction Box Mod -->
 		<recipe name="JunctionBox" count="1" craft_area="workbench">
-		  <ingredient name="resourceElectricParts" count="3"/>
-		  <ingredient name="resourceForgedIron" count="1"/>
+			<ingredient name="resourceElectricParts" count="3"/>
+			<ingredient name="resourceForgedIron" count="5"/>
 		</recipe>
 
-		<!-- Our Light recipies --> 
+		<!-- Our Light recipies -->
 		<recipe name="porchLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="porchLight04_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="porchLight04Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingLight02_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingLight02Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingLight04_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingLight05_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingLight05Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="wallLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="streetLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="streetLightClassic_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="sconce1Light_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
-		<recipe name="lanternDecorLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-
 		<recipe name="flashlightDecor_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="industrialLight02Red_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="ceilingFanLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="endTableLamp_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="signExitLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="roadBarricadeLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="deskLampLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
-
 		<recipe name="tableLampLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedIron" count="2"/>
 			<ingredient name="resourceElectricParts" count="4"/>
 		</recipe>
 
 	</append>
-</configs>
+</basti890>

@@ -1,0 +1,21 @@
+<basti890>
+
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigerator']" name="size">6,8</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='beerCooler']" name="size">6,6</setattribute>
+
+	<!-- vehicleBicycle storage -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']" name="size">10,2</setattribute> <!-- Default 9,1 -->
+	
+	<!-- vehicleMinibike storage -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']" name="size">10,4</setattribute> <!-- Default 9,3 -->
+
+	<!-- vehicleMotorcycle storage -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']" name="size">10,6</setattribute> <!-- Default 9,4 -->
+
+	<!-- vehicle4x4Truck storage -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']" name="size">10,10</setattribute> <!-- Default 9,9 -->
+
+	<!-- vehicleGyrocopter storage -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']" name="size">10,8</setattribute> <!-- Default 9,5 -->
+
+</basti890>

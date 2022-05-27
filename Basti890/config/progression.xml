@@ -1,6 +1,33 @@
-<configs>
+<basti890>
 
     <set xpath="/progression/level/@skill_points_per_level">2</set>
+	
+	<!-- More BlockdamgeBonus for Miner69r -->
 	<setattribute xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='BlockDamage']" name="value">1,5</setattribute>
 	
-</configs>
+	<!-- Faster looting -->
+	<append xpath="/progression/attributes/attribute[@name='attPerception']/effect_group">
+		<passive_effect name="ScavengingTime" operation="perc_subtract" level="2" value=".9"/>
+	</append>
+	
+	<!-- Craft Tier6 -->
+	<setattribute xpath="/progression/perks/perk[@name='perkDeadEye']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkDemolitionsExpert']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkJavelinMaster']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkBoomstick']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkPummelPete']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkSkullCrusher']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkHeavyArmor']/effect_group/passive_effect[@name='CraftingTier']" name="value">2,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkBrawler']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkMachineGunner']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkArchery']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkGunslinger']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkDeepCuts']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkLightArmor']/effect_group/passive_effect[@name='CraftingTier']" name="value">2,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkElectrocutioner']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='CraftingTier']" name="value">1,2,3,4,5</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@name='CraftingTier']" name="value">2,6</setattribute>
+
+</basti890>
