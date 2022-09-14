@@ -1,0 +1,278 @@
+key,source,context,changes,english
+
+useSwitchLightOff,UI,Menu,New,Turn Off
+useSwitchLightOn,UI,Menu,New,Turn On
+
+buffElementHotShowerWetName,buffs,Buff,,Cleanliness
+buffElementHotShowerWetDesc,buffs,Buff,,"Normally under the rain, you get colder, but since you've taken a hot shower, you receive some unexpected benefits.\n\nStamina Regeneration: [DECFA4]+{cvar(.StaminaRegeneration:0.0)}%[-]\n\nRunning Speed: [DECFA4]+{cvar(.RunSpeed:0.0)}%[-]\n\nCold Resist: [DECFA4]+{cvar(.ColdResistance:0.0)}[-]"
+buffElementHotShowerWetTooltip,buffs,Buff,,You enjoy a hot shower
+
+HN Kitchen Blocks,blocks,Variant,New,Kitchen Cabinets/Sinks
+HNKitchenBlocksDesc,blocks,Block,New,Kitchen cabinets and sinks for the zombie apocalypse!
+HN Kitchen Appliances,blocks,Variant,New,Kitchen Appliances
+HNKitchenAppliancesDesc,blocks,Block,New,Kitchen appliances that somehow work in the zombie apocalypse, who knew!
+HN Decor,blocks,Variant,New,Decor
+HNDecorDesc,blocks,Block,New,Decorations even for the zombie apocalypse!
+HN Tables/Chairs,blocks,Variant,New,Tables/Chairs
+HNTables/ChairsDesc,blocks,Block,New,Tables and chairs for the zombies apocalypse!
+HN Sofa Blocks,blocks,Variant,New,Sofa Furniture
+HNSofaBlocksDesc,Block,Variant,New,Sofa furniture for the zombie apocalypse!
+HN Bedroom Blocks/Racks,blocks,Variant,New,Bedroom Furniture
+HNBedroomBlocks/RacksDesc,blocks,Block,New,Bedroom furniture for the zombie apocalypse!
+HN Electronics,blocks,Variant,New,Electronics
+HNElectronicsDesc,blocks,Block,New,Electronics that somehow work in the zombie apocalypse, who knew!
+HN Lights,blocks,Variant,New,Lights
+HNLightsDesc,blocks,Block,New,New fancy lights that somehow work in the zombie apocalypse, who knew!
+HN Bathroom Blocks,blocks,Variant,New,Bathroom Furniture/Amenities
+HNBathroomBlocksDesc,blocks,Block,New,Bathroom furniture and amenities for the zombie apocalypse!
+HN Pool/Outdoor Furniture,blocks,Variant,New,Pool/Outdoor Furniture
+HNPool/OutdoorFurnitureDesc,blocks,Block,New,Even the zombie apocalypse deserves pools!
+HN Doors,blocks,Variant,New,Wooden Doors
+HNDoorsDesc,blocks,Block,New,Wooden doors for the zombie apocalypse!
+HN Windows/Glass Doors,blocks,Variant,New,Windows/Glass Doors
+HNWindows/GlassDoorsDesc,blocks,Block,New,Windows and glass doors for the zombie apocalypse!
+
+HN ZTCooktopRebuild,blocks,Variant,New,Small Cooktop
+HN Cooktop,blocks,Variant,New,Big Cooktop
+HN Cooker Top,blocks,Variant,New,Cooker Top
+HN Cooker Top Chimney,blocks,Variant,New,Cooker Top Chimney
+HN ZTStoveRebuild,blocks,Variant,New,Gas Stove
+HN ZTOvenRebuild,blocks,Variant,New,Wall Oven
+HN ZTCoffeeMakerRebuild,blocks,Variant,New,Coffee Maker
+HN ZTMicrowaveRebuild,blocks,Variant,New,Microwave
+HN ZTToasterRebuild,blocks,Variant,New,Toaster
+HN Fridge New,blocks,Variant,New,Fridge
+HN ZTBathroomDoorRebuild,blocks,Variant,New,Shower Double Doors
+HN ZTBathroomSingleDoorRebuild,blocks,Variant,New,Shower Single Door
+HN ZTBathroomTallGlassRebuild,blocks,Variant,New,Shower Glass
+HN ZTBathroomGlassPanelRebuild,blocks,Variant,New,Shower Glass
+HN ZTBathroomTowelRebuild,blocks,Variant,New,Towel
+HN ZTBathroomToiletPaperRebuild,blocks,Variant,New,Toilet Paper (Left)
+HN ZTBathroomToiletPaperRightRebuild,blocks,Variant,New,Toilet Paper (Right)
+HN ZTBathroomShowerRebuild,blocks,Variant,New,Shower
+HN Bathroom Cabinet 1,blocks,Variant,New,Cabinet
+HN Bathroom Cabinet 2,blocks,Variant,New,Shelf
+HN Bathroom Cabinet 3,blocks,Variant,New,Cabinet
+HN ZTBathroomCabinetRebuild,blocks,Variant,New,Shelf
+HN ZTBathroomSinkRebuild,blocks,Variant,New,Small Bathroom Sink
+HN Bathroom Sink 2,blocks,Variant,New,Bathroom Sink
+HN Bathroom Bathtub,blocks,Variant,New,Bathtub
+HN Bathroom Bathtub White,blocks,Variant,New,Bathtub
+HN Bathroom Accessories,blocks,Variant,New,Toiletries
+HN Bed Large 2X2.5,blocks,Variant,New,Large Bed
+HN Bed Small 1X2.5,blocks,Variant,New,Small Bed
+HN ZTHangingLightRebuild,blocks,Variant,New,Hanging Light
+HN ZTNightTableBackLampRebuild,blocks,Variant,New,Nighttable Back Lamp
+HN ZTNightTableLampRebuild,blocks,Variant,New,Nighttable Lamp
+HN ZTLampRebuild,blocks,Variant,New,Floor Lamp
+HN ZTSLampRebuild,blocks,Variant,New,Small Lamp
+HN ZTCeilingLampRebuild,blocks,Variant,New,Ceiling Light
+HN Ceiling Lamp Metal Top,blocks,Variant,New,Ceiling Lamp Extender
+HN ZTSCeilingLampRebuild,blocks,Variant,New,Ceiling Lamp
+HN Nighttable,blocks,Variant,New,Nighttable
+HN NightStand,blocks,Variant,New,Night Stand
+HN Bedroom Mirror 2X1,blocks,Variant,New,Bedroom Mirror
+HN Toy Teddy Bear,blocks,Variant,New,Teddy Bear
+HN Rack 1,blocks,Variant,New,Shelf
+HN Rack 2,blocks,Variant,New,Shelf
+HN Rack 3,blocks,Variant,New,Shelf
+HN Rack 4,blocks,Variant,New,Shelf
+HN Rack 5,blocks,Variant,New,Shelf
+HN Rack 6,blocks,Variant,New,Shelf
+HN Rack 7,blocks,Variant,New,Shelf
+HN Rack 8,blocks,Variant,New,Shelf
+HN Rack Modular 1,blocks,Variant,New,Shelf
+HN Rack Modular 2,blocks,Variant,New,Shelf
+HN Sink Clear Wood,blocks,Variant,New,Kitchen Sink
+HN Sink White Wood,blocks,Variant,New,Kitchen Sink
+HN Sink,blocks,Variant,New,Kitchen Sink
+HN Sink Dark Wood,blocks,Variant,New,Kitchen Sink
+HN Painting 1,blocks,Variant,New,Painting
+HN Painting 2,blocks,Variant,New,Painting
+HN Painting 3,blocks,Variant,New,Painting
+HN Painting 4,blocks,Variant,New,Painting
+HN Painting 5,blocks,Variant,New,Painting
+HN Painting 6,blocks,Variant,New,Painting
+HN ZTSmallTVRebuild,blocks,Variant,New,Small TV Set
+HN ZTLargeTVRebuild,blocks,Variant,New,Large TV Set
+HN ZTLargeMountedTV,blocks,Variant,New,Mounted TV
+HN ZTSmallMountedTV,blocks,Variant,New,Mounted TV
+HN ZTSoundBarRebuild,blocks,Variant,New,Sound Bar
+HN ZTDoorBell,blocks,Variant,New,Door Bell (Right Side)
+HN ZTDoorBellLeft,blocks,Variant,New,Door Bell (Left Side)
+HN Glass Desk,blocks,Variant,New,Glass Desk
+HN Glass and Metal Table 1x1,blocks,Variant,New,Metal Table
+HN Glass and Metal Table 2x1,blocks,Variant,New,Metal Table
+HN Glass and Metal Table 2x2,blocks,Variant,New,Metal Table
+HN Large Table,blocks,Variant,New,Table
+HN Dark Wood Medium Table,blocks,Variant,New,Table
+HN Glass and Metal Coffe Table,blocks,Variant,New,Metal Coffee Table
+HN Coffee Table X1,blocks,Variant,New,Coffee Table
+HN Coffee Table X2,blocks,Variant,New,Coffee Table
+HN Coffee Table X3,blocks,Variant,New,Coffee Table
+HN Coffee Table AX1,blocks,Variant,New,Coffee Table
+HN Coffee Table AX2,blocks,Variant,New,Coffee Table
+HN Coffee Table AX3,blocks,Variant,New,Coffee Table
+HN Elegant Chair 1,blocks,Variant,New,Leather Chair
+HN PC Chair Black,blocks,Variant,New,Computer Chair
+HN PC Chair Brown,blocks,Variant,New,Computer Chair
+HN PC Chair White,blocks,Variant,New,Computer Chair
+HN Modern Chair,blocks,Variant,New,Metal Chair
+HN Chair Metal,blocks,Variant,New,Metal Chair
+HN Umbrella Blue,blocks,Variant,New,Blue Umbrella
+HN Umbrella Green,blocks,Variant,New,Green Umbrella
+HN Umbrella Red,blocks,Variant,New,Red Umbrella
+HN Umbrella Yellow,blocks,Variant,New,Yellow Umbrella
+HN Umbrella White and Red,blocks,Variant,New,Red and White Umbrella
+HN Umbrella Stand,blocks,Variant,New,Umbrella Stand
+HN ZTModernFireplaceRebuild,blocks,Variant,New,Modern Fireplace
+HN Sofa Brown,blocks,Variant,New,Sofa
+HN Sofa Arm Brown,blocks,Variant,New,Sofa
+HN Sofa Arm Right Brown,blocks,Variant,New,Sofa
+HN Sofa Arm Left Brown,blocks,Variant,New,Sofa
+HN Sofa Corner Brown,blocks,Variant,New,Sofa
+HN Sofa White,blocks,Variant,New,Sofa
+HN Sofa Arm White,blocks,Variant,New,Sofa
+HN Sofa Arm Right White,blocks,Variant,New,Sofa
+HN Sofa Arm Left White,blocks,Variant,New,Sofa
+HN Sofa Corner White,blocks,Variant,New,Sofa
+HN Sofa Gray,blocks,Variant,New,Sofa
+HN Sofa Arm Gray,blocks,Variant,New,Sofa
+HN Sofa Arm Right Gray,blocks,Variant,New,Sofa
+HN Sofa Arm Left Gray,blocks,Variant,New,Sofa
+HN Sofa Corner Gray,blocks,Variant,New,Sofa
+HN Sofa Black,blocks,Variant,New,Sofa
+HN Sofa Arm Black,blocks,Variant,New,Sofa
+HN Sofa Arm Right Black,blocks,Variant,New,Sofa
+HN Sofa Arm Left Black,blocks,Variant,New,Sofa
+HN Sofa Corner Black,blocks,Variant,New,Sofa
+HN ZTChimneyRebuild,blocks,Variant,New,Chimney
+HN Decor Plant,blocks,Variant,New,Decorative Plant
+HN Palm Plant Pot,blocks,Variant,New,Palm Plant
+HN Puff,blocks,Variant,New,Cushion
+HN Decor Jars,blocks,Variant,New,Decorative Jars
+HN Decoration Spheres,blocks,Variant,New,Decoration Spheres
+HN Decoration Spheres X2,blocks,Variant,New,Decoration Spheres
+HN Swimming Pool Block 01,blocks,Variant,New,Swimming Pool Block
+HN ZTPoolLightRebuild,blocks,Variant,New,Swimming Pool Light
+HN Swimming Pool Stairs 01,blocks,Variant,New,Swimming Pool Stairs
+HN Swimming Pool Stairs 02,blocks,Variant,New,Swimming Pool Stairs
+HN Sushi Dinner,blocks,Variant,New,Sushi Dinner
+HN Garden Bed,blocks,Variant,New,Garden Bed
+HN Garden Chair,blocks,Variant,New,Garden Chair
+HN Garden Table,blocks,Variant,New,Garden Table
+HN Garden Table Square,blocks,Variant,New,Square Garden Table
+HN Garden Table Round,blocks,Variant,New,Round Garden Table
+HN ZTPCRebuild,blocks,Variant,New,Desktop PC
+HN ZTLaptopRebuild,blocks,Variant,New,Laptop
+HN Video Game Console PS,blocks,Variant,New,PlayStation 4 Console 
+HN Sliding Door Mirrored Glass,blocks,Variant,New,Bulletproof Mirrored Door
+HN Glass Closet Door 1,blocks,Variant,New,Glass Closet Door
+HN Glass Closet Door 2,blocks,Variant,New,Glass Closet Door
+HN Glass Closet Door 3,blocks,Variant,New,Glass Closet Door
+HN Glass Door,blocks,Variant,New,Glass Door
+HN ZTClosetDoor,blocks,Variant,New,Closet Door
+HN ZTClosetSecretDoor,blocks,Variant,New,Secret Closet Door
+HN ZTClosetDoorSwingOut,blocks,Variant,New,Closet Door (Swing Out)
+HN ZTClosetSecretDoorSwingOut,blocks,Variant,New,Secret Closet Door (Swing Out)
+HN ZTClosetBottomRebuild,blocks,Variant,New,Closet (Bottom)
+HN ZTClosetMiddleRebuild,blocks,Variant,New,Closet (Middle)
+HN ZTClosetTopRebuild,blocks,Variant,New,Closet (Top)
+HN Main Door,blocks,Variant,New,Heavy Door
+HN Main Double Door,blocks,Variant,New,Heavy Double Doors
+HN Sliding Door,blocks,Variant,New,Sliding Doors
+HN Wood Door Brown,blocks,Variant,New,Brown Wooden Door
+HN Wood Door Clear,blocks,Variant,New,Clear Wooden Door
+HN Wood Door White,blocks,Variant,New,White Wooden Door
+HN Wood Door Gray,blocks,Variant,New,Gray Wooden Door
+HN Wood Double Door Brown,blocks,Variant,New,Brown Double Doors
+HN Wood Double Door Clear,blocks,Variant,New,Clear Double Doors
+HN Wood Double Door White,blocks,Variant,New,White Double Doors
+HN Wood Double Door Gray,blocks,Variant,New,Gray Double Doors
+HN Cabinet 1,blocks,Variant,New,Cabinet
+HN Cabinet 2,blocks,Variant,New,Cabinet
+HN Cabinet 3,blocks,Variant,New,Cabinet
+HN Cabinet 6,blocks,Variant,New,Cabinet
+HN Cabinet 7,blocks,Variant,New,Cabinet
+HN Cabinet 8,blocks,Variant,New,Cabinet
+HN Cabinet Dark Wood 1,blocks,Variant,New,Cabinet
+HN Cabinet Dark Wood 2,blocks,Variant,New,Cabinet
+HN Cabinet Dark Wood 3,blocks,Variant,New,Cabinet
+HN Cabinet Dark Wood 4,blocks,Variant,New,Cabinet
+HN Cabinet Filler Dark Wood,blocks,Variant,New,Cabinet
+HN Cabinet Cube Dark Wood,blocks,Variant,New,Cabinet
+HN Cabinet Clear Wood 1,blocks,Variant,New,Cabinet
+HN Cabinet Clear Wood 2,blocks,Variant,New,Cabinet
+HN Cabinet Clear Wood 3,blocks,Variant,New,Cabinet
+HN Cabinet Clear Wood 4,blocks,Variant,New,Cabinet
+HN Cabinet Filler Clear Wood,blocks,Variant,New,Cabinet
+HN Cabinet Cube Clear Wood,blocks,Variant,New,Cabinet
+HN Cabinet Round Corner Clear Wood,blocks,Variant,New,Cabinet
+HN Cabinet White Wood 1,blocks,Variant,New,Cabinet
+HN Cabinet White Wood 2,blocks,Variant,New,Cabinet
+HN Cabinet White Wood 3,blocks,Variant,New,Cabinet
+HN Cabinet White Wood 4,blocks,Variant,New,Cabinet
+HN Cabinet Filler White Wood,blocks,Variant,New,Cabinet
+HN Cabinet Cube White Wood,blocks,Variant,New,Cabinet
+HN Cabinet Round Corner White Wood,blocks,Variant,New,Cabinet
+HN Cabinet Round Corner Dark Wood,blocks,Variant,New,Cabinet
+HN Cupboard White Wood 1,blocks,Variant,New,Cupboard
+HN Cupboard White Wood 2,blocks,Variant,New,Cupboard
+HN Cupboard White Wood 3,blocks,Variant,New,Shelf
+HN Cupboard White Wood 4,blocks,Variant,New,Cupboard
+HN Cupboard Corner White Wood,blocks,Variant,New,Cupboard
+HN Cupboard Large White Wood,blocks,Variant,New,Cupboard
+HN Cupboard Clear Wood 1,blocks,Variant,New,Cupboard
+HN Cupboard Clear Wood 2,blocks,Variant,New,Cupboard
+HN Cupboard Clear Wood 3,blocks,Variant,New,Shelf
+HN Cupboard Clear Wood 4,blocks,Variant,New,Cupboard
+HN Cupboard Corner Clear Wood,blocks,Variant,New,Cupboard
+HN Cupboard Dark Wood 1,blocks,Variant,New,Cupboard
+HN Cupboard Dark Wood 2,blocks,Variant,New,Cupboard
+HN Cupboard Dark Wood 3,blocks,Variant,New,Shelf
+HN Cupboard Dark Wood 4,blocks,Variant,New,Cupboard
+HN Cupboard Corner Dark Wood,blocks,Variant,New,Cupboard
+HN Cupboard Large Clear Wood,blocks,Variant,New,Cupboard
+HN Cupboard Large Dark Wood,blocks,Variant,New,Cupboard
+HN SD Window Panel x1,blocks,Variant,New,Window Panel
+HN SD Window Panel x2,blocks,Variant,New,Window Panel
+HN SD Window Panel x4,blocks,Variant,New,Window Panel
+HN Window A1,blocks,Variant,New,Window
+HN Window A2,blocks,Variant,New,Window
+HN Window A3,blocks,Variant,New,Window
+HN Window A4,blocks,Variant,New,Window
+HN Window A5,blocks,Variant,New,Window
+HN Window A6,blocks,Variant,New,Window
+HN Window A7,blocks,Variant,New,Window
+HN Window A8,blocks,Variant,New,Window
+HN Window A9,blocks,Variant,New,Window
+HN Window B1,blocks,Variant,New,Window
+HN Window B2,blocks,Variant,New,Window
+HN Window B3,blocks,Variant,New,Window
+HN Window B4,blocks,Variant,New,Window
+HN Window B5,blocks,Variant,New,Window
+HN Window B6,blocks,Variant,New,Window
+HN Window B7,blocks,Variant,New,Window
+HN Window B8,blocks,Variant,New,Window
+HN Window B9,blocks,Variant,New,Window
+HN Window B10 Inverted,blocks,Variant,New,Window
+HN Wood Door Brown Top Window,blocks,Variant,New,Wide Window
+HN Wood Door Clear Top Window,blocks,Variant,New,Wide Window
+HN Wood Door White Top Window,blocks,Variant,New,Wide Window
+HN Wood Door Gray Top Window,blocks,Variant,New,Wide Window
+HN Wood Double Door Brown Top Window,blocks,Variant,New,Wide Window
+HN Wood Double Door Clear Top Window,blocks,Variant,New,Wide Window
+HN Wood Double Door White Top Window,blocks,Variant,New,Wide Window
+HN Wood Double Door Gray Top Window,blocks,Variant,New,Wide Window
+HN Wood Window 1x1,blocks,Variant,New,Wooden Window
+HN Wood Window 2x1,blocks,Variant,New,Wooden Window
+HN Wood Window 2x2,blocks,Variant,New,Wooden Window
+HN Wood Window Sect 1x1,blocks,Variant,New,Wooden Window
+HN Wood Window Sect 2x1,blocks,Variant,New,Wooden Window
+HN Wood Window Sect 2x2,blocks,Variant,New,Wooden Window
+HN Wood Window White 1x1,blocks,Variant,New,White Wooden Window
+HN Wood Window White 2x1,blocks,Variant,New,White Wooden Window
+HN Wood Window White 2x2,blocks,Variant,New,White Wooden Window
+HN Wood Window Sect White 1x1,blocks,Variant,New,White Wooden Window
+HN Wood Window Sect White 2x1,blocks,Variant,New,White Wooden Window
+HN Wood Window Sect White 2x2,blocks,Variant,New,White Wooden Window

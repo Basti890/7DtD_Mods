@@ -1,0 +1,109 @@
+<ZTbuffsUBBI name="buffs.xml">
+		
+		<insertAfter xpath="/buffs/buff[@name='buffElementWet']">
+			
+			<buff name="buffElementHotShowerWet" name_key="buffElementHotShowerWetName" description_key="buffElementHotShowerWetDesc" tooltip_key="buffElementHotShowerWetTooltip" icon="ui_game_symbol_shower">
+				
+				<stack_type value="replace"/>
+				<duration value="1800"/>
+				<update_rate value="2"/>
+				
+				<!--
+				
+				<display_value value="$WetTempModifierDisplay"/>
+				<display_value_key value="{0:0.0}%"/>
+				
+				-->
+				
+				<effect_group>
+				
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffElementHotShowerWet"/>
+				
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="set" value="1800"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$WetTempModifier" operation="set" value="2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$WetTempModifierActive" operation="set" value="2"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifier" operation="set" value="@_wetness"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="subtract" value="2"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifier" operation="multiply" value="16"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="subtract" value="2"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierActive" operation="set" value="@$WetTempModifier">
+						<requirement name="CVarCompare" cvar="$WetTempModifier" operation="GT" value="@$WetTempModifierActive"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="subtract" value="2"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierDisplay" operation="set" value="@$WetTempModifierActive"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="subtract" value="2"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierDisplay" operation="multiply" value="6.25"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$Duration" operation="subtract" value="2"/>
+
+					<!-- <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierActive" operation="subtract" value=".2"/> -->
+					
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffElementHotShowerWet">
+						<requirement name="CVarCompare" cvar="$WetTempModifierActive" operation="LT" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$Duration" operation="set" value="0"/>
+					
+				</effect_group>
+				
+				<!-- Stamina Boost & Cold Resist Boost via Code Below -->
+				
+				<effect_group>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="subtract" value="@$MetabolismDuration"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCoffeeDisplay" operation="set" value="@$buffCoffeeDuration"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffCoffeeDisplay" operation="divide" value="@$MetabolismDuration"/>
+					
+				</effect_group>
+				
+				<effect_group>
+				
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCoffee">
+						<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="LTE" value="0"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffCoffeeDisplay" operation="set" value="0"/>
+					
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="0"/>
+					
+				</effect_group>
+				
+				<effect_group>
+				
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".StaminaRegeneration" operation="set" value="40"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ColdResistance" operation="set" value="10"/>
+					
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".RunSpeed" operation="set" value="5"/>
+				
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="@$buffCoffeeBSDuration"/>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="1800">
+						<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="1800"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBlackStrapCoffee"/>
+
+					<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.4">
+						<requirement name="NotHasBuff" buff="buffHealWaterMax"/>
+					</passive_effect>
+					
+					<passive_effect name="HypothermalResist" operation="base_add" value="10"/>
+					
+					<passive_effect name="RunSpeed" operation="perc_add" value="0.05"/>
+					
+				</effect_group>
+				
+			</buff>
+			
+		</insertAfter>
+		
+</ZTbuffsUBBI>

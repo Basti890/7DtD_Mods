@@ -1,0 +1,379 @@
+<configs>
+    <append xpath="/items">
+	
+        <item name="TVsLoadingHacks"><!--Covers four assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/ZTTVRebuilds.unity3d?ZTLargeTVRebuildPrefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/ZTTVRebuilds.unity3d?ZTLargeTVRebuildPrefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		LightsLoadingHacks includes:
+		Resources/ZTTVRebuilds.unity3d?ZTLargeTVRebuildPrefab
+		Resources/ZTTVRebuilds.unity3d?ZTSmallTVRebuildPrefab
+		Resources/ZTTVRebuilds.unity3d?ZTLargeMountedTVPrefab
+		Resources/ZTTVRebuilds.unity3d?ZTSmallMountedTVPrefab
+		-->
+		
+        <item name="TechLoadingHacks"><!--Covers five assets, four objects & one sound file-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/ZTTechRebuilds.unity3d?ZTSoundBarRebuildPrefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/ZTTechRebuilds.unity3d?ZTSoundBarRebuildPrefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		TechLoadingHacks includes:
+		Resources/ZTTechRebuilds.unity3d?ZTSoundBarRebuildPrefab
+		Resources/ZTTechRebuilds.unity3d?ZTLaptopRebuildPrefab
+		Resources/ZTTechRebuilds.unity3d?ZTModernFireplaceRebuildPrefab
+		Resources/ZTTechRebuilds.unity3d?ZTPCRebuildPrefab
+		-->
+		
+        <item name="LightsLoadingHacks"><!--Covers seven assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/ZTLightRebuilds.unity3d?ZTNightTableBackLampRebuildPrefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/ZTLightRebuilds.unity3d?ZTNightTableBackLampRebuildPrefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		LightsLoadingHacks includes:
+		Resources/ZTLightRebuilds.unity3d?ZTNightTableBackLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTNightTableLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTSLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTFloorLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTCeilingLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTSCeilingLampRebuildPrefab
+		Resources/ZTLightRebuilds.unity3d?ZTHangingLightRebuildPrefab
+		-->
+		
+        <item name="LivingOverhaulLoadingHacks"><!--Covers five assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/ZTLivingOverhaul.unity3d?ZTStoveRebuildPrefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/ZTLivingOverhaul.unity3d?ZTStoveRebuildPrefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		LivingOverhaulLoadingHacks includes:
+		Resources/ZTLivingOverhaul.unity3d?ZTStoveRebuildPrefab
+		Resources/ZTLivingOverhaul.unity3d?ZTMicrowaveRebuildPrefab
+		Resources/ZTLivingOverhaul.unity3d?ZTChimneyRebuildPrefab
+		Resources/ZTLivingOverhaul.unity3d?ZTDoorBellPrefab
+		Resources/ZTLivingOverhaul.unity3d?ZTDoorBellLeftPrefab
+		-->
+		
+		<item name="BathroomItemsLoadingHacks"><!--Covers eight assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/ZTBathroomRebuilds.unity3d?ZTBathroomShowerRebuildPrefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/ZTBathroomRebuilds.unity3d?ZTBathroomShowerRebuildPrefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		BathroomItemsLoadingHacks includes:
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomShowerRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomTowelRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomToiletPaperRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomToiletPaperRightRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomDoorRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomSingleDoorRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomTallGlassRebuildPrefab
+		Resources/ZTBathroomRebuilds.unity3d?ZTBathroomGlassPanelRebuildPrefab
+		-->
+		
+		<item name="GardenLoadingHacks"><!--Covers eleven assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/HNGarden.unity3d?HNGardenBed1.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/HNGarden.unity3d?HNGardenBed1.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		GardenLoadingHacks includes:
+		Resources/HNGarden.unity3d?HNGardenBed1.prefab
+		Resources/HNGarden.unity3d?HNGardenChair1.prefab
+		Resources/HNGarden.unity3d?HNGardenTable1.prefab
+		Resources/HNGarden.unity3d?HNGardenTable1a.prefab
+		Resources/HNGarden.unity3d?HNGardenTable2.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrella1.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrella2.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrella3.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrella4.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrella5.prefab
+		Resources/HNGarden.unity3d?HNGardenUmbrellaS.prefab
+		-->
+		
+        <item name="BlackWindowsLoadingHacks"><!--Covers eleven assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/W2.unity3d?windblack1a.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/W2.unity3d?windblack1a.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		BlackWindowsLoadingHacks includes:
+		Resources/W2.unity3d?windblack2a.prefab
+		Resources/W2.unity3d?windblack3a.prefab
+		Resources/W2.unity3d?windblack4a.prefab
+		Resources/W2.unity3d?windblack5a.prefab
+		Resources/W2.unity3d?windblack6a.prefab
+		Resources/W2.unity3d?windblack7a.prefab
+		Resources/W2.unity3d?windblack8a.prefab
+		Resources/W2.unity3d?windblack9a.prefab
+		Resources/W2.unity3d?windblack10a.prefab
+		Resources/W2.unity3d?windblack11a.prefab
+		-->
+		
+        <item name="WindowsLoadingHacks"><!--Covers twelve assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/HNWWindows.unity3d?WW1.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/HNWWindows.unity3d?WW1.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		WindowsLoadingHacks includes:
+		Resources/HNWWindows.unity3d?WW1.prefab
+		Resources/HNWWindows.unity3d?WW2.prefab
+		Resources/HNWWindows.unity3d?WW3.prefab
+		Resources/HNWWindows.unity3d?WW4.prefab
+		Resources/HNWWindows.unity3d?WW5.prefab
+		Resources/HNWWindows.unity3d?WW6.prefab
+		Resources/HNWWindows.unity3d?WW1a.prefab
+		Resources/HNWWindows.unity3d?WW2a.prefab
+		Resources/HNWWindows.unity3d?WW3a.prefab
+		Resources/HNWWindows.unity3d?WW4a.prefab
+		Resources/HNWWindows.unity3d?WW5a.prefab
+		Resources/HNWWindows.unity3d?WW6a.prefab
+		-->
+		
+        <item name="DoorsLoadingHacks"><!--Covers sixteen assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/HNDoors.unity3d?DoorA.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/HNDoors.unity3d?DoorA.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		DoorsLoadingHacks includes:
+		Resources/HNDoors.unity3d?DoorA.prefab
+		Resources/HNDoors.unity3d?DoorB.prefab
+		Resources/HNDoors.unity3d?DoorC.prefab
+		Resources/HNDoors.unity3d?DoorD.prefab
+		Resources/HNDoors.unity3d?2DoorA.prefab
+		Resources/HNDoors.unity3d?2DoorB.prefab
+		Resources/HNDoors.unity3d?2DoorC.prefab
+		Resources/HNDoors.unity3d?2DoorD.prefab
+		Resources/HNDoors.unity3d?WinTopx1A.prefab
+		Resources/HNDoors.unity3d?WinTopx1B.prefab
+		Resources/HNDoors.unity3d?WinTopx1C.prefab
+		Resources/HNDoors.unity3d?WinTopx1D.prefab
+		Resources/HNDoors.unity3d?WinTopx2A.prefab
+		Resources/HNDoors.unity3d?WinTopx2B.prefab
+		Resources/HNDoors.unity3d?WinTopx2C.prefab
+		Resources/HNDoors.unity3d?WinTopx2D.prefab
+		-->
+		
+        <item name="SofaFurnitureLoadingHacks"><!--Covers twenty assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/HNSofa.unity3d?SofaBody1.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/HNSofa.unity3d?SofaBody1.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		SofaFurnitureLoadingHacks includes:
+		Resources/HNSofa.unity3d?SofaBody1.prefab
+		Resources/HNSofa.unity3d?SofaArm1.prefab
+		Resources/HNSofa.unity3d?SofaArmRight1.prefab
+		Resources/HNSofa.unity3d?SofaArmLeft1.prefab
+		Resources/HNSofa.unity3d?SofaCorner1.prefab
+		Resources/HNSofa.unity3d?SofaBody2.prefab
+		Resources/HNSofa.unity3d?SofaArm2.prefab
+		Resources/HNSofa.unity3d?SofaArmRight2.prefab
+		Resources/HNSofa.unity3d?SofaArmLeft2.prefab
+		Resources/HNSofa.unity3d?SofaCorner2.prefab
+		Resources/HNSofa.unity3d?SofaBody3.prefab
+		Resources/HNSofa.unity3d?SofaArm3.prefab
+		Resources/HNSofa.unity3d?SofaArmRight3.prefab
+		Resources/HNSofa.unity3d?SofaArmLeft3.prefab
+		Resources/HNSofa.unity3d?SofaCorner3.prefab
+		Resources/HNSofa.unity3d?SofaBody4.prefab
+		Resources/HNSofa.unity3d?SofaArm4.prefab
+		Resources/HNSofa.unity3d?SofaArmRight4.prefab
+		Resources/HNSofa.unity3d?SofaArmLeft4.prefab
+		Resources/HNSofa.unity3d?SofaCorner4.prefab
+		-->
+		
+        <item name="MoreCabinetsLoadingHacks"><!--Covers 46 assets/objects-->
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="missingIcon"/>
+			<property name="CustomIconTint" value="90ff90"/>
+            <property name="HoldType" value="45"/>
+            <property name="HoldingItemHidden" value="true"/>
+            <property name="Meshfile" value="#@modfolder:Resources/HNCabinetsKB.unity3d?CabinetA01.prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/HNCabinetsKB.unity3d?CabinetA01.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="1"/> 
+            <property name="EconomicValue" value="1"/>
+            <property name="EconomicBundleSize" value="1000"/>
+            <property name="Group" value="Resources"/>
+        </item>
+		
+		<!--
+		MoreCabinetsLoadingHacks includes:
+		Resources/HNCabinetsKB.unity3d?CabinetA01.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA02.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA03.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA04.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA05.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA06.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA14.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA07.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA08.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA09.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA10.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA11.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA12.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetA13.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB01.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB02.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB03.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB04.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB05.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB06.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB14.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB07.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB08.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB09.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB10.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB11.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB12.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetB13.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC01.prefab
+		LResources/HNCabinetsKB.unity3d?CabinetC02.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC03.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC04.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC05.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC06.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC14.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC07.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC08.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC09.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC10.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC11.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC12.prefab
+		Resources/HNCabinetsKB.unity3d?CabinetC13.prefab
+		Resources/HNCabinetsKB.unity3d?CooktopGen.prefab
+		Resources/HNCabinetsKB.unity3d?Chimeney1.prefab
+		Resources/HNCabinetsKB.unity3d?Chimeney2.prefab
+		Resources/HNCabinetsKB.unity3d?WallOven.prefab
+		-->
+		
+    </append>
+	
+	<append xpath="/items/item[@name='generatorbankSchematic']">
+		
+			<property name="Unlocks" value="generatorbank"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="HN Lights" operation="set" value="1"/>
+			</effect_group>
+		
+	<!--Code designed by modder Beardman-->
+	</append>
+	
+</configs>

@@ -1,0 +1,87 @@
+<ZTrecipesUBBI name="recipes.xml">
+
+	<append xpath="/recipes">
+
+        <recipe name="HN Kitchen Blocks" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceWood" count="20"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		
+        <recipe name="HN Kitchen Appliances" count="1" craft_area="workbench">
+            <ingredient name="resourceForgedSteel" count="5"/>
+	        <ingredient name="resourceSpring" count="5"/>
+	        <ingredient name="resourceElectricParts" count="10"/>
+	        <ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+		
+        <recipe name="HN Decor" count="1" craft_area="workbench">
+	        <ingredient name="resourceClayLump" count="10"/>
+	        <ingredient name="resourceScrapPolymers" count="10"/>
+	        <ingredient name="resourceCloth" count="1"/>
+            <ingredient name="resourcePaint" count="1"/>
+		</recipe>
+		
+        <recipe name="HN Tables/Chairs" count="1" craft_area="workbench">
+	        <ingredient name="resourceWood" count="10"/>
+	        <ingredient name="resourceMechanicalParts" count="5"/>
+	        <ingredient name="resourceNail" count="10"/>
+		</recipe>
+		
+        <recipe name="HN Sofa Blocks" count="1" craft_area="workbench">
+	        <ingredient name="resourceLeather" count="5"/>
+	        <ingredient name="resourceNail" count="10"/>
+	        <ingredient name="resourceWood" count="10"/>
+		</recipe>
+		
+        <recipe name="HN Bedroom Blocks/Racks" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="4"/>
+			<ingredient name="resourceSpring" count="2"/>
+		</recipe>
+		
+        <recipe name="HN Electronics" count="1" craft_area="workbench">
+            <ingredient name="resourceForgedSteel" count="5"/>
+	        <ingredient name="resourceWood" count="10"/>
+	        <ingredient name="resourceElectricParts" count="10"/>
+	        <ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+		
+        <recipe name="HN Lights" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+            <ingredient name="resourceForgedIron" count="3"/>
+	        <ingredient name="resourceHeadlight" count="1"/>
+	        <ingredient name="resourceElectricParts" count="5"/>
+	        <ingredient name="resourceScrapPolymers" count="5"/>
+		</recipe>
+
+        <recipe name="HN Bathroom Blocks" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceWood" count="20"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		
+        <recipe name="HN Pool/Outdoor Furniture" count="1" craft_area="workbench" >
+	        <ingredient name="resourceWood" count="10"/>
+	        <ingredient name="resourceScrapPolymers" count="10"/>
+	        <ingredient name="resourceNail" count="5"/>
+            <ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+		
+        <recipe name="HN Doors" count="1" craft_area="workbench">
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceNail" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="4"/>
+		</recipe>
+
+        <recipe name="HN Windows/Glass Doors" count="1" craft_area="workbench">
+			<ingredient name="resourceForgedIron" count="5"/>
+			<ingredient name="glassBlockVariantHelper" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="4"/>
+		</recipe>
+
+	</append>
+	
+</ZTrecipesUBBI>

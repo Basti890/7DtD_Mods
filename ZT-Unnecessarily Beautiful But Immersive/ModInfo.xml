@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<ModInfo>
+		<Name value="ZT-Unnecessarily Beautiful But Immersive" />
+		<Description value="Unnecessarily Beautiful But Immersive." />
+		<Author value="Ztensity" />
+		<!--Original Author of Unnecessary But Beautiful: Hernan-->
+		<!--Original Author of Unnecessary But Beautiful's Recipes: Hellsmoke-->
+		<!--Permission to Rebuild Granted By Hernan: https://drive.google.com/file/d/19lgG8z42gMPY6O4SezZHUz3b5GLVZxWf/view?usp=sharing-->
+		<Version value="3.0.0" compat="A20.3" />
+	</ModInfo>
+</xml>

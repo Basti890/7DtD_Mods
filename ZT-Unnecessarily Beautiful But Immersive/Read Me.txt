@@ -1,0 +1,285 @@
+
+ Unnecessarily Beautiful But Immersive - Version 3.0.0
+ The Unnecessary But Beautiful 20.3 Rebuild
+ 
+ 
+ - !!URGENT!! -
+ 
+ Since this update is designed for Alpha 20.3 compatibility, a new game is recommended for players using the old version of UBBI. If this is your first time playing with UBBI, you should be able to seamlessly install this mod into your game's mod folder.
+ 
+ Testing with overhauls has not been made and will not be. Using UBBI with an overhaul is at your discretion.
+ 
+ - !!URGENT!! -
+ 
+ 
+ ABOUT THIS MOD
+ ==============
+ 
+ After a lot of hard work across weeks of coding, Unnecessarily Beautiful But Immersive's 2.0.0 update is finally out.
+ 
+ Originally designed as a rework of Hernan's Unnecessary But Beautiful, UBBI is a fuller version of that mod that has been created for 7 Days to Die's 19.3 stable edition. Not only does my modlet include assets and blocks currated by the original mod author himself, but it also brings updated recipes, Localization and an assortment of other features.
+ 
+ 
+ In previous updates, I added the following unnecessarily beautiful, but absolutely immersive features:
+ 
+ 1. In order to turn on the lights, TVs, PC, laptop, fireplace and sound bar, players must now make use of the wire tool.
+ 
+ 2. In order to craft any of the lights however, a player must first have their Intellect perk at lvl 6 and their Advanced Engineering perk at lvl 3.
+ 
+ 3. If a player is lucky to find the "Basics of Electricity Schematic" at the trader or in the world, they can unlock all lights early.
+ 
+ 4. Players can now utilize the garden bed, small bed and big bed as a bedroll.
+ 
+ 5. Players can use the wrench line of tools to receive additional resources when destroying a multitude of items, whilst also receiving resources back when using just fists and/or weapons to destroy them.
+ 
+ 6. In order to repair items crafted, players must use specific resources from cloth fragments, wood and glass blocks to forged iron, concrete mix and leather.
+ 
+ 
+ For Unnecessarily Beautiful But Immersive's 2.0.0 update, I have added the following:
+ 
+ 7. I have made the shower head usable with water visual and sound effects. To increase immersion and add usefulness to it, I also provided up to 30 minutes of increased benefits, which include inscreased stamina regeneration, icnreased running speed and cold resistance.
+ 
+ 8. To improve shower room aesthetics, I have replaced the towel, made the toilet paper piece to be closer to the edge for aesthetics with a toilet, created an alternate toilet paper piece to be closer to the opposite side (left), redesigned the bathroom mirrors and bathroom double doors and created a new bathroom single door as well.
+ 
+ 9. I have reworked the closet pieces slightly, created a single closet door and created a secret closet door that takes up one block for people playing with one block crouch.
+ 
+ 10. Inspired by the POI version of the vanilla chimney, I have brought to life a more immersive version of the Chimney with new chimney effects that emit more realistically.
+ 
+ 11. I have added a working doorbell that can not only be used as aesthetics, but it can be used as a way to alarm a player you're entering their build and it will hopefully alarm zombies to some extent as well.
+ 
+ 
+ I have made the lights an unlockable buildable to make it challenging and rewarding. However, at the same time, vanilla lights require the same skill level before being able to craft. Therefore, this increases immersion further and was a sensible addition to the mod. To add to this as a sort of balancing act, if a player is lucky enough to find a certain schematic, they can also unlock all lights early as well, just like their Vanilla light counterparts.
+ 
+ In order to make recipes work in 19.3, I changed - craft_area="tablesaw" to craft_area="workbench" - for each recipe. This was provided in the comments section of Hernan's original upload on Nexus, but with the amount of people asking about how to make it work, making it part of the modlet as a whole and streamlining it in this version seemed the most logical. This effectively makes recipes function as expected.
+ 
+ 
+ For Unnecessarily Beautiful But Immersive's 3.0.0 update, I have made the following changes:
+ 
+ 12. UI elements have been removed. This will allow for quicker updates in the future and better compatibility with overhauls and UI modlets such as the widely popular and personally supported SMX series. I have stripped the Stove, Oven, Cooktop, Toaster, Coffe Maker and Microwave to being purely aesthetic now.
+ 
+ 13. I have removed sound files, UI images and other select Unity files to clean ths mod, as they were no longer needed. I have also adjusted blocks.xml, items.xml, localization.txt and recipes.xml per these changes. I made sure to remove the loot.xml as well, as that is no longer needed.
+ 
+ 14. I completely removed electronic components and the "Shamway Cooking Spring." These were only in the game for the working appliances. Simultaneously, I have removed the ability to use car batteries, electric parts and electronic components as fuel sources in the same vain.
+ 
+ 15. I have enabled storage options for all items that makes sense, such as cabinets, bathroom items and others.
+ 
+ 
+ TIPS
+ ====
+ 
+ HOW TO SEARCH FOR RECIPES TO CRAFT
+ =======
+ 
+ In order to craft, you must be at the workbench. Once at a workbench, you can easily find each type of recipe you want to craft by searching "HN." Despite the name changes provided by the localization, this is still possible and makes it really easy to find.
+ 
+ 
+ SEARCHABLE WORKBENCH CRAFTING BLOCKS BY "HN:"
+ =======
+ 
+ HN Kitchen Blocks = Kitchen Cabinets/Sinks
+ HN Bathroom Blocks = Bathroom Furniture/Amenities
+ HN Sofa Blocks = Sofa Pieces
+ HN Windows/Glass Doors = Windows/Glass Doors
+ HN Doors = Wooden Doors
+ HN Decor = Decor
+ HN Pool/Outdoor Furniture = Pool/Outdoor Furniture
+ HN Tables/Chairs = Tables/Chairs
+ HN Electronics = Electronics
+ HN Kitchen Appliances = Kitchen Appliances
+ HN Lights = Lights
+ HN Bedroom Blocks/Racks = Bedroom Furniture
+ 
+ 
+ ================================
+ 
+ 
+ AVAILABLE LIGHTS
+ =======
+ 
+ ZTNightTableLampRebuild = Nighttable Lamp
+ ZTNightTableBackLampRebuild = Nighttable Back Lamp
+ ZTLampRebuild = Floor Lamp
+ ZTSLampRebuild = Small Lamp
+ ZTCeilingLampRebuild = Ceiling Light
+ ZTSCeilingLampRebuild = Ceiling Lamp
+ ZTHangingLightRebuild = Hanging Light
+ ZTBathroomCabinetRebuild = Shelf
+ ZTBathroomSinkRebuild = Small Bathroom Sink
+ ZTPoolLightRebuild = Swimming Pool Light
+
+ 
+ AVAILABLE CEILING LAMP EXTENDER
+ =======
+ 
+ HN Ceiling Lamp Metal Top = Ceiling Lamp Extender
+ 
+ AVAILABLE TVS
+ =======
+ 
+ ZTLargeTVRebuild = Large TV Set
+ ZTSmallTVRebuild = Small TV Set
+ ZTLargeMountedTV = Mounted TV
+ ZTSmallMountedTV = Mounted TV
+ 
+ 
+ AVAILABLE TURN ON/OFF DEVICES
+ =======
+ 
+ ZTPCRebuild = Desktop PC
+ ZTLaptopRebuild = Laptop
+ ZTSoundBarRebuild = Sound Bar
+ ZTModernFireplaceRebuild = Modern Fireplace
+ 
+ 
+ HOW TO TURN ON LIGHTS, TVS, PC, LAPTOP, FIREPLACE & SOUND BAR
+ =======
+ 
+ After placing one of the these items such as a "Floor Lamp," you must have a wire tool in hand. Next you must activate the wire tool's rope on the lamp by pressing e/y, disconnecting the rope by pressing e/y and then viola - you should now be able to turn your device on/off.
+ 
+ 
+ ================================
+ 
+ 
+ SOUND BAR INFORMATION
+ =======
+ 
+ The sound bar currently is sampling a 14 second clip of the Purge siren. According to what I can find Online, this should be copyright free. My hope is that it will scare the crap out of you.
+ 
+ What is worthy to note is that once you turn it on, it will play for its expected 14 seconds unless you turn it off. In this time, its intended to attract AI. This is currently an experimental feature, as it currently seems to attract zombies, but only if they are already somewhat close to you.
+ 
+ This feature is subject to change and/or be tweaked. However, with feedback and help from the community, I hope to fine tune this further to make it really attract zombies at even 300-1000 meters away due to it being a loud siren.
+ 
+ Final Note: You must turn off the sound bar before leaving your game. Other wise, the siren will go off automatically at the start of your next game session. This is because it's technically still in the "on" state. I made it work this way so that players can manually stop the siren. This is not a glitch. If you leave it on and it starts again in your next game session, just simply turn it off and you will be fine.
+ 
+ 
+ BEDROLL FEATURE INFORMATION
+ =======
+ 
+ The bedroll feature that has been added to UBBI currently works on the big big and small bed from the bedroom furniture recipe and the garden bed from the pool/outdoor furniture recipe.
+ 
+ Similarly to vanilla, once you place a bedroll it should act a safe haven for re-spawning. Whichever is your last placed bed or vanilla bedroll however will be utilized as your re-spawn point in almost all cases with the exception of rare vanilla bugs.
+ 
+ 
+ ================================
+ 
+ 
+ LOCALIZATION FYI
+ =======
+ 
+ A localization has been put in for "useSwitchLightOff" and "useSwitchLightOn" to make all lights, TVs and computers turn on / off immersively. This will also affect vanilla lights as well or anything else using the "switch class." This was done since the wording is hard coded and without using DMT, DLLs or CSharp, the localization method was the only way to increase immersion across all devices.
+ 
+ For the time being, anything using a wire tool will say "turn off" / "turn on." This means this mod will also affect other mods that utilize the "switch class" as well.
+ 
+ If you are making a modlet and you don't want your object to read "turn on/off" and you want it to have the vanilla wording, try making it load after this modlet utilizing a ZZ as the first two characters. I suspect that this may allow it to have the vanilla wording, but there is no guarantee.
+ 
+ 
+ ITEMS XML & BUNDLE LOADING
+ =======
+ 
+ In an effort to help with FPS, potential freezing etc. for players running on older software/hardware, an items XML has been utilized to pre-load select bundles into memory.
+ 
+ Currently bundles that include ten or more blocks (i.e. garden bed/pool items, windows, bathroom amenity items, various doors, sofa furniture and cabinets) are being pre-loaded in addition to lights, TVs and electronics/tech, which includes a fireplace, a laptop, a PC, a sound bar and a sound file.
+ 
+ Hopefully, this XML will allow for slightly smoother gameplay for players.
+ 
+ 
+ ================================
+ 
+ 
+ WHAT FILES ARE NEW
+ =======
+ 
+ I have reworked and rebuilt 18 Prefabs (TVs, Lights, a PC, a laptop, a fireplace and a Sound Bar) that have been compiled as three UNITY3D files ZTLightRebuilds, ZTTechRebuilds and ZTTVRebuilds. ZTTechRebuilds also includes a silent 14 second .wav file.
+ 
+ I have added a sounds.xml file, which is intended to attract AI (zombies, animals, etc.) nearby to the player when using the Sound Bar. The .wav file from the ZTTechRebuilds unity bundle ties to the code, which should allow the pieces to come together.
+ 
+ I have added a progression.xml file, which appends the progression.xml file from the data/config file of the vanilla files. In other words, this is what is making the lights in this mod unlockables once a player is at the Intellect perk of lvl 6 and Advanced Engineering of lvl 3.
+ 
+ I have added an items.xml file, which pre-loads pre-loads certain bundles I've selected into memory to increase frames per second, freezing/lagging and general performance for players. This is likely especially useful to players with older software/hardware.
+ 
+ I have adjusted code across the board for blocks.xml, recipes.xml, sounds.xml, progression.xml, Localization.txt, ModInfo.xml and this Read Me.txt to make everything smoother, cleaner and most importantly more immersive when applicable from an in-game standpoint. I have also cleaned the ItemIconAtlas folder (235 files remaining) and Resources folder (51 files remaining) to make sure only the files being used in-game were left.
+ 
+ With version 2.0.0, I have added an xui.xml, windows.xml, buffs.xml, loot.xml and a ui_display.xml file to make all new features a reality. Further, I also added a variety of lines to blocks.xml, items.xml and sounds.xml as well.
+ 
+ With version 3.0.0, I have removed the xui.xml, windows.xml, loot.xml and ui_display.xml, since I remove the functionality and UI of kitchen appliances. I also adjusted a variety of code per these changes to make the mod more compatibile with UI mods, potential overhauls and allowing for quicker updates as needed. Please refer to the Updates file for more context and more information as for what was removed.
+ 
+ Most importantly, I have made sure that UBBI is compatible with Alpha 20.3.
+ 
+ 
+ ================================
+ 
+ 
+ CREDITS
+ =======
+ 
+ Most assets including the UNITY3D Files for resources, PNGs for UIAtlases, block coding and 12 original localized files were are all created, designed and published first by Hernan (HN). With his permission, I have presented a newer edition/rebuild of the mod with new features, more in-depth immersion, better compatibility with the latest build and further accessibility across all websites.
+ 
+ The recipes file was originally designed and coded by modder Hellsmoke. Hernan uploaded this on 2/12/2020 as an optional download. I am now including this as part of the new edition of Unnecessary but Beautiful to not only keep it updated for all players, but also make the localization available for further immersion to make recipes feel like part of vanilla game.
+ 
+ Permission: https://drive.google.com/file/d/19lgG8z42gMPY6O4SezZHUz3b5GLVZxWf/view?usp=sharing
+ Original Mod Via Nexus: https://www.nexusmods.com/7daystodie/mods/670
+ 
+ 
+ ================================
+ 
+ 
+ SHOUTOUTS
+ =======
+ 
+ Lastly, I want to give thorough shout outs to every person who helped me bring this mod overhaul into existence and make it a reality. Here goes!
+ 
+ 
+ 
+ Xyth: Without Xyth, a lot of this would not have happened. From his tutorials, help early on with moving from the "doorSecure" class to "switch" classes, animations, looping, dummy layers, Localization suggestions, etc. Between occasional direct messages, chime ins on channels and so on. He helped me truly understand a large part of what I've done so far. I was able to also correct errors associated with "MultiBlockDim," the -1 yellow line animator error which is associated with the wrong naming conventions (i.e you have to use SwitchOffStatic and SwitchOnStatic - not OffStatic and OnStatic) and disappearing icons via conversation with Xyth.
+ 
+ Xyth, Guppycur & Bdubyah: Thank you for guiding me to go to Unity early on when I tried to lazily adjust the blocks.xml to utilize the "switch" class when nothing was designed to work like a switch. Almost four weeks later and I feel much more knowledgeable and much more confident in this mod with this release.
+ 
+ Xyth & Ragsy: Thank you for helping me insure the TVs were properly bright in-game by making sure to change the shader to "unlit/texture." Thank you Ragsy for also helping me to understand how to work with objects, shaders, textures etc. in Unity. This very note actually helped me do a last minute edit on the laptop - who'd of thought!
+ 
+ Xyth, Guppycur & Mumpfy: Thank you for helping me put the final touches on the mounted TVs so they are correctly mounted to the walls as they should be. Talk about immersion!
+ 
+ Xyth & Guppycur: Thank you for attempting to assist me in creating animations that would allow for two or more screens to work on a TV (flipping from the off state to channel, to channel, to channel, to off state and repeat). I ultimately nixed this idea, as I could not get it to work properly, but I believe my findings may help Xyth crack the code so to speak one day. It is worthy to note, that we found the -1 animator issue when trying to do multiple screens. This was resolved by adding a second layer (making it the primary layer with weight set to 1 and override set) and making layer 0 a dummy layer with empty states and transitions going from "SwitchOffStatic" > "On" > "SwitchOnStatic" > "Off" > "SwitchOffStatic."
+ 
+ Xyth, Mumpfy, Snufkin & TSBX: Thank you for helping me change wording for switches from "Switch light off" / "Switch light on" to "turn off" / "turn on." While this was accomplished through organic conversation and light pushes to look at the vanilla Localization, I wouldn't have known to do that without you guys.
+ 
+ Guppy: Thank you for helping me understand the in and outs of using Unity. Alongside Xyth, I would not have been able to do everything without first having learned to rebuild the first lamp with your assistance. You also helped me with textures and taught me how to use the application Materialize! Finally, without organic conversation with you, I wouldn't have realized that making a Prefab out of an object while it's invisible in Unity and then bundling it, would cause issues in-game. Thank you for also helping me understand how to design doors.
+ 
+ Guppycur, Zorro, Ragsy & Khaine: Thank you guys for helping me rebuild my first lamp from Hernan's Unnecessary But Beautiful mod. This was the only lamp I made new textures for, as I eventually caught on to how to truly rebuild the remaining objects based on what was already designed, but without your guys help, none of this would have been possible.
+ 
+ Guppycur, Bdubyah & saminal: Thank you guys early on for helping me understand why one of my lamps weren't showing in-game and causing a red line error. Also through organic conversation, I was able to to determine that to make sure the icon in the inventory and in the crafting area is showing, the name via the icon in "ItemIconAtlas" and line of code "CustomIcon" in blocks.xml has to be the same.
+ 
+ Zorro & Khaine: Thank you guys for helping me figure out which version of Unity to install to even begin working with Hernan's assets in the first place. I was determined to install all of them, but I'm glad you guys narrowed it down to just 2-4. We figured it out and four weeks later, I have a fully released, massive modlet!
+ 
+ Bdubyah: Thank you for helping me learn how to work around some of the bits of unity in terms of shaders, editing, creating, terminology, etc. Thank you for also helping me add the sound effect to the Sound Bar and helping me make sure it worked in-game and thank you for helping me create my sounds.xml and for helping me learn and understand how to rename the line in sounds.xml "ZTTechRebuilds.unity3d?ZTSoundBarSilentTrigger" to make sure it linked the silent trigger sound. While there is still a lot of work to do on this portion of the mod, your support was appreciated.
+ 
+ Mumpfy: Thank you for helping me understand voxel space in Unity in relation to colliders, alignment etc.
+ 
+ Artjom & Snufkin: Thank you for also supporting me while I was learning how to create my sounds.xml file. Snufkin, I believe your suggestion to make the sounds.xml utilize "AudioSource_Explosion" should make it work more effectively.
+ 
+ saminal: Thank you for helping me understand how containers and doors work in relation to locks. Furthermore, thank you for helping me understand conventions surrounding readme's, correcting my modInfo.xml early on and explaining nodes in xml's.
+ 
+ TSBX: As one of the admins of the Discord, thank you for chiming in and encouraging me to take the next steps when I've asked questions and begun to take initiative. Specifically, without your "Looks good to me, If it works, it works," I wouldn't have moved forward with my need to edit over 5,000 lines of code for consistency, professional appearance, cleanliness and my personal OCD needs in the blocks.xml alone.
+ 
+ sphereii: Thank you for making me utilize notepad++ like I should, by saving my files as .xml while working in them, even for random lines of code in a "backup" file. While I never got the XML Tools plugin, your advice helped me immensely!
+ 
+ wrathmaniac: Thank you for helping me understand Localization's to their full extent. Before my conversations with you, I didn't 100% understand what I was doing, but you helped me learn the in and outs of this txt file. I appreciate your help! Thank you for also helping me use your 7 Days to Die Mod Editor. While I haven't used it for most of my project, it did help me understand the in and outs of the blocks.xml early on.
+ 
+ InnocuousChaos: Thank you for helping me create my progression.xml. Without you, I would not have been able to get the code together or get the lights unlockable the way I was wanting. Thank you for also helping me through ideas for my sound effect for the Sound Bar. Hopefully I scare the crap out of people!
+ 
+ chiko: Thank you for your thorough explanation of offset language and terminology - "Find a table that's less than 1 block high, like a coffee table.  Try putting a regular mug on top of it, and see that it floats.  Now, try putting an offset version of the mug on top of it.  The offset version doesn't float, so it looks nice." While I removed offset versions of lights and electronics etc. from this mod ultimately, it's nice to understand this for the future.
+ 
+ Haidr'Gna: Thank you for helping me understand how to rename my bundles in the line in blocks.xml "Resources/ZTTVRebuilds.unity3d?ZTSmallTVRebuildPrefab" after bundling multiple assets together to make for a cleaner mod.
+ 
+ RazorEye: Thank you for your suggestion to add bedrolls as a feature to the mod. I went ahead and through the feature onto the garden bed for a little bit of fun, but thanks to you and your suggestion, this mod is now additionally more immersive than ever!
+ 
+ BeardMan: With the help of modder Beardman, lights can now be unlocked before hitting the appropriate perks if you are lucky enough to find the "basics of electricity schematic" either through the trader or out in the world on your travels. Beardman designed the xpath which allowed for this schematic to become unlockable. With his help, I also realized that by putting various lights under master blocks it created a loophole, which allowed for select lights to still be crafted despite not having the correct perks assigned. I resolved this by removing lights from different recipe blocks and only having them under one recipe block ("HN Lights" or "Lights").
+ 
+ K1NGER1988: Thank you for providing the xml code for blocks.xml. To enable appropriate storage for a variety of containers, he provided me with the following: 
+ change <property name="lootList" value="6" /> to <property name="LootList" value="poiStorageBox" />
+ 
+ Ozmods: Thank you for providing me even more context for container storage information. Specifically, it was very helpful to know the differences between "cupboard," "playerstorage" and "storageCrate." I'll provide your specific notes in the Notes file.
+ 
+ - Ztensity - 
+ 
+ 
+ 

@@ -1,0 +1,23 @@
+
+ Unnecessarily Beautiful But Immersive - Version 3.0.0
+ The Unnecessary But Beautiful 20.3 Rebuild
+ Credits
+ 
+ ================================
+ 
+ 
+ The Fun Pimps: I have appropriated the chimney from the vanilla files, which was originally titled Chimney (POI).
+ 
+ Kenney Assets: I want to say thank you to Kenney.nl for their free assets. I utilized their smoke affect for the new update of UBBI for a Chimney I appropriated from the vanilla files!
+ See their website here: https://www.kenney.nl/
+ 
+ 3DHaupt: I want to say thank you to 3DHaupt based out of Ilmenau Germany. Without him, I would not have been able to make my updated version of the microwave more immersive. I took a disc out of a Microwave model created by him. Find his models here: https://sketchfab.com/dennish2010
+ 
+ Unity Assets Store: I want to say thank you to Rivermill Studios for such great shower effects, sound effects and model. I only used the effects, but this was such a great purchase!
+ 
+ Unity Store Link: https://assetstore.unity.com/publishers/2575
+ Unity Link for Studio: https://assetstore.unity.com/publishers/2575
+ 
+ Agustín Hönnun: I want to say thank you to Agustín Hönnun for his Towel and Towel Rail model. I used this free model entirely as a replacement to the towel in Hernan's original Unnecessary But Beautiful modlet.
+ 
+ Guppycur: Thank you for redesigning the closet door for me and making a details video to help me learn what I had done wrong. While I didn't end up using this version in the final release, it helped me bring my closet pieces and closet doors to such a more immersive state.

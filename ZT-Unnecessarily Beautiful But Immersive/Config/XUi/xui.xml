@@ -1,0 +1,37 @@
+<basti890>
+	<!-- Working Oven -->
+	<append xpath="/xui/ruleset">
+		<window_group name="workstation_HN ZTStoveRebuild" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_HN ZTOvenRebuild" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_HN ZTMicrowaveRebuild" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_HN ZTCooktopRebuild" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>	
+</basti890>
