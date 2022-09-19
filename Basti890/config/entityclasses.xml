@@ -1,0 +1,20 @@
+<VanillaPlus>
+	<!--NOTE 1: the "TimeStayAfterDeath" works in real life seconds-->
+	
+	<!--Section 1 = Dead Animals-->
+	<!--DEFUALT is 300 seconds (5 minutes). 600 seconds = 10 minutes-->
+	<setattribute xpath="/entity_classes/entity_class[starts-with(@name,'animal')]/property[@name='TimeStayAfterDeath']" name="value">600</setattribute>
+	
+
+	<!--Section 2 = Zombie Loot Drops-->
+	<!--DEFUALT is 1200 (20mins). 3600 = 1 HOURS-->
+	<setattribute xpath="/entity_classes/entity_class[starts-with(@name,'EntityLootContainer')]/property[@name='TimeStayAfterDeath']" name="value">3600</setattribute>
+
+
+	<!--Section 3 = Zombie Bodies disappear more quickly for performance reasons-->
+	<!--DEFAULT is 30 seconds.-->
+	<setattribute xpath="/entity_classes/entity_class/property[@name='TimeStayAfterDeath'][@value='30']" name="value">10</setattribute>
+
+</VanillaPlus>
+
+

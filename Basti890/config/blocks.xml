@@ -80,9 +80,9 @@
 			<property name="LootList" value="workingOvenSink"/>
 			<drop event="Destroy" name="workstationOven" count="1"/>
 			<drop event="Fall" name="woodDebris" count="1" prob="1.0" stick_chance=".75"/>
-			<property name="HeatMapStrength" value="1"/>
-			<property name="HeatMapTime" value="1200"/>
-			<property name="HeatMapFrequency" value="25"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
 			<property name="Group" value="Food/Cooking,Decor"/>
 			<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
 			<property class="Workstation">
@@ -337,43 +337,43 @@
 		
 		<!-- expanded traps -->
 		<block name="trapFireEmpty">
-			<property name="CustomIcon" value="trapFire" />
-			<property name="Material" value="Msteel" />
-			<property name="Texture" value="356,352,352,352,352,352" />
+			<property name="CustomIcon" value="trapFire"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Texture" value="356,352,352,352,352,352"/>
 			<property class="UpgradeBlock">
-				<property name="ToBlock" value="trapFire" />
-				<property name="Item" value="trapGasCan" />
-				<property name="ItemCount" value="100" />
-				<property name="UpgradeHitCount" value="1" />
+				<property name="ToBlock" value="trapFire"/>
+				<property name="Item" value="trapGasCan"/>
+				<property name="ItemCount" value="100"/>
+				<property name="UpgradeHitCount" value="1"/>
 			</property>
 			<property class="RepairItems">
 				<property name="resourceForgedSteel" value="8"/>
 			</property>
-			<drop event="Destroy" count="0" prob="1" />
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance="1" />
+			<drop event="Destroy" count="0" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
 		<block name="trapFire">
 			<property name="DescriptionKey" value="trapFireDesc"/>
-			<property name="Class" value="Damage" />
-			<property name="Damage" value="30" />
-			<property name="Damage_received" value="30" />
+			<property name="Class" value="Damage"/>
+			<property name="Damage" value="30"/>
+			<property name="Damage_received" value="30"/>
 			<property name="MaxDamage" value="3000"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov" />
-			<property name="Material" value="Msteel" />
-			<property name="Texture" value="355,352,352,352,352,352" />
-			<property name="DowngradeBlock" value="trapFireEmpty" />
-			<drop event="Destroy" count="0" prob="1" />
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0"  stick_chance="1" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Texture" value="355,352,352,352,352,352"/>
+			<property name="DowngradeBlock" value="trapFireEmpty"/>
+			<drop event="Destroy" count="0" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
+			<property name="Group" value="Tools/Traps"/>
 		</block>
 		<block name="trapAdhesiveKnockdown">
 			<property name="CustomIcon" value="trapAdhesiveSpike"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveKnockdownDesc"/>
-			<property name="Material" value="MbarbedFence" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="1"/>
 			<property name="Damage_received" value="1"/>
 			<property name="MaxDamage" value="132"/>
@@ -381,10 +381,10 @@
 			<property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02" />
+			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0" />
-			<property name="Group" value="Tools/Traps" />
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
 			<drop event="Fall" count="0"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
@@ -392,9 +392,9 @@
 			<property name="CustomIcon" value="trapAdhesiveSpike"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveDesc"/>
-			<property name="Material" value="MbarbedFence" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="33"/>
 			<property name="Damage_received" value="33"/>
 			<property name="MaxDamage" value="238"/>
@@ -402,10 +402,10 @@
 			<property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffShocked" />
+			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0" />
-			<property name="Group" value="Tools/Traps" />
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
 			<drop event="Fall" count="0"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
@@ -413,9 +413,9 @@
 			<property name="CustomIcon" value="trapAdhesiveSpike"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveBurningDesc"/>
-			<property name="Material" value="MbarbedFence" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="44"/>
 			<property name="Damage_received" value="44"/>
 			<property name="MaxDamage" value="450"/>
@@ -423,10 +423,10 @@
 			<property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov" />
+			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0" />
-			<property name="Group" value="Tools/Traps" />
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
 			<drop event="Fall" count="0"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
@@ -434,9 +434,9 @@
 			<property name="CustomIcon" value="trapAdhesiveSpike"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveStunnedDesc"/>
-			<property name="Material" value="MbarbedFence" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="1"/>
 			<property name="Damage_received" value="1"/>
 			<property name="MaxDamage" value="132"/>
@@ -444,10 +444,10 @@
 			<property name="HandleFace" value="Bottom"/>
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03" />
+			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
 			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0" />
-			<property name="Group" value="Tools/Traps" />
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
 			<drop event="Fall" count="0"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
@@ -455,9 +455,9 @@
 			<property name="CustomIcon" value="pressureplateLong"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveKnockdownDesc"/>
-			<property name="Material" value="MbarbedWire" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedWire"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="1"/>
 			<property name="Damage_received" value="1"/>
 			<property name="MaxDamage" value="244"/>
@@ -468,22 +468,22 @@
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="HandleFace" value="Bottom"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="40"/>
 				<property name="resourceMechanicalParts" value="6"/>
 				<property name="resourceElectricParts" value="4"/>
-			</property>	
+			</property>
 		</block>
 		<block name="pressureplateLongtrapAdhesiveShocked">
 			<property name="CustomIcon" value="pressureplateLong"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveShockedDesc"/>
-			<property name="Material" value="MbarbedWire" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedWire"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Damage" value="33"/>
 			<property name="Damage_received" value="33"/>
 			<property name="MaxDamage" value="474"/>
@@ -494,22 +494,22 @@
 			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
 			<property name="HandleFace" value="Bottom"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffShocked" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="40"/>
 				<property name="resourceMechanicalParts" value="6"/>
 				<property name="resourceElectricParts" value="4"/>
-			</property>	
+			</property>
 		</block>
 		<block name="pressureplateLongtrapAdhesiveBurning">
 			<property name="CustomIcon" value="pressureplateLong"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveBurningDesc"/>
-			<property name="Material" value="MbarbedWire" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedWire"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Mesh" value="models"/>
 			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
 			<property name="HandleFace" value="Bottom"/>
@@ -520,22 +520,22 @@
 			<property name="Damage" value="44"/>
 			<property name="Damage_received" value="44"/>
 			<property name="MaxDamage" value="900"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="40"/>
 				<property name="resourceMechanicalParts" value="6"/>
 				<property name="resourceElectricParts" value="4"/>
-			</property>	
+			</property>
 		</block>
 		<block name="pressureplateLongtrapAdhesiveStunned">
 			<property name="CustomIcon" value="pressureplateLong"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveStunnedDesc"/>
-			<property name="Material" value="MbarbedWire" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Texture" value="217" />
+			<property name="Material" value="MbarbedWire"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="217"/>
 			<property name="Mesh" value="models"/>
 			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
 			<property name="HandleFace" value="Bottom"/>
@@ -546,26 +546,26 @@
 			<property name="Damage_received" value="1"/>
 			<property name="MaxDamage" value="166"/>
 			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 			<property class="RepairItems">
 				<property name="resourceForgedIron" value="40"/>
 				<property name="resourceMechanicalParts" value="6"/>
 				<property name="resourceElectricParts" value="4"/>
-			</property>	
+			</property>
 		</block>
 		<block name="trapAdhesiveKnockdownSpike">
 			<property name="CustomIcon" value="barbedWireSheet"/>
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveKnockdownSpikeDesc"/>
 			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence" />
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02" /> 
-			<property name="MaxDamage" value="10000" />
-			<property name="Shape" value="New" />
-			<property name="Model" value="cone1m" />
-			<property name="Texture" value="355" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cone1m"/>
+			<property name="Texture" value="355"/>
 			<property name="Damage" value="1"/>
 			<property name="Damage_received" value="1"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
@@ -575,12 +575,12 @@
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveShockedSpikeDesc"/>
 			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence" />
-			<property name="BuffsWhenWalkedOn" value="buffShocked" />
-			<property name="MaxDamage" value="10000" />
-			<property name="Shape" value="New" />
-			<property name="Model" value="cone1m" />
-			<property name="Texture" value="355" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cone1m"/>
+			<property name="Texture" value="355"/>
 			<property name="Damage" value="33"/>
 			<property name="Damage_received" value="33"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
@@ -590,12 +590,12 @@
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveBurningSpikeDesc"/>
 			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence" />
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov" />
-			<property name="MaxDamage" value="10000" />
-			<property name="Shape" value="New" />
-			<property name="Model" value="cone1m" />
-			<property name="Texture" value="355" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cone1m"/>
+			<property name="Texture" value="355"/>
 			<property name="Damage" value="44"/>
 			<property name="Damage_received" value="44"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
@@ -605,23 +605,23 @@
 			<property name="CustomIconTint" value="4040ff"/>
 			<property name="DescriptionKey" value="trapAdhesiveStunnedSpikeDesc"/>
 			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence" />
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03" />
-			<property name="MaxDamage" value="10000" />
-			<property name="Shape" value="New" />
-			<property name="Model" value="cone1m" />
-			<property name="Texture" value="355" />
+			<property name="Material" value="MbarbedFence"/>
+			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cone1m"/>
+			<property name="Texture" value="355"/>
 			<property name="Damage" value="1"/>
 			<property name="Damage_received" value="1"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
 		<block name="minersTNT">
 			<property name="DescriptionKey" value="minersTNTDesc"/>
-			<property name="Extends" value="mineCandyTin" />
+			<property name="Extends" value="mineCandyTin"/>
 			<property class="Explosion">
 				<property name="ParticleIndex" value="5"/>
-				<property name="RadiusBlocks" value="8" />
-				<property name="BlockDamage" value="3000" />
+				<property name="RadiusBlocks" value="8"/>
+				<property name="BlockDamage" value="3000"/>
 				<property name="DamageBonus.stone" value="1"/>
 				<property name="DamageBonus.metal" value="1"/>
 				<property name="DamageBonus.earth" value="1"/>
@@ -630,46 +630,46 @@
 			</property>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
-		<block name="trapSteelFireSpike">  
+		<block name="trapSteelFireSpike">
 			<property name="Damage" value="100"/>
 			<property name="Damage_received" value="100"/>
-			<property name="MaxDamage" value="10000" />
-			<property name="Class" value="TrunkTip" />
+			<property name="MaxDamage" value="10000"/>
+			<property name="Class" value="TrunkTip"/>
 			<property name="DescriptionKey" value="trapSteelFireSpikeDesc"/>
-			<property name="Damage" value="7" />
-			<property name="Damage_received" value="40" />
-			<property name="Material" value="Msteel" />
-			<property name="Shape" value="New" />
-			<property name="Model" value="cone1m" />
-			<property name="Texture" value="355" />
+			<property name="Damage" value="7"/>
+			<property name="Damage_received" value="40"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cone1m"/>
+			<property name="Texture" value="355"/>
 			<!--property name="DontDamageOnTouch" value="true" /-->
 			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
 			<property class="RepairItems">
-				<property name="resourceForgedSteel" value="10" />
+				<property name="resourceForgedSteel" value="10"/>
 			</property>
-			<property name="CustomUpgradeSound" value="Crafting/place_block_metal" />
-			<property name="DowngradeBlock" value="securityGatePlate" />
-			<drop event="Destroy" count="0" />
-			<drop event="Fall" name="scrapMetalPile" count="1" prob=".75" stick_chance="1" />
-			<property name="EconomicValue" value="160" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="CustomUpgradeSound" value="Crafting/place_block_metal"/>
+			<property name="DowngradeBlock" value="securityGatePlate"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob=".75" stick_chance="1"/>
+			<property name="EconomicValue" value="160"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
 		<block name="trapNailMine">
 			<property name="DescriptionKey" value="trapNailMineDesc"/>
-			<property name="Class" value="Mine" />
-			<property name="Material" value="Mmetal" />
-			<property name="Shape" value="ModelEntity" />
-			<property name="Mesh" value="models" />
-			<property name="Model" value="#Other/Items?Weapons/Explosive/trapMineTinCan_01Prefab.prefab" />
-			<property name="IsTerrainDecoration" value="true" />
-			<property name="Explosion.ParticleIndex" value="1" />
+			<property name="Class" value="Mine"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Mesh" value="models"/>
+			<property name="Model" value="#Other/Items?Weapons/Explosive/trapMineTinCan_01Prefab.prefab"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Explosion.ParticleIndex" value="1"/>
 			<!-- which prefab/particle is used -->
-			<property name="Explosion.RadiusEntities" value="4" />
+			<property name="Explosion.RadiusEntities" value="4"/>
 			<!-- damage radius for entities -->
-			<property name="DropScale" value="3" />
-			<drop event="Destroy" count="0" />
-			<property name="Group" value="Tools/Traps" />
+			<property name="DropScale" value="3"/>
+			<drop event="Destroy" count="0"/>
+			<property name="Group" value="Tools/Traps"/>
 			<property name="UnlockedBy" value="trapSchematic"/>
 		</block>
 	</append>

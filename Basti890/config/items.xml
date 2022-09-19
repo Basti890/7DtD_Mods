@@ -4,13 +4,17 @@
 	<!-- Quicker smelting -->
 	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
 	
+	
+	<!--More MOD slots-->
+	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">1,1,2,3,4,5</setattribute>
+	
 	<!-- ammo -->
 	<setattribute xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']" name="value">1000</setattribute>
 	<append xpath="/items/item[@name='ammo44MagnumBulletBall']">
 		<property name="Stacknumber" value="750"/>
 	</append>
 	<setattribute xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']" name="value">500</setattribute>
-	<setattribute xpath="/items/item[contains(@name,'Bullet')]/effect_group/passive_effect[@name='BlockDamage']" name ="value" >1</setattribute>
+	<setattribute xpath="/items/item[contains(@name,'Bullet')]/effect_group/passive_effect[@name='BlockDamage']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']" name="value">250</setattribute>
