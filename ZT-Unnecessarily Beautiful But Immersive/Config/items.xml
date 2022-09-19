@@ -375,5 +375,11 @@
 		
 	<!--Code designed by modder Beardman-->
 	</append>
+	<append xpath="/items/item[@name='drinkJarEmpty']/property[@class='Action1']">
+		<property name="Focused_blockname_7" value="HN Sink" />
+		<property name="Focused_blockname_8" value="HN Sink White Wood" />
+		<property name="Focused_blockname_9" value="HN Sink Clear Wood" />
+		<property name="Focused_blockname_10" value="HN Sink Dark Wood" />
+	</append>
 	
 </configs>
