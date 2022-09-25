@@ -157,6 +157,7 @@
 	</set>
 
 	<setattribute xpath="/recipes/recipe[@name='resourceGunPowder']" name="count">2</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='resourceOil']/ingredient[@name='resourceOilShale']" name="count">4</setattribute>
 
 	<set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']">
 		<ingredient name="resourceCloth" count="1"/>
