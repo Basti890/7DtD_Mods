@@ -153,7 +153,6 @@
 		<block name="porchLight04Brass_Player">
 			<property name="Extends" value="porchLight01_Player"/>
 			<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/>
-			<drop event="Destroy" name="resourceScrapBrass" count="10,30" prob="1"/>
 			<property name="CustomIcon" value="porchLight04Brass"/>
 		</block>
 		<block name="ceilingLight02_Player">
@@ -163,7 +162,7 @@
 			<property name="CustomIcon" value="ceilingLight02"/>
 		</block>
 		<block name="ceilingLight02Brass_Player">
-			<property name="Extends" value="porchLight04Brass"/>
+			<property name="Extends" value="porchLight04Brass_Player"/>
 			<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight02Brass"/>
@@ -181,7 +180,7 @@
 			<property name="CustomIcon" value="ceilingLight05"/>
 		</block>
 		<block name="ceilingLight05Brass_Player">
-			<property name="Extends" value="porchLight04Brass"/>
+			<property name="Extends" value="porchLight04Brass_Player"/>
 			<property name="Model" value="Entities/Lighting/ceilingLight05BrassPrefab"/>
 			<property name="HandleFace" value="Top"/>
 			<property name="CustomIcon" value="ceilingLight05Brass"/>
@@ -203,6 +202,23 @@
 			<property name="RequiredPower" value="5"/>
 			<property name="CustomIcon" value="streetLight01"/>
 		</block>
+		<!-- Streetlights with 2-4 Lights. They currently suck cause there's always just one of the many Bulbs lighten up
+		<block name="streetLight02_Player">
+			<property name="Extends" value="streetLight01_Player"/>
+			<property name="Model" value="Entities/Lighting/lightStreetLamp02Prefab"/>
+			<property name="CustomIcon" value="streetLight02"/>
+		</block>
+		<block name="streetLight03_Player">
+			<property name="Extends" value="streetLight01_Player"/>
+			<property name="Model" value="Entities/Lighting/lightStreetLamp03Prefab"/>
+			<property name="CustomIcon" value="streetLight03"/>
+		</block>
+		<block name="streetLight04_Player">
+			<property name="Extends" value="streetLight01_Player"/>
+			<property name="Model" value="Entities/Lighting/lightStreetLamp04Prefab"/>
+			<property name="CustomIcon" value="streetLight04"/>
+		</block>
+		-->
 		<block name="streetLightClassic_Player">
 			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
 			<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
@@ -290,6 +306,15 @@
 			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
 			<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
 			<property name="CustomIcon" value="tableLampLight"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="GndAlign" value="1"/>
+		</block>
+		<block name="tableLampLightCentered_Player">
+			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
+			<property name="Model" value="Entities/Lighting/table_lamp_centeredPrefab"/>
+			<property name="CustomIcon" value="tableLampLight"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="GndAlign" value="1"/>
 		</block>
 
 		<!-- Additional crobs -->
