@@ -1601,5 +1601,6 @@
 	<setattribute xpath="/items/item[@name='resourceLockPick']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='bookFiremansAlmanacHeat']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']" name="value">50</setattribute>
+	<setattribute xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">30000</setattribute>
 	
 </basti890>
