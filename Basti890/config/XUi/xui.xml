@@ -31,7 +31,7 @@
 	
 	<!-- Working Oven -->
 	<append xpath="/xui/ruleset">
-		<window_group name="workstation_workstationOven" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+		<window_group name="workstation_cntStoveModernVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>
 			<window name="B890windowCraftingQueue"/>
@@ -39,5 +39,53 @@
 			<window name="B890WindowOutput" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
-	</append>	
+		<window_group name="workstation_cntStoveOldVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntMicrowaveOvenVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntMicrowaveOvenVer2Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullWhite_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullGrey_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullBlack_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="B890WindowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
 </basti890>

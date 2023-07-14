@@ -1,23 +1,21 @@
 <basti890>
 
-	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">250,2500</setattribute>
-
+	<!-- Pickup Landmines -->
 	<setattribute xpath="/blocks/block[@name='mineCandyTin']/property[@name='CanPickup']" name="value">true</setattribute>
 
-	<append xpath="/blocks/block[@name='flashlightDecor']">
-		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-		<drop event="Harvest" name="resourceElectricParts" count="0" tag="salvageHarvest"/>
-		<!-- HV: mounted lamp -->
-		<drop event="Destroy" name="resourceScrapIron" count="0"/>
-		<drop event="Destroy" name="flashlightDecor_Player" count="1"/>
+
+	<!-- Pickup Flaslights -->
+	<append xpath="/blocks/block[starts-with(@name,'flashlight')]">
+		<drop event="Destroy" name="resourceHeadlight" count="1"/>
 	</append>
-	<append xpath="/blocks/block[@name='lanternDecorLight']">
-		<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-		<drop event="Harvest" name="resourceElectricParts" count="0" tag="salvageHarvest"/>
-		<!-- HV: mounted lamp -->
-		<drop event="Destroy" name="resourceScrapIron" count="0"/>
-		<drop event="Destroy" name="lanternLight_player" count="1"/>
+	
+	<append xpath="/blocks/block[starts-with(@name,'lantern')]">
+		<drop event="Destroy" name="lanternDecorLightBlockVariantHelper" count="1"/>
 	</append>
+	
+	
+	<setattribute xpath="/blocks/block[@name='cntCollapsedDewCollector']/drop[@event='Destroy']" name="name">resourceWaterFilter</setattribute>
+	
 	
 	<!-- More power Hough Hough hough hough houg -->
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='MaxPower']" name="value">900</setattribute>
@@ -27,6 +25,7 @@
 	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='OutputPerStack']" name="value">200</setattribute>
 	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='MaxPower']" name="value">800</setattribute>
 	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='OutputPerStack']" name="value">100</setattribute>
+
 
 	<!-- Up- & Downgrade additions -->
 	<set xpath="/blocks/block[@name='woodShapes']/property[@class='UpgradeBlock']">
@@ -39,26 +38,15 @@
 		<property name="DowngradeBlock" value="concreteShapes"/>
 	</append>
 
-	<!-- more resources from Pallets -->
-	<append xpath="/blocks/block[@name='palletWhiteBagsBase']">
-		<drop event="Harvest" name="resourceCement" count="400" tag="allHarvest"/>
-	</append>
-	<append xpath="/blocks/block[@name='palletWhiteBagsTile']">
-		<drop event="Harvest" name="resourceCement" count="500" tag="allHarvest"/>
-	</append>
-	<append xpath="/blocks/block[@name='palletWhiteBagsTop']">
-		<drop event="Harvest" name="resourceCement" count="250" tag="allHarvest"/>
-	</append>
-	<append xpath="/blocks/block[@name='palletWhiteBagsPartial1']">
-		<drop event="Harvest" name="resourceCement" count="250" tag="allHarvest"/>
-	</append>
-	<append xpath="/blocks/block[@name='palletWhiteBagsPartial2']">
-		<drop event="Harvest" name="resourceCement" count="50" tag="allHarvest"/>
-	</append>
-	<append xpath="/blocks/block[@name='palletWhiteBagsLoose']">
-		<drop event="Harvest" name="resourceCement" count="50" tag="allHarvest"/>
-	</append>
 
+	<!-- more Gas -->
+	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">10,1500</setattribute>
+	
+	
+	<!-- more resources from Pallets -->
+	<setattribute xpath="/blocks/block[starts-with(@name,'palletBag')]/drop[@event='Harvest']" name="count">10,500</setattribute>
+	
+	
 	<!-- more resources from rolls -->
 	<setattribute xpath="/blocks/block[@name='paperPillar100']/drop[@event='Harvest']" name="count">2500</setattribute>
 	<append xpath="/blocks/block[@name='paperPillar50']">
@@ -67,256 +55,94 @@
 	<setattribute xpath="/blocks/block[@name='clothPillar100']/drop[@event='Harvest']" name="count">2500</setattribute>
 	<setattribute xpath="/blocks/block[@name='clothPillar50']/drop[@event='Harvest']" name="count">500</setattribute>
 
+
+	<!-- Make Player Ovens usable as Campfire -->
+	<append xpath="/blocks/block[@name='cntStoveModernVer1Closed_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+	
+	<append xpath="/blocks/block[@name='cntStoveOldVer1Closed_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntMicrowaveOvenVer1Closed_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+			
+	<append xpath="/blocks/block[@name='cntMicrowaveOvenVer2Closed_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+	
+	<append xpath="/blocks/block[@name='cntwallOvenFullWhite_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntwallOvenFullGrey_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntwallOvenFullBlack_Player']">
+		<property name="Class" value="Campfire"/>
+		<property name="HeatMapStrength" value="2"/>
+		<property name="HeatMapTime" value="5000"/>
+		<property name="HeatMapFrequency" value="1000"/>
+		<property class="Workstation">
+			<property name="Modules" value="tools,output,input"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket"/>
+			<property name="CraftingAreaRecipes" value="campfire"/>
+		</property>
+	</append>
+		
+		
 	<append xpath="/blocks">
-		<!-- Working Oven and Sink Mod -->
-		<block name="workstationOven">
-			<property name="DescriptionKey" value="workstationOvenDesc"/>
-			<property name="Class" value="Campfire"/>
-			<property name="CustomIcon" value="cntWallOven"/>
-			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Material" value="Mwood_weak"/>
-			<property name="Texture" value="346,345,341,345,262,345"/>
-			<property name="LootList" value="workingOvenSink"/>
-			<drop event="Destroy" name="workstationOven" count="1"/>
-			<drop event="Fall" name="woodDebris" count="1" prob="1.0" stick_chance=".75"/>
-			<property name="HeatMapStrength" value="2"/>
-			<property name="HeatMapTime" value="5000"/>
-			<property name="HeatMapFrequency" value="1000"/>
-			<property name="Group" value="Food/Cooking,Decor"/>
-			<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
-			<property class="Workstation">
-				<property name="Modules" value="tools,output,input"/>
-				<property name="Collide" value="melee,bullet,arrow,rocket"/>
-				<property name="CraftingAreaRecipes" value="campfire"/>
-			</property>
-			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
-		</block>
-		<block name="workingGranitSink">
-			<property name="DescriptionKey" value="WorkingSinkDesc"/>
-			<property name="Extends" value="cntGraniteSink"/>
-			<property name="CustomIcon" value="cntGraniteSink"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Class" value="SecureLoot"/>
-		</block>
-
-		<!-- Junction Box Mod -->
-		<block name="JunctionBox">
-			<property name="DescriptionKey" value="JunctionBoxDesc"/>
-			<property name="Class" value="ElectricWire"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="MaxDamage" value="1000"/>
-			<property name="StabilitySupport" value="true"/>
-			<property name="CustomIcon" value="fusebox"/>
-			<property name="ImposterDontBlock" value="true"/>
-			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="ModelOffset" value="0,-0.2,0"/>
-			<property name="Stacknumber" value="10"/>
-			<property name="Shape" value="Ext3dModel"/>
-			<property name="Texture" value="293"/>
-			<property name="Model" value="Industrial/fusebox" param1="main_mesh"/>
-			<property name="HandleFace" value="South"/>
-			<property name="Mesh" value="models"/>
-			<property name="RequiredPower" value="0"/>
-			<property name="Group" value="Building"/>
-			<property name="DamageReceived" value="0.5"/>
-			<property name="FilterTags" value="fdecor,fother,felectrical"/>
-			<property name="SortOrder1" value="70e0"/>
-			<property class="RepairItems">
-				<property name="resourceScrapIron" value="8"/>
-			</property>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
-			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
-		</block>
-
-		<!-- Additional Lights -->
-		<block name="porchLight01_Player">
-			<property name="Class" value="PoweredLight"/>
-			<property name="Extends" value="porchLight01"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="RuntimeSwitch" value="true"/>
-			<property name="StabilitySupport" value="false"/>
-			<property name="Light" value="1"/>
-			<!-- build restriction -->
-			<property name="TakeDelay" value="5"/>
-			<property name="RequiredPower" value="5"/>
-			<property name="DescriptionKey" value="lightPlayerGroupDesc"/>
-			<property name="CustomIcon" value="porchLight01"/>
-			<property name="FilterTags" value="MC_playerBlocks,SC_electrical"/>
-		</block>
-		<block name="porchLight04_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/porchLight04Prefab"/>
-			<property name="CustomIcon" value="porchLight04"/>
-		</block>
-		<block name="porchLight04Brass_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/porchLight04BrassPrefab"/>
-			<property name="CustomIcon" value="porchLight04Brass"/>
-		</block>
-		<block name="ceilingLight02_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight02Prefab"/>
-			<property name="HandleFace" value="Top"/>
-			<property name="CustomIcon" value="ceilingLight02"/>
-		</block>
-		<block name="ceilingLight02Brass_Player">
-			<property name="Extends" value="porchLight04Brass_Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight02BrassPrefab"/>
-			<property name="HandleFace" value="Top"/>
-			<property name="CustomIcon" value="ceilingLight02Brass"/>
-		</block>
-		<block name="ceilingLight04_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight04Prefab"/>
-			<property name="HandleFace" value="Top"/>
-			<property name="CustomIcon" value="ceilingLight04"/>
-		</block>
-		<block name="ceilingLight05_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight05Prefab"/>
-			<property name="HandleFace" value="Top"/>
-			<property name="CustomIcon" value="ceilingLight05"/>
-		</block>
-		<block name="ceilingLight05Brass_Player">
-			<property name="Extends" value="porchLight04Brass_Player"/>
-			<property name="Model" value="Entities/Lighting/ceilingLight05BrassPrefab"/>
-			<property name="HandleFace" value="Top"/>
-			<property name="CustomIcon" value="ceilingLight05Brass"/>
-		</block>
-		<block name="wallLight01_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/wall_light01Prefab"/>
-			<property name="HandleFace" value="South"/>
-			<property name="CustomIcon" value="wallLight01"/>
-		</block>
-		<block name="streetLight01_Player">
-			<property name="Extends" value="streetLight01"/>
-			<property name="Class" value="PoweredLight"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="RuntimeSwitch" value="true"/>
-			<property name="StabilitySupport" value="false"/>
-			<!-- build restriction -->
-			<property name="TakeDelay" value="5"/>
-			<property name="RequiredPower" value="5"/>
-			<property name="CustomIcon" value="streetLight01"/>
-		</block>
-		<!-- Streetlights with 2-4 Lights. They currently suck cause there's always just one of the many Bulbs lighten up
-		<block name="streetLight02_Player">
-			<property name="Extends" value="streetLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/lightStreetLamp02Prefab"/>
-			<property name="CustomIcon" value="streetLight02"/>
-		</block>
-		<block name="streetLight03_Player">
-			<property name="Extends" value="streetLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/lightStreetLamp03Prefab"/>
-			<property name="CustomIcon" value="streetLight03"/>
-		</block>
-		<block name="streetLight04_Player">
-			<property name="Extends" value="streetLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/lightStreetLamp04Prefab"/>
-			<property name="CustomIcon" value="streetLight04"/>
-		</block>
-		-->
-		<block name="streetLightClassic_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Model" value="Entities/Lighting/streetLamp_ClassicPrefab"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="MultiBlockDim" value="1,5,1"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="ImposterExchange" value="imposterDontBlockCTRPole" param1="169"/>
-			<property name="OnlySimpleRotations" value="true"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="CustomIcon" value="streetLightClassic"/>
-		</block>
-		<block name="sconce1Light_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/sconce_1_Prefab"/>
-			<property name="CustomIcon" value="sconce1Light"/>
-		</block>
-		<block name="flashlightDecor_Player">
-			<property name="Extends" value="porchLight01" param1="HandleFace,DescriptionKey,FilterTags"/>
-			<property name="Class" value=""/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CanPickup" value="true"/>
-			<property name="CustomIcon" value="flashlightDecor"/>
-			<property name="Material" value="Mglass"/>
-			<property name="Model" value="Entities/Lighting/flashlightDecorPrefab"/>
-			<property name="StabilitySupport" value="false"/>
-			<!-- build restriction -->
-			<property name="TakeDelay" value="2"/>
-			<property name="Group" value="Science,Building,advBuilding"/>
-		</block>
-		<block name="industrialLight02Red_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/industrial_light_02_redPrefab"/>
-			<property name="CustomIcon" value="industrialLight02Red"/>
-			<property name="HandleFace" value="Top"/>
-		</block>
-		<block name="ceilingFanLight_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Path" value="solid"/>
-			<property name="Model" value="Entities/Lighting/ceiling_fanPrefab"/>
-			<property name="CustomIcon" value="ceilingFanLight"/>
-			<property name="HandleFace" value="Top"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="1"/>
-				<property name="resourceElectricParts" value="3"/>
-				<property name="resourceMechanicalParts" value="2"/>
-			</property>
-		</block>
-		<block name="endTableLamp_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Path" value="solid"/>
-			<property name="Model" value="Entities/Lighting/end_table_lightPrefab"/>
-			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="CustomIcon" value="endTableLamp"/>
-		</block>
-		<block name="signExitLight_Player">
-			<property name="Extends" value="porchLight01_Player"/>
-			<property name="Model" value="Entities/Lighting/exit_signPrefab"/>
-			<property name="HandleFace" value="South"/>
-			<property name="CustomIcon" value="signExitLight"/>
-		</block>
-		<block name="roadBarricadeLight_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="MultiBlockDim" value="3,2,1"/>
-			<property name="OnlySimpleRotations" value="true"/>
-			<property name="Place" value="TowardsPlacerInverted"/>
-			<property name="Model" value="Entities/Signs/barricadePrefab"/>
-			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
-			<drop event="Destroy" name="resourceScrapIron" count="3,12"/>
-			<property name="Group" value="Decor/Miscellaneous"/>
-			<property name="FilterTags" value="fdecor,fother,ffurniture,felectrical"/>
-			<property name="DescriptionKey" value="decorationBlockGroupDesc"/>
-			<property name="CustomIcon" value="roadBarricadeLight"/>
-		</block>
-		<block name="deskLampLight_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Model" value="Entities/Lighting/desk_lampPrefab"/>
-			<property name="CustomIcon" value="deskLampLight"/>
-		</block>
-		<block name="tableLampLight_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Model" value="Entities/Lighting/table_lampPrefab"/>
-			<property name="CustomIcon" value="tableLampLight"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="GndAlign" value="1"/>
-		</block>
-		<block name="tableLampLightCentered_Player">
-			<property name="Extends" value="porchLight01_Player" param1="HandleFace"/>
-			<property name="Model" value="Entities/Lighting/table_lamp_centeredPrefab"/>
-			<property name="CustomIcon" value="tableLampLight"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="GndAlign" value="1"/>
-		</block>
-
 		<!-- Additional crobs -->
 		<!-- NOT_A_SHAPE -->
 		<block name="plantedPeas1">
@@ -359,343 +185,5 @@
 			<!-- <property name="DowngradeBlock" value="plantedPeas1"/> -->
 		</block>
 		
-		
-		<!-- expanded traps -->
-		<block name="trapFireEmpty">
-			<property name="CustomIcon" value="trapFire"/>
-			<property name="Material" value="Msteel"/>
-			<property name="Texture" value="356,352,352,352,352,352"/>
-			<property class="UpgradeBlock">
-				<property name="ToBlock" value="trapFire"/>
-				<property name="Item" value="trapGasCan"/>
-				<property name="ItemCount" value="100"/>
-				<property name="UpgradeHitCount" value="1"/>
-			</property>
-			<property class="RepairItems">
-				<property name="resourceForgedSteel" value="8"/>
-			</property>
-			<drop event="Destroy" count="0" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapFire">
-			<property name="DescriptionKey" value="trapFireDesc"/>
-			<property name="Class" value="Damage"/>
-			<property name="Damage" value="30"/>
-			<property name="Damage_received" value="30"/>
-			<property name="MaxDamage" value="3000"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property name="Material" value="Msteel"/>
-			<property name="Texture" value="355,352,352,352,352,352"/>
-			<property name="DowngradeBlock" value="trapFireEmpty"/>
-			<drop event="Destroy" count="0" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
-			<property name="Group" value="Tools/Traps"/>
-		</block>
-		<block name="trapAdhesiveKnockdown">
-			<property name="CustomIcon" value="trapAdhesiveSpike"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveKnockdownDesc"/>
-			<property name="Material" value="MbarbedFence"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="MaxDamage" value="132"/>
-			<property name="Model" value="Entities/Electrical/pressure_platePrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0"/>
-			<property name="Group" value="Tools/Traps"/>
-			<drop event="Fall" count="0"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveShocked">
-			<property name="CustomIcon" value="trapAdhesiveSpike"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveDesc"/>
-			<property name="Material" value="MbarbedFence"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="33"/>
-			<property name="Damage_received" value="33"/>
-			<property name="MaxDamage" value="238"/>
-			<property name="Model" value="Entities/Electrical/pressure_platePrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0"/>
-			<property name="Group" value="Tools/Traps"/>
-			<drop event="Fall" count="0"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveBurning">
-			<property name="CustomIcon" value="trapAdhesiveSpike"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveBurningDesc"/>
-			<property name="Material" value="MbarbedFence"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="44"/>
-			<property name="Damage_received" value="44"/>
-			<property name="MaxDamage" value="450"/>
-			<property name="Model" value="Entities/Electrical/pressure_platePrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0"/>
-			<property name="Group" value="Tools/Traps"/>
-			<drop event="Fall" count="0"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveStunned">
-			<property name="CustomIcon" value="trapAdhesiveSpike"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveStunnedDesc"/>
-			<property name="Material" value="MbarbedFence"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="MaxDamage" value="132"/>
-			<property name="Model" value="Entities/Electrical/pressure_platePrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
-			<drop event="Destroy" count="0"/>
-			<property name="Group" value="Tools/Traps"/>
-			<drop event="Fall" count="0"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="pressureplateLongtrapAdhesiveKnockdown">
-			<property name="CustomIcon" value="pressureplateLong"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveKnockdownDesc"/>
-			<property name="Material" value="MbarbedWire"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="MaxDamage" value="244"/>
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="MultiBlockDim" value="5,1,1"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="40"/>
-				<property name="resourceMechanicalParts" value="6"/>
-				<property name="resourceElectricParts" value="4"/>
-			</property>
-		</block>
-		<block name="pressureplateLongtrapAdhesiveShocked">
-			<property name="CustomIcon" value="pressureplateLong"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveShockedDesc"/>
-			<property name="Material" value="MbarbedWire"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Damage" value="33"/>
-			<property name="Damage_received" value="33"/>
-			<property name="MaxDamage" value="474"/>
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="MultiBlockDim" value="5,1,1"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="40"/>
-				<property name="resourceMechanicalParts" value="6"/>
-				<property name="resourceElectricParts" value="4"/>
-			</property>
-		</block>
-		<block name="pressureplateLongtrapAdhesiveBurning">
-			<property name="CustomIcon" value="pressureplateLong"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveBurningDesc"/>
-			<property name="Material" value="MbarbedWire"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="MultiBlockDim" value="5,1,1"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="CanPickup" value="false"/>
-			<property name="Damage" value="44"/>
-			<property name="Damage_received" value="44"/>
-			<property name="MaxDamage" value="900"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="40"/>
-				<property name="resourceMechanicalParts" value="6"/>
-				<property name="resourceElectricParts" value="4"/>
-			</property>
-		</block>
-		<block name="pressureplateLongtrapAdhesiveStunned">
-			<property name="CustomIcon" value="pressureplateLong"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="pressureplateLongtrapAdhesiveStunnedDesc"/>
-			<property name="Material" value="MbarbedWire"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="217"/>
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="Entities/Electrical/pressure_plate_longPrefab"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="MultiBlockDim" value="5,1,1"/>
-			<property name="ImposterExchange" value="imposterPlate" param1="143"/>
-			<property name="HandleFace" value="Bottom"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="MaxDamage" value="166"/>
-			<property name="CanPickup" value="false"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-			<property class="RepairItems">
-				<property name="resourceForgedIron" value="40"/>
-				<property name="resourceMechanicalParts" value="6"/>
-				<property name="resourceElectricParts" value="4"/>
-			</property>
-		</block>
-		<block name="trapAdhesiveKnockdownSpike">
-			<property name="CustomIcon" value="barbedWireSheet"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveKnockdownSpikeDesc"/>
-			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryKnockdown02"/>
-			<property name="MaxDamage" value="10000"/>
-			<property name="Shape" value="New"/>
-			<property name="Model" value="cone1m"/>
-			<property name="Texture" value="355"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveShockedSpike">
-			<property name="CustomIcon" value="barbedWireSheet"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveShockedSpikeDesc"/>
-			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence"/>
-			<property name="BuffsWhenWalkedOn" value="buffShocked"/>
-			<property name="MaxDamage" value="10000"/>
-			<property name="Shape" value="New"/>
-			<property name="Model" value="cone1m"/>
-			<property name="Texture" value="355"/>
-			<property name="Damage" value="33"/>
-			<property name="Damage_received" value="33"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveBurningSpike">
-			<property name="CustomIcon" value="barbedWireSheet"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveBurningSpikeDesc"/>
-			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property name="MaxDamage" value="10000"/>
-			<property name="Shape" value="New"/>
-			<property name="Model" value="cone1m"/>
-			<property name="Texture" value="355"/>
-			<property name="Damage" value="44"/>
-			<property name="Damage_received" value="44"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapAdhesiveStunnedSpike">
-			<property name="CustomIcon" value="barbedWireSheet"/>
-			<property name="CustomIconTint" value="4040ff"/>
-			<property name="DescriptionKey" value="trapAdhesiveStunnedSpikeDesc"/>
-			<!--<property name="Extends" value="barbedWireSheet" />-->
-			<property name="Material" value="MbarbedFence"/>
-			<property name="BuffsWhenWalkedOn" value="buffInjuryStunned03"/>
-			<property name="MaxDamage" value="10000"/>
-			<property name="Shape" value="New"/>
-			<property name="Model" value="cone1m"/>
-			<property name="Texture" value="355"/>
-			<property name="Damage" value="1"/>
-			<property name="Damage_received" value="1"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="minersTNT">
-			<property name="DescriptionKey" value="minersTNTDesc"/>
-			<property name="Extends" value="mineCandyTin"/>
-			<property class="Explosion">
-				<property name="ParticleIndex" value="5"/>
-				<property name="RadiusBlocks" value="8"/>
-				<property name="BlockDamage" value="3000"/>
-				<property name="DamageBonus.stone" value="1"/>
-				<property name="DamageBonus.metal" value="1"/>
-				<property name="DamageBonus.earth" value="1"/>
-				<property name="DamageBonus.wood" value="1"/>
-				<property name="DamageBonus.water" value="1"/>
-			</property>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapSteelFireSpike">
-			<property name="Damage" value="100"/>
-			<property name="Damage_received" value="100"/>
-			<property name="MaxDamage" value="10000"/>
-			<property name="Class" value="TrunkTip"/>
-			<property name="DescriptionKey" value="trapSteelFireSpikeDesc"/>
-			<property name="Damage" value="7"/>
-			<property name="Damage_received" value="40"/>
-			<property name="Material" value="Msteel"/>
-			<property name="Shape" value="New"/>
-			<property name="Model" value="cone1m"/>
-			<property name="Texture" value="355"/>
-			<!--property name="DontDamageOnTouch" value="true" /-->
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property class="RepairItems">
-				<property name="resourceForgedSteel" value="10"/>
-			</property>
-			<property name="CustomUpgradeSound" value="Crafting/place_block_metal"/>
-			<property name="DowngradeBlock" value="securityGatePlate"/>
-			<drop event="Destroy" count="0"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob=".75" stick_chance="1"/>
-			<property name="EconomicValue" value="160"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
-		<block name="trapNailMine">
-			<property name="DescriptionKey" value="trapNailMineDesc"/>
-			<property name="Class" value="Mine"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="#Other/Items?Weapons/Explosive/trapMineTinCan_01Prefab.prefab"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="Explosion.ParticleIndex" value="1"/>
-			<!-- which prefab/particle is used -->
-			<property name="Explosion.RadiusEntities" value="4"/>
-			<!-- damage radius for entities -->
-			<property name="DropScale" value="3"/>
-			<drop event="Destroy" count="0"/>
-			<property name="Group" value="Tools/Traps"/>
-			<property name="UnlockedBy" value="trapSchematic"/>
-		</block>
 	</append>
 </basti890>

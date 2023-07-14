@@ -1,8 +1,4 @@
 Key,UsedInMainMenu,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
-workstationOvenDesc,,blocks,Block,New,This working oven can be used to cook many different recipes without using a fuel source.,,,,,
-workstationOven,,blocks,Block,New,Working Oven,,,,,
-WorkingSinkDesc,,blocks,Block,New,This working can be used as a source of clean water. Fill your jars with water by left-clicking with them.,,,,,
-workingGranitSink,,blocks,Block,New,Working Sink,,,,,
 JunctionBoxDesc,,blocks,Block,New,This fuse box works as distributor for electricity with in-wall wiring.,,,,,
 JunctionBox,,blocks,Block,New,Junction Box,,,,,
 porchLight01_Player,,blocks,Block,New,Porch Light,,Veranda Licht,,,

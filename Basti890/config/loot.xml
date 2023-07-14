@@ -1,6 +1,7 @@
 <basti890>
 
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigerator']" name="size">6,8</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigeratorNOPOP']" name="size">6,8</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='dishwasherNOPOP']" name="size">6,6</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='beerCooler']" name="size">6,6</setattribute>
 
 	<!-- vehicleBicycle storage -->
@@ -18,61 +19,4 @@
 	<!-- vehicleGyrocopter storage -->
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']" name="size">10,8</setattribute><!-- Default 9,5 -->
 
-	<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
-		<item name="Biscuit Recipe" loot_prob_template="veryLow"/>
-		<item name="Biscuit With Jam Recipe" loot_prob_template="veryLow"/>
-		<item name="Ramen Soup Recipe" loot_prob_template="veryLow"/>
-	</append>
-
-	<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
-		<item name="Health Drink Recipe" loot_prob_template="ProbT2"/>
-	</append>
-  
-	<append xpath="/lootcontainers/lootgroup[@name='groupCupboard01']">
-		<item name="Bag Of Hot Chips" loot_prob_template="medLow"/>
-		<item name="Bag Of Chips" loot_prob_template="medLow"/>
-		<item name="Candy Bar" loot_prob_template="medLow"/>
-		<item name="Ramen Noodles" loot_prob_template="medLow"/>
-	</append>
-
-	<!-- expaned traps -->
-	<append xpath="/lootcontainers/lootgroup[@name='groupArmyTruck01']">
-		<item name="gunTrapNailgun" count="1" loot_prob_template="low"/>
-		<item name="trapFire" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveKnockdown" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveShocked" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveBurning" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveStunned" count="1,3" loot_prob_template="low"/>
-		<item name="pressureplateLongtrapAdhesiveKnockdown" count="1,3" loot_prob_template="low"/>
-		<item name="pressureplateLongtrapAdhesiveShocked" count="1,3" loot_prob_template="low"/>
-		<item name="pressureplateLongtrapAdhesiveBurning" count="1,3" loot_prob_template="low"/>
-		<item name="pressureplateLongtrapAdhesiveStunned" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveKnockdownSpike" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveShockedSpike" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveBurningSpike" count="1,3" loot_prob_template="low"/>
-		<item name="trapAdhesiveStunnedSpike" count="1,3" loot_prob_template="low"/>
-		<item name="minersTNT" count="1,3" loot_prob_template="low"/>
-		<item name="trapSteelFireSpike" count="1,3" loot_prob_template="low"/>
-		<item name="trapNailMine" count="1,3" loot_prob_template="low"/>
-		<item name="trapSchematic" count="1" loot_prob_template="low"/>
-	</append>
-
-	<append xpath="/lootcontainers/lootgroup[@name='booksAllScaled']">
-		<item name="trapSchematic" count="1,5" loot_prob_template="low"/>
-	</append>
-	
-	<append xpath="/lootcontainers/lootgroup[@name='groupToolsT2']">
-		<item name="gunTrapNailgun" count="1" loot_prob_template="low"/>
-		<item name="trapGasCan" count="10" loot_prob_template="low"/>
-	</append>
-	
-	<append xpath="/lootcontainers/lootgroup[@name='groupWorkingStiffsCrate']">
-		<item name="gunTrapNailgun" count="1" loot_prob_template="low"/>
-	</append>
-	
-	<append xpath="/lootcontainers/lootgroup[@name='groupJunk']">
-		<item name="trapGasCan" count="10" loot_prob_template="low"/>
-		<item name="trapSchematic" count="1" loot_prob_template="low"/>
-	</append>
-	
 </basti890>

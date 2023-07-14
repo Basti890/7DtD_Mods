@@ -120,12 +120,14 @@
 			<ingredient name="ammo762mmBulletBall" count="500"/>
 			<ingredient name="resourceForgedSteel" count="100"/>
 		</recipe>
+		<!--
 		<recipe name="modGunMeleeBlessedMetal" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceForgedSteel" count="5"/>
 			<ingredient name="resourceGoldNugget" count="1"/>
 			<ingredient name="resourceMechanicalParts" count="2"/>
 			<ingredient name="resourceSpring" count="5"/>
 		</recipe>
+		-->
 	</append>
 
 	<set xpath="/recipes/recipe[@name='ammoShotgunShell']">
@@ -168,7 +170,6 @@
 	<set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']">
 		<ingredient name="resourceCloth" count="1"/>
 		<ingredient name="ammoGasCan" count="300"/>
-		<ingredient name="drinkJarEmpty" count="1"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='thrownAmmoPipeBomb']">
 		<ingredient name="resourceYuccaFibers" count="1"/>
@@ -197,6 +198,15 @@
 		<ingredient name="resourcePaper" count="5"/>
 	</set>
 
+
+	<set xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']">
+		<ingredient name="resourceForgedIron" count="5"/>
+		<ingredient name="resourceHeadlight" count="1"/>
+		<ingredient name="resourceElectricParts" count="2"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+	</set>
+		
+		
 	<!-- Food -->
 	<setattribute xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
 	<setattribute xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
@@ -207,6 +217,7 @@
 	
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedIron']" name="count">2</setattribute>
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedSteel']" name="count">2</setattribute>
+
 
 	<append xpath="/recipes">
 	
@@ -220,22 +231,12 @@
 			<ingredient name="medicalBandage" count="1"/>
 		</recipe>
 	
-		<!--Working Ovens and Sinks Mod -->
-		<recipe name="workstationOven" count="1" scrapable="False">
-			<ingredient name="resourceForgedIron" count="20"/>
-			<ingredient name="toolCookingGrill" count="2"/>
-		</recipe>
-		<recipe name="workingGranitSink" count="1" scrapable="False">
-			<ingredient name="resourceWood" count="15"/>
-			<ingredient name="resourceCobblestones" count="5"/>
-			<ingredient name="resourceForgedIron" count="10"/>
-			<ingredient name="resourceMetalPipe" count="5"/>
-		</recipe>
 		
 		<!-- Craft Bricks -->
 		<recipe name="brickShapes:VariantHelper" count="1">
 			<ingredient name="resourceCobblestones" count="5"/>
 		</recipe>
+
 
 		<!-- Extract Gunpowdser from Mines -->
 		<recipe name="resourceGunPowder" count="4">
@@ -250,6 +251,7 @@
 		<recipe name="resourceGunPowder" count="5">
 			<ingredient name="mineCookingPot" count="1"/>
 		</recipe>
+		
 		
 		<!-- Additional Resources -->
 		<recipe name="resourcePaper" count="1">
@@ -279,99 +281,11 @@
 		</recipe>
 		<recipe name="foodCanPeas" count="1">
 			<ingredient name="foodCropPeas" count="5"/>
-			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 		<recipe name="plantedPeas1" count="1">
 			<ingredient name="foodCropPeas" count="1"/>
 		</recipe>
 		
-		<!-- Junction Box Mod -->
-		<recipe name="JunctionBox" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceElectricParts" count="3"/>
-			<ingredient name="resourceForgedIron" count="5"/>
-		</recipe>
-
-		<!-- Our Light recipies -->
-		<recipe name="porchLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="porchLight04_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="porchLight04Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingLight02_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingLight02Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingLight04_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingLight05_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingLight05Brass_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="wallLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="streetLight01_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="streetLightClassic_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="sconce1Light_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="flashlightDecor_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="industrialLight02Red_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="ceilingFanLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="endTableLamp_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="signExitLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="roadBarricadeLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="deskLampLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
-		<recipe name="tableLampLight_Player" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="4"/>
-		</recipe>
 		
 		<!-- Expanded Food Mod -->
 		<recipe name="bowl" count="1" scrapable="False" craft_area="campfire">
@@ -403,20 +317,16 @@
 		</recipe>
 		<recipe name="blueberryJam" count="1" scrapable="False">
 			<ingredient name="foodCropBlueberries" count="12"/>
-			<ingredient name="drinkJarEmpty" count="1"/>
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
 		<recipe name="canMeatStew" count="1" scrapable="False">
 			<ingredient name="foodMeatStew" count="1"/>
-			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 		<recipe name="canVegetableStew" count="1" scrapable="False">
 			<ingredient name="foodVegetableStew" count="1"/>
-			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 		<recipe name="canChunkyMeatStew" count="1" scrapable="False">
 			<ingredient name="stewChunkyMeat" count="1"/>
-			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 		<recipe name="bowlFruit" count="1" scrapable="False">
 			<ingredient name="bowl" count="1"/>
@@ -567,95 +477,5 @@
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
 		
-		<!-- Expanded Traps Mod -->
-		<recipe name="trapAdhesiveKnockdown" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="4"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="modGunCrippleEm" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveShocked" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="10"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="modMeleeStunBatonRepulsor" count="1"/>
-			<ingredient name="carBattery" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveBurning" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="24"/>
-			<ingredient name="ammoGasCan" count="12"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="modFuelTankSmall" count="1"/>
-			<ingredient name="modMeleeClubBurningShaft" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveStunned" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="20"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
-		</recipe>
-		<recipe name="pressureplateLongtrapAdhesiveKnockdown" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="20"/>
-			<ingredient name="resourceGlue" count="10"/>
-			<ingredient name="modGunCrippleEm" count="1"/>
-		</recipe>
-		<recipe name="pressureplateLongtrapAdhesiveShocked" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="30"/>
-			<ingredient name="resourceGlue" count="10"/>
-			<ingredient name="modMeleeStunBatonRepulsor" count="1"/>
-			<ingredient name="carBattery" count="1"/>
-		</recipe>
-		<recipe name="pressureplateLongtrapAdhesiveBurning" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="40"/>
-			<ingredient name="ammoGasCan" count="24"/>
-			<ingredient name="resourceGlue" count="10"/>
-			<ingredient name="modFuelTankSmall" count="1"/>
-			<ingredient name="modMeleeClubBurningShaft" count="1"/>
-		</recipe>
-		<recipe name="pressureplateLongtrapAdhesiveStunned" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="50"/>
-			<ingredient name="meleeWpnBatonT2StunBatonParts" count="32"/>
-		</recipe>
-		<recipe name="trapAdhesiveKnockdownSpike" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="12"/>
-			<ingredient name="resourceGlue" count="3"/>
-			<ingredient name="modGunCrippleEm" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveShockedSpike" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="12"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="modMeleeStunBatonRepulsor" count="1"/>
-			<ingredient name="carBattery" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveBurningSpike" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="12"/>
-			<ingredient name="ammoGasCan" count="5"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="modFuelTankSmall" count="1"/>
-			<ingredient name="modMeleeClubBurningShaft" count="1"/>
-		</recipe>
-		<recipe name="trapAdhesiveStunnedSpike" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceWood" count="12"/>
-			<ingredient name="resourceGlue" count="5"/>
-			<ingredient name="meleeWpnBatonT2StunBatonParts" count="4"/>
-		</recipe>
-		<recipe name="trapFireEmpty" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="8"/>
-			<ingredient name="toolCookingGrill" count="1"/>
-		</recipe>
-		<recipe name="trapNailMine" count="1" scrapable="True" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceNail" count="15"/>
-			<ingredient name="resourceGunPowder" count="1"/>
-			<ingredient name="resourceCandyTin" count="1"/>
-		</recipe>
-		<recipe name="trapGasCan" count="10" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="ammoGasCan" count="5"/>
-			<ingredient name="resourceGunPowder" count="5"/>
-			<ingredient name="resourceOil" count="1"/>
-		</recipe>
-		<recipe name="gunTrapNailgun" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting,learnable">
-			<ingredient name="resourceForgedSteel" count="20"/>
-			<ingredient name="resourceMechanicalParts" count="20"/>
-			<ingredient name="resourceDuctTape" count="2"/>
-			<ingredient name="resourceScrapPolymers" count="10"/>
-			<ingredient name="resourceSpring" count="5"/>
-		</recipe>
 	</append>
 </basti890>
