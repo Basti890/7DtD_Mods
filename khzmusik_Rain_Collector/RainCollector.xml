@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RainCollector</name>
+    </assembly>
+    <members>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches">
+            <summary>
+            Harmony patches for <see cref="T:BlockDewCollector"/>.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.BlockDewCollectorPatches.PropIsChunkObserver">
+            <summary>
+            Property name to determine if the dew collector should be a chunk observer.
+            </summary>
+        </member>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches.AddTileEntity">
+            <summary>
+            Patch to
+            <see cref="M:BlockDewCollector.addTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>
+            to add a chunk observer as the tile entity is being added.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.BlockDewCollectorPatches.AddTileEntity.Postfix(WorldBase,Vector3i,BlockDewCollector)">
+            <summary>
+            Harmony postfix for
+            <see cref="M:BlockDewCollector.addTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>.
+            </summary>
+            <param name="world"></param>
+            <param name="_blockPos"></param>
+            <param name="__instance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.BlockDewCollectorPatches.RemoveTileEntity">
+            <summary>
+            Patch to
+            <see cref="M:BlockDewCollector.removeTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>
+            to remove the chunk observer added when the tile entity was added.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.BlockDewCollectorPatches.RemoveTileEntity.Postfix(WorldBase,Vector3i,BlockDewCollector)">
+            <summary>
+            Harmony postfix for
+            <see cref="M:BlockDewCollector.removeTileEntity(WorldBase,Chunk,Vector3i,BlockValue)"/>.
+            </summary>
+            <param name="world"></param>
+            <param name="_blockPos"></param>
+            <param name="__instance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.RainCollector">
+            <summary>
+            Harmony initializer for the Rain Collector mod.
+            </summary>
+        </member>
+        <member name="P:RainCollector.Harmony.RainCollector.Debug">
+            <summary>
+            Whether or not to print debug messages to the console.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.RainCollector.InitMod(Mod)">
+            <summary>
+            Initializes the mod.
+            </summary>
+            <param name="_modInstance"></param>
+        </member>
+        <member name="T:RainCollector.Harmony.TileEntityDewCollectorPatches">
+            <summary>
+            Harmony patches for <see cref="T:TileEntityDewCollector"/>.
+            </summary>
+        </member>
+        <member name="T:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate">
+            <summary>
+            Patches <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/> to handle the
+            additional features of this mod.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropFogConvertMultiplier">
+            <summary>
+            Fog Convert Multiplier property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropMinConvertTemperature">
+            <summary>
+            Minimum Convert Temperature property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropRainConvertMultiplier">
+            <summary>
+            Rain Convert Multiplier property name.
+            </summary>
+        </member>
+        <member name="F:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.PropContainerSize">
+            <summary>
+            Container size property name.
+            </summary>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.Prefix(World,TileEntityDewCollector,System.UInt64,System.UInt64@)">
+            <summary>
+            Harmony prefix for <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/>
+            that saves the last world time as state, and bypasses the method if the temperature
+            check fails.
+            </summary>
+            <param name="world"></param>
+            <param name="__instance"></param>
+            <param name="___lastWorldTime"></param>
+            <param name="__state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.Postfix(World,TileEntityDewCollector,System.UInt64)">
+            <summary>
+            Harmony postfix for <see cref="M:TileEntityDewCollector.HandleUpdate(World)"/>
+            that handles adding additional fill time due to fog density and rainfall.
+            </summary>
+            <param name="world"></param>
+            <param name="__instance"></param>
+            <param name="__state"></param>
+        </member>
+        <member name="M:RainCollector.Harmony.TileEntityDewCollectorPatches.HandleUpdate.InitializeProperties(Block)">
+            <summary>
+            Initializes the mod using the block properties, if it hasn't already been initialized,
+            and returns true if the mod is enabled.
+            </summary>
+            <param name="block"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
