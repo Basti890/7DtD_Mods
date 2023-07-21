@@ -6,10 +6,10 @@
 	<setattribute xpath="/progression/perks/perk[@name='perkMiner69r']/effect_group/passive_effect[@name='BlockDamage']" name="value">1,5</setattribute>
 	
 	<!-- Faster looting -->
-	<append xpath="/progression/attributes/attribute[@name='attPerception']/effect_group">
-		<passive_effect name="ScavengingTime" operation="perc_subtract" level="2" value=".9"/>
-	</append>
-	
+	<set  xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='ScavengingTime']/@level">1</set>
+	<set  xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='ScavengingTime']/@value">0.95</set>
+
+
 	<!-- Craft Tier6 -->
 
 	<!-- HARVESTING_TOOL_SKILLS -->
