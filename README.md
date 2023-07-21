@@ -18,6 +18,7 @@ The Basti890 Mods inculde:
 * craft brick shapes
 * faster Looting
 * some reduced ingredients for selected recipies
+* larger vehicle storage
 
 Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if iot does not exist).
 
