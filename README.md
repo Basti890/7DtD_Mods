@@ -1,4 +1,4 @@
-# 7DtD_Mods
+# my Mods for 7 Days to Die
 
 The Basti890 Mods inculde:
 * higher item stacknumbers
