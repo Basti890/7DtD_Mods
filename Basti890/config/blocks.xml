@@ -17,6 +17,14 @@
 	<setattribute xpath="/blocks/block[@name='cntCollapsedDewCollector']/drop[@event='Destroy']" name="name">resourceWaterFilter</setattribute>
 	
 	
+	<!-- traps better -->
+	<setattribute xpath="/blocks/block[@name='bladeTrap']/property[@name='DamageReceived']" name="value">1</setattribute>
+	<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='MaxDistance']" name="value">50</setattribute>
+	<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='RaySpread']" name="value">0.3</setattribute>
+	<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='MaxDistance']" name="value">25</setattribute>
+	<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='RaySpread']" name="value">0.6</setattribute>
+	
+	
 	<!-- More power Hough Hough hough hough houg -->
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='MaxPower']" name="value">900</setattribute>
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']" name="value">150</setattribute>
@@ -183,6 +191,43 @@
 			<drop event="Harvest" name="foodCropPeas" prob="0.5" count="1" tag="bonusCropHarvest"/>
 			<drop event="Destroy" name="plantedPeas1" count="1" prob="0.5"/>
 			<!-- <property name="DowngradeBlock" value="plantedPeas1"/> -->
+		</block>
+		
+		
+		<!-- expanded traps -->
+		<block name="trapFireEmpty">
+			<property name="CustomIcon" value="trapFire"/>
+			<property name="DescriptionKey" value="trapFireEmptyDesc"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Texture" value="356,352,352,352,352,352"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapFire"/>
+				<property name="Item" value="ammoGasCan"/>
+				<property name="ItemCount" value="3000"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="8"/>
+			</property>
+			<drop event="Destroy" count="0" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
+		</block>
+		<block name="trapFire">
+			<property name="DescriptionKey" value="trapFireDesc"/>
+			<property name="Class" value="Damage"/>
+			<property name="Damage" value="10"/>
+			<!-- <property name="Damage_received" value="30"/> -->
+			<property name="MaxDamage" value="3000"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Texture" value="355,352,352,352,352,352"/>
+			<property name="DowngradeBlock" value="trapFireEmpty"/>
+			<property class="RepairItems">
+				<property name="ammoGasCan" value="300"/>
+			</property>
+			<drop event="Destroy" count="0" prob="1"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
+			<property name="Group" value="Tools/Traps"/>
 		</block>
 		
 	</append>

@@ -31,7 +31,7 @@
 	<setattribute xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='thrownAmmoFlare']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']" name="value">2500</setattribute>
-	<setattribute xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']" name="value">20000</setattribute>
+	<setattribute xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']" name="value">30000</setattribute>
 	
 	<!-- Guns -->
 	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">100</setattribute>
@@ -1424,4 +1424,7 @@
 	<setattribute xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">30000</setattribute>
 	
+	
+	<!-- Add ammoGasCan as repair-item to the tools for the firetraps -->
+	<append xpath="/items/item/property/property[@name='Allowed_upgrade_items']/@value">,ammoGasCan</append>
 </basti890>

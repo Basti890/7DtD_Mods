@@ -477,5 +477,11 @@
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
 		
+		
+		<!-- expanded traps -->
+		<recipe name="trapFireEmpty" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting">
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="toolCookingGrill" count="1"/>
+		</recipe>
 	</append>
 </basti890>
