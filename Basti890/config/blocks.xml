@@ -194,6 +194,80 @@
 		</block>
 		
 		
+		<!-- Chicken nest -->
+		<block name="plantedChickenCoop1">
+			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="CustomIcon" value="chickenNest" />
+			<property name="UnlockedBy" value="recipebookAnimalTraps"/>
+			<property name="Material" value="Mwood_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/LootContainers/birdnestPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="GndAlign" value="1"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.Next" value="plantedChickenNestHarvestPlayer"/>
+			<property name="Group" value="Food/Cooking"/>
+			<drop event="Destroy" name="plantedChickenCoop1" count="1"/>
+		</block>
+		<block name="plantedChickenNestHarvestPlayer">
+			<property name="Class" value="Loot" />
+			<property name="CustomIcon" value="chickenNest" />
+			<property name="Material" value="Mwood_weak"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/LootContainers/birdnestPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="GndAlign" value="1"/>
+			<property name="LootList" value="chickenNest" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="DowngradeBlock" value="plantedChickenCoop1" />
+			<drop event="Destroy" name="plantedChickenCoop1" count="1"/>
+		</block>
+		
+		
+		<!-- Animal Snare -->
+		<block name="plantedAnimalSnare1">
+			<property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="recipebookAnimalTraps"/>
+			<property name="LightOpacity" value="0"/>
+			<property name="CustomIcon" value="animalSnare" />
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Model" value="Entities/OutdoorDecor/classicDogHousePrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Mplastics" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="RotationAllowed" value="pivotOnFloor" />
+			<property name="Place" value="Door" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.Next" value="plantedAnimalSnare3HarvestPlayer"/>
+			<property name="Group" value="Food/Cooking"/>
+			<drop event="Destroy" name="plantedAnimalSnare1" count="1"/>
+		</block>
+		<block name="plantedAnimalSnare3HarvestPlayer">
+			<property name="LightOpacity" value="0"/>
+			<property name="CustomIcon" value="animalSnare" />
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Class" value="Loot" />
+			<property name="LootList" value="animalSnare" />
+			<property name="Model" value="Entities/OutdoorDecor/classicDogHousePrefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Material" value="Mplastics" />
+			<property name="Shape" value="ModelEntity" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="DowngradeBlock" value="plantedAnimalSnare1" />
+			<property name="RotationAllowed" value="pivotOnFloor" />
+			<property name="Place" value="Door" />
+			<property name="Group" value="Food/Cooking"/>
+			<drop event="Destroy" name="plantedAnimalSnare1" count="1"/>
+		</block>
+		
+		
 		<!-- expanded traps -->
 		<block name="trapFireEmpty">
 			<property name="CustomIcon" value="trapFire"/>

@@ -285,7 +285,22 @@
 		<recipe name="plantedPeas1" count="1">
 			<ingredient name="foodCropPeas" count="1"/>
 		</recipe>
-		
+		<recipe name="animalFeed" count="1" scrapable="False"  >
+			<ingredient name="foodCropPumpkin" count="3" />
+		</recipe>
+		<recipe name="animalFeed" count="1" scrapable="False" >
+			<ingredient name="foodCropCorn" count="3" />
+		</recipe>
+		<recipe name="plantedAnimalSnare1" count="1" scrapable="False" tags="learnable">
+			<ingredient name="resourceWood" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="6" />
+			<ingredient name="animalFeed" count="2" />
+		</recipe>
+		<recipe name="plantedChickenCoop1" count="1" scrapable="False" tags="learnable">
+			<ingredient name="resourceWood" count="10"/>
+			<ingredient name="resourceYuccaFibers" count="15" />
+			<ingredient name="animalFeed" count="2" />
+		</recipe>
 		
 		<!-- Expanded Food Mod -->
 		<recipe name="bowl" count="1" scrapable="False" craft_area="campfire">
