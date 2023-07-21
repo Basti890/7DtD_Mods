@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="EmptyJars" />
+	<DisplayName value="Empty jars" />
+	<Description value="Mod restores empty jars in the game, which can be filled with water" />
+	<Author value="bullrider" />
+	<Version value="0.0.0.2" />
+	<Website value="lmfao.pl" />
+</xml>
