@@ -19,6 +19,11 @@ The Basti890 Mods inculde:
 * faster Looting
 * some reduced ingredients for selected recipies
 * larger vehicle storage
+* player craftable ovens are now usable as campfire without using any fuel
+* 1 more craftig queue slot
+* 1 more forge smelting slot
+* more crafting output slots
+* lockable inventory slots
 
 Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if iot does not exist).
 
