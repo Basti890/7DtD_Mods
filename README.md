@@ -12,8 +12,8 @@ The Basti890 Mods inculde:
 * more time before loot drops from Zombies and killed animals disapear
 * faster zombie body disapearing (for performance reasons)
 * tool mods make tools way more powerfull
-* dpgrade wood to reinforeced wood
-* downgrade steel to concrete
+* udpgrade wood to metal and than to cobblestone
+* downgrade steel to concrete when destroyed (effectivly higher health for steel)
 * more health for cobbelstone, and bricks
 * craft brick shapes
 * faster Looting
