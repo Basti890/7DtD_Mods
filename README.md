@@ -24,8 +24,10 @@ The Basti890 Mods inculde:
 * 1 more forge smelting slot
 * more crafting output slots
 * lockable inventory slots
+* Bigger Generators
+* faster skilling through the Skill magazines
+* faster dew collector
 
 Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if iot does not exist).
 
 You are free to suggest changes and bugfixes.
-
