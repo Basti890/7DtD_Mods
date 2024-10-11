@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <xml>
-	<ModInfo>
-		<Name value="A21_Basti890" />
-		<Description value="My Mods for Alpha21" />
-		<Author value="Basti890" />
-		<Version value="2.0" />
-
-</ModInfo>
+	<Name value="V1_Basti890" />
+	<Description value="My Mods for V1" />
+    <DisplayName value="Batsi890's Mod Collction" />
+	<Author value="Basti890" />
+	<Version value="1.0.0.1" />
+    <Website value="https://github.com/Basti890/7DtD_Mods" />
 </xml>

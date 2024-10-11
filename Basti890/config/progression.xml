@@ -10,32 +10,67 @@
 	<set  xpath="/progression/perks/perk[@name='perkLuckyLooter']/effect_group/passive_effect[@name='ScavengingTime']/@value">0.95</set>
 
 
+	<!-- faster craftig -->
+	<setattribute xpath="/progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
+	
+
+	<!-- more XP from Trap kills -->
+	<setattribute xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='ElectricalTrapXP']" name="value">.25,.50,.75,1,1.25</setattribute>
+	
+
 	<!-- Craft Tier6 -->
 
 	<!-- HARVESTING_TOOL_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/display_entry[2]/@unlock_level">11,14,18,22,26,30</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/display_entry[3]/@unlock_level">27,35,43,51,59,67</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/display_entry[4]/@unlock_level">60,70,80,90,100</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingHarvestingTools" max_level="30" parent="attCrafting" name_key="craftingHarvestingToolsName" desc_key="craftingHarvestingToolsDesc" long_desc_key="craftingHarvestingToolsLongDesc" icon="ui_game_symbol_tool">
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[5]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[6]/@level">14,18,22,26,30,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[7]/@level">35,43,51,59,67,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[8]/@level">60,70,80,90,100</set>
+			<display_entry icon="meleeToolRepairT0StoneAxe" name_key="harvestToolsStone" has_quality="true" unlock_level="1,2,3,4,5,6" >
+				<unlock_entry item="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT1IronPickaxe" name_key="harvestToolsIron" has_quality="true" unlock_level="7,8,9,10,11,12" >
+				<unlock_entry item="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT2SteelPickaxe" name_key="harvestToolsSteel" has_quality="true" unlock_level="13,14,15,16,17,18" >
+				<unlock_entry item="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolAxeT3Chainsaw" name_key="harvestToolsMechanical" has_quality="true" unlock_level="19,20,21,22,23,24" >
+				<unlock_entry item="meleeToolAxeT3Chainsaw" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="meleeToolPickT3Auger" name_key="harvestToolsMechanical" has_quality="true" unlock_level="25,26,27,28,29,30" >
+				<unlock_entry item="meleeToolPickT3Auger" unlock_tier="1" />
+			</display_entry>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']/effect_group/passive_effect[8]/@value">1,2,3,4,5</set>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,39" value="1" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="19,30" value="1" tags="meleeToolAxeT3Chainsaw"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,30" value="1" tags="meleeToolPickT3Auger"/>
 
+				<passive_effect name="CraftingTier" operation="base_add" level="2,3,4,5,6,30" value="1,2,3,4,5,5" tags="meleeToolRepairT0StoneAxe,meleeToolShovelT0StoneShovel"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="8,9,10,11,12,30" value="1,2,3,4,5,5" tags="meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel,meleeToolAxeT1IronFireaxe"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="14,15,16,17,18,30" value="1,2,3,4,5,5" tags="meleeToolPickT2SteelPickaxe,meleeToolShovelT2SteelShovel,meleeToolAxeT2SteelAxe"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="20,21,22,23,24,30" value="1,2,3,4,5,5" tags="meleeToolAxeT3Chainsaw"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="26,27,28,29,30" value="1,2,3,4,5" tags="meleeToolPickT3Auger"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
 
 
 	<!-- *** REPAIRING_TOOL_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/display_entry[1]/@unlock_level">5,10,15,20,25,30</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/display_entry[2]/@unlock_level">26,30,35,40,50</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']" name="max_level">15</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/display_entry[1]/@unlock_level">2,3,4,5,6,7</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/display_entry[2]/@unlock_level">10,11,12,13,14,15</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[3]/@level">10,15,20,25,30,50</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[4]/@level">26,30,35,40,50</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[1]/@level">2,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[2]/@level">10,15</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[3]/@level">3,4,5,6,7,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[4]/@level">11,12,13,14,15</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[3]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRepairTools']/effect_group/passive_effect[4]/@value">1,2,3,4,5</set>
@@ -43,13 +78,19 @@
 
 
 	<!-- *** SALVAGING_TOOL_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[1]/@unlock_level">2,6,11,16,21,26</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[2]/@unlock_level">22,28,34,40,46,52</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[3]/@unlock_level">40,47,54,61,68,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[4]/@level">6,11,16,21,26,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[5]/@level">28,34,40,46,52,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[6]/@level">47,54,61,68,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[3]/@level">15,20</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[4]/@level">6,11,16,21,26,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[5]/@level">9,10,11,12,13,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSalvageTools']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -57,13 +98,19 @@
 
 
 	<!-- *** KNUCKLE_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[3]/@level">15,20</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[4]/@level">2,3,4,5,6,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[5]/@level">9,10,11,12,13,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingKnuckles']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -71,13 +118,19 @@
 
 
 	<!-- *** BLADE_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[3]/@level">15,20</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[4]/@level">2,3,4,5,6,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[5]/@level">9,10,11,12,13,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBlades']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -85,13 +138,19 @@
 
 
 	<!-- *** CLUB_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[3]/@level">15,20</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[4]/@level">2,3,4,5,6,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[5]/@level">9,10,11,12,13,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingClubs']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -99,13 +158,19 @@
 
 
 	<!-- *** SLEDGEHAMMER_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[3]/@level">15,20</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[4]/@level">2,3,4,5,6,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[5]/@level">9,10,11,12,13,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSledgehammers']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -113,17 +178,25 @@
 
 
 	<!-- *** BOW_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[1]/@unlock_level">1,3,5,7,9,11</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[2]/@unlock_level">10,12,15,18,21,24</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[3]/@unlock_level">22,26,30,34,38,42</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[4]/@unlock_level">39,46,53,60,67,74</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[5]/@unlock_level">60,68,76,84,92,100</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']" name="max_level">30</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[2]/@unlock_level">7,8,9,10,11,12</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[3]/@unlock_level">13,14,15,16,17,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[4]/@unlock_level">19,20,21,22,23,24</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/display_entry[5]/@unlock_level">25,26,27,28,29,30</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[6]/@level">3,5,7,9,11,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[7]/@level">12,15,18,21,24,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[8]/@level">26,30,34,38,42,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[9]/@level">46,53,60,67,74,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[10]/@level">68,76,84,92,100</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[1]/@level">1,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[2]/@level">7,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[3]/@level">13,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[4]/@level">19,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[5]/@level">25,30</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[6]/@level">2,3,4,5,6,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[7]/@level">8,9,10,11,12,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[8]/@level">14,15,16,17,18,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[9]/@level">20,21,22,23,24,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[10]/@level">26,27,28,29,30</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingBows']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
@@ -134,13 +207,19 @@
 
 
 	<!-- *** SPEAR_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']" name="max_level">20</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[2]/@unlock_level">8,9,10,11,12,13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/display_entry[3]/@unlock_level">15,16,17,18,19,20</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[1]/@level">1,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[2]/@level">8,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[3]/@level">15,20</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[4]/@level">2,3,4,5,6,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[5]/@level">9,10,11,12,13,20</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[6]/@level">16,17,18,19,20</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSpears']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
@@ -148,94 +227,242 @@
 
 
 	<!-- *** HANDGUN_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[2]/@unlock_level">11,13,16,19,22,25</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[3]/@unlock_level">23,26,30,34,38,42</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[4]/@unlock_level">39,46,53,60,67,74</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[5]/@unlock_level">60,68,76,84,92,100</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingHandguns" max_level="40" parent="attCrafting" name_key="craftingHandgunsName" desc_key="craftingHandgunsDesc" long_desc_key="craftingHandgunsLongDesc" icon="ui_game_symbol_pistol">
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[6]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[7]/@level">13,16,19,22,25,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[8]/@level">26,30,34,38,42,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[9]/@level">46,53,60,67,74,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[10]/@level">68,76,84,92,100</set>
+			<display_entry item="gunHandgunT0PipePistol" unlock_level="1,2,3,4,5,6">
+				<unlock_entry item="ammoBundle9mmBulletBall" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunHandgunT1Pistol" unlock_level="8,9,10,11,12,13" >
+				<unlock_entry item="ammo9mmBulletHP,ammoBundle9mmBulletHP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunHandgunT2Magnum44" unlock_level="16,17,18,19,20,21">
+				<unlock_entry item="ammo44MagnumBulletHP,ammoBundle44MagnumBulletBall" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunHandgunT3SMG5" unlock_level="24,25,26,27,28,29">
+				<unlock_entry item="ammo9mmBulletAP,ammoBundle9mmBulletAP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunHandgunT3DesertVulture" unlock_level="33,34,35,36,37,38">
+				<unlock_entry item="ammoBundle44MagnumBulletHP,ammo44MagnumBulletAP,ammoBundle44MagnumBulletAP" unlock_tier="1" />
+			</display_entry>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[8]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[9]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group/passive_effect[10]/@value">1,2,3,4,5</set>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,40" value="1" tags="gunHandgunT0PipePistol"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,40" value="1" tags="ammoBundle9mmBulletBall"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,40" value="1" tags="gunHandgunT1Pistol"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,40" value="1" tags="ammo9mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,40" value="1" tags="ammoBundle9mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,40" value="1" tags="gunHandgunT2Magnum44"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,40" value="1" tags="ammo44MagnumBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,40" value="1" tags="ammoBundle44MagnumBulletBall"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,40" value="1" tags="gunHandgunT3SMG5"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,40" value="1" tags="ammo9mmBulletAP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="31,40" value="1" tags="ammoBundle9mmBulletAP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="32,40" value="1" tags="ammoBundle44MagnumBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="33,40" value="1" tags="gunHandgunT3DesertVulture"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="39,40" value="1" tags="ammo44MagnumBulletAP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="40" value="1" tags="ammoBundle44MagnumBulletAP"/>
 
+				<passive_effect name="CraftingTier" operation="base_add" level="2,3,4,5,6,40" value="1,2,3,4,5,5" tags="gunHandgunT0PipePistol"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="9,10,11,12,13,40" value="1,2,3,4,5,5" tags="gunHandgunT1Pistol"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="17,18,19,20,21,40" value="1,2,3,4,5,5" tags="gunHandgunT2Magnum44"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="25,26,27,28,29,40" value="1,2,3,4,5,5" tags="gunHandgunT3SMG5"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="34,35,36,37,38,40" value="1,2,3,4,5,5" tags="gunHandgunT3DesertVulture"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
 
 	<!-- *** SHOTGUN_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[2]/@unlock_level">11,14,18,22,26,30</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[3]/@unlock_level">27,35,43,51,59,67</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[4]/@unlock_level">60,70,80,90,100</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingShotguns" max_level="30" parent="attCrafting" name_key="craftingHandgunsName" desc_key="craftingHandgunsDesc" long_desc_key="craftingHandgunsLongDesc" icon="ui_game_symbol_pistol">
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[5]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[6]/@level">14,18,22,26,30,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[7]/@level">35,43,51,59,67,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[8]/@level">60,70,80,90,100</set>
+			<display_entry item="gunShotgunT0PipeShotgun" unlock_level="1,2,3,4,5,6">
+				<unlock_entry item="ammoBundleShotgunShell" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunShotgunT1DoubleBarrel" unlock_level="8,9,10,11,12,13" >
+				<unlock_entry item="ammoShotgunSlug" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunShotgunT2PumpShotgun" unlock_level="15,16,17,18,19,20">
+				<unlock_entry item="ammoBundleShotgunSlug" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunShotgunT3AutoShotgun" unlock_level="22,23,24,25,26,27">
+				<unlock_entry item="ammoShotgunBreachingSlug,ammoBundleShotgunBreachingSlug" unlock_tier="1" />
+			</display_entry>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/effect_group/passive_effect[8]/@value">1,2,3,4,5</set>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="gunShotgunT0PipeShotgun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="ammoBundleShotgunShell"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="gunShotgunT1DoubleBarrel"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="ammoShotgunSlug"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,30" value="1" tags="gunShotgunT2PumpShotgun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="ammoBundleShotgunSlug"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,30" value="1" tags="gunShotgunT3AutoShotgun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,30" value="1" tags="ammoShotgunBreachingSlug"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30" value="1" tags="ammoBundleShotgunBreachingSlug"/>
 
-
+				<passive_effect name="CraftingTier" operation="base_add" level="2,3,4,5,6,30" value="1,2,3,4,5,5" tags="gunShotgunT0PipeShotgun"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="9,10,11,12,13,30" value="1,2,3,4,5,5" tags="gunShotgunT1DoubleBarrel"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="16,17,18,19,20,30" value="1,2,3,4,5,5" tags="gunShotgunT2PumpShotgun"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="23,24,25,26,27,30" value="1,2,3,4,5,5" tags="gunShotgunT3AutoShotgun"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
+	
 	<!-- *** RIFLE_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[2]/@unlock_level">11,14,18,22,26,30</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[3]/@unlock_level">27,35,43,51,59,67</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[4]/@unlock_level">60,70,80,90,100</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingRifles" max_level="30" parent="attCrafting" name_key="craftingRiflesName" desc_key="craftingRiflesDesc" long_desc_key="craftingRiflesLongDesc" icon="ui_game_symbol_long_shot">
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[5]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[6]/@level">14,18,22,26,30,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[7]/@level">35,43,51,59,67,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[8]/@level">60,70,80,90,100</set>
+			<display_entry item="gunRifleT0PipeRifle" unlock_level="1,2,3,4,5,6">
+				<unlock_entry item="ammoBundle762mmBulletBall" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunRifleT1HuntingRifle" unlock_level="8,9,10,11,12,13">
+				<unlock_entry item="ammo762mmBulletHP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunRifleT2LeverActionRifle" unlock_level="15,16,17,18,19,20">
+				<unlock_entry item="ammoBundle762mmBulletHP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunRifleT3SniperRifle" unlock_level="22,23,24,25,26,27">
+				<unlock_entry item="ammo762mmBulletAP,ammoBundle762mmBulletAP" unlock_tier="1" />
+			</display_entry>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group/passive_effect[8]/@value">1,2,3,4,5</set>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="gunRifleT0PipeRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="ammoBundle762mmBulletBall"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="gunRifleT1HuntingRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="ammo762mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,30" value="1" tags="gunRifleT2LeverActionRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="ammoBundle762mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,30" value="1" tags="gunRifleT3SniperRifle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,30" value="1" tags="ammo762mmBulletAP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30" value="1" tags="ammoBundle762mmBulletAP"/>
+
+				<passive_effect name="CraftingTier" operation="base_add" level="2,3,4,5,6,30" value="1,2,3,4,5,5" tags="gunRifleT0PipeRifle"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="9,10,11,12,13,30" value="1,2,3,4,5,5" tags="gunRifleT1HuntingRifle"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="16,17,18,19,20,30" value="1,2,3,4,5,5" tags="gunRifleT2LeverActionRifle"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="23,24,25,26,27,30" value="1,2,3,4,5,5" tags="gunRifleT3SniperRifle"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
 
 
 	<!-- *** MACHINE_GUN_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[2]/@unlock_level">11,14,18,22,26,30</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[3]/@unlock_level">27,35,43,51,59,67</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[4]/@unlock_level">60,70,80,90,100</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingMachineGuns" max_level="30" parent="attCrafting" name_key="craftingMachineGunsName" desc_key="craftingMachineGunsDesc" long_desc_key="craftingMachineGunsLongDesc" icon="ui_game_symbol_rifle">
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[5]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[6]/@level">14,18,22,26,30,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[7]/@level">35,43,51,59,67,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[8]/@level">60,70,80,90,100</set>
+			<display_entry item="gunMGT0PipeMachineGun" unlock_level="1,2,3,4,5,6">
+				<unlock_entry item="ammoBundle762mmBulletBall" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunMGT1AK47" unlock_level="8,9,10,11,12,13">
+				<unlock_entry item="ammo762mmBulletHP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunMGT2TacticalAR" unlock_level="15,16,17,18,19,20">
+				<unlock_entry item="ammoBundle762mmBulletHP" unlock_tier="1" />
+			</display_entry>
+			<display_entry item="gunMGT3M60" unlock_level="22,23,24,25,26,27">
+				<unlock_entry item="ammo762mmBulletAP,ammoBundle762mmBulletAP" unlock_tier="1" />
+			</display_entry>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[8]/@value">1,2,3,4,5</set>
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="gunMGT0PipeMachineGun"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="ammoBundle762mmBulletBall"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="gunMGT1AK47"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="ammo762mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,30" value="1" tags="gunMGT2TacticalAR"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="ammoBundle762mmBulletHP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,30" value="1" tags="gunMGT3M60"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,30" value="1" tags="ammo762mmBulletAP"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30" value="1" tags="ammoBundle762mmBulletAP"/>
 
+				<passive_effect name="CraftingTier" operation="base_add" level="2,3,4,5,6,30" value="1,2,3,4,5,5" tags="gunMGT0PipeMachineGun"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="9,10,11,12,13,30" value="1,2,3,4,5,5" tags="gunMGT1AK47"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="16,17,18,19,20,30" value="1,2,3,4,5,5" tags="gunMGT2TacticalAR"/>
+				<passive_effect name="CraftingTier" operation="base_add" level="23,24,25,26,27,30" value="1,2,3,4,5,5" tags="gunRifleT3SniperRifle"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
 
 	<!-- *** EXPLOSIVE_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[5]/@unlock_level">45,55,65,75,85,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[12]/@level">55,65,75,85,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[12]/@value">1,2,3,4,5</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingExplosives" max_level="30" parent="attCrafting" name_key="craftingExplosivesName" desc_key="craftingExplosivesDesc" long_desc_key="craftingExplosivesLongDesc" icon="ui_game_symbol_explosion">
+
+			<display_entry icon="thrownAmmoPipeBomb,thrownGrenade,mineCookingPot" name_key="explosivesT1-1,explosivesT1-2,explosivesT1-3" has_quality="false" unlock_level="2,4,6" >
+				<unlock_entry item="thrownAmmoPipeBomb" unlock_tier="1" />
+				<unlock_entry item="thrownGrenade" unlock_tier="2" />
+				<unlock_entry item="mineCookingPot" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="thrownDynamite,thrownGrenadeContact,mineHubcap" name_key="explosivesT2-1,explosivesT2-2,explosivesT2-3" has_quality="false" unlock_level="8,10,12" >
+				<unlock_entry item="thrownDynamite" unlock_tier="1" />
+				<unlock_entry item="thrownGrenadeContact" unlock_tier="2" />
+				<unlock_entry item="mineHubcap" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="mineAirFilter,resourceGunPowder,thrownTimedCharge" name_key="explosivesT3-1,explosivesT3-2,explosivesT3-3" has_quality="false" unlock_level="14,16,18" >
+				<unlock_entry item="mineAirFilter" unlock_tier="1" />
+				<unlock_entry item="resourceGunPowderBundle" unlock_tier="2" />
+				<unlock_entry item="thrownTimedCharge" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="ammoRocketFrag" name_key="explosivesT4" has_quality="false" unlock_level="20,21,23" >
+				<unlock_entry item="resourceRocketTip,resourceRocketCasing" unlock_tier="1" />
+				<unlock_entry item="ammoRocketFrag" unlock_tier="2" />
+				<unlock_entry item="ammoRocketHE" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="gunExplosivesT3RocketLauncher" name_key="explosivesT5" has_quality="true" unlock_level="25,26,27,28,29,30" >
+				<unlock_entry item="gunExplosivesT3RocketLauncher" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,30" value="1" tags="thrownAmmoPipeBomb"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,30" value="1" tags="thrownGrenade"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,30" value="1" tags="mineCookingPot"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="thrownDynamite"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,30" value="1" tags="thrownGrenadeContact"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,30" value="1" tags="mineHubcap"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="mineAirFilter"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,30" value="1" tags="resourceGunPowderBundle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,30" value="1" tags="thrownTimedCharge"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,30" value="1" tags="resourceRocketTip,resourceRocketCasing"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="ammoRocketFrag"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,30" value="1" tags="ammoRocketHE"/>
+
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,30" value="1" tags="gunExplosivesT3RocketLauncher"/>
+
+				<passive_effect name="CraftingTier" operation="base_add" level="26,27,28,29,30" value="1,2,3,4,5" tags="gunExplosivesT3RocketLauncher"/>
+
+			</effect_group>
+		</crafting_skill>
+	</append>
 
 
 	<!-- *** ROBOTIC_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[2]/@unlock_level">11,13,16,19,22,25</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[3]/@unlock_level">23,26,30,34,38,42</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[4]/@unlock_level">39,46,53,60,67,74</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[5]/@unlock_level">60,68,76,84,92,100</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']" name="max_level">30</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[1]/@unlock_level">1,2,3,4,5,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[2]/@unlock_level">7,8,9,10,11,12</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[3]/@unlock_level">13,14,15,16,17,18</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[4]/@unlock_level">19,20,21,22,23,24</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/display_entry[5]/@unlock_level">25,26,27,28,29,30</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[6]/@level">3,5,7,10,13,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[7]/@level">13,16,19,22,25,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[8]/@level">26,30,34,38,42,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[9]/@level">46,53,60,67,74,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[10]/@level">68,76,84,92,100</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[1]/@level">1,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[2]/@level">7,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[3]/@level">13,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[4]/@level">19,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[5]/@level">25,30</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[6]/@level">2,3,4,5,6,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[7]/@level">8,9,10,11,12,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[8]/@level">14,15,16,17,18,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[9]/@level">20,21,22,23,24,30</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[10]/@level">26,27,28,29,30</set>
 
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[6]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group/passive_effect[7]/@value">1,2,3,4,5,5</set>
@@ -245,22 +472,298 @@
 
 
 	<!-- *** ARMOR_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[1]/@unlock_level">1,3,5,7,10,13</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[2]/@unlock_level">11,17,24,31,38,45</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[3]/@unlock_level">30,39,48,57,66,75</set>
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']" name="max_level">15</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[1]/@unlock_level">2,3,4,5,6,7</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[2]/@unlock_level">10,11,12,13,14,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[3]/@unlock_level">10,11,12,13,14,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/display_entry[4]/@unlock_level">10,11,12,13,14,15</set>
 
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[4]/@level">3,5,7,10,13,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[5]/@level">17,24,31,38,45,75</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[6]/@level">39,48,57,66,75</set>
-
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[1]/@level">1,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[2]/@level">10,15</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[3]/@level">3,4,5,6,7,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[4]/@level">10,11,12,13,14,15</set>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[3]/@value">1,2,3,4,5,5</set>
 	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[4]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[5]/@value">1,2,3,4,5,5</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingArmor']/effect_group/passive_effect[6]/@value">1,2,3,4,5</set>
+	
+	
+	<!-- *** MEDICAL_SKILLS -->
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']" name="max_level">10</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/display_entry[1]/@unlock_level">1,2</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/display_entry[2]/@unlock_level">3,4,6</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/display_entry[3]/@unlock_level">6,8,10</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[1]/@level">1,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[2]/@level">2,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[3]/@level">3,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[4]/@level">4,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[5]/@level">5,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[6]/@level">6,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[7]/@level">8,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMedical']/effect_group/passive_effect[8]/@level">10</set>
+
+
+	<!-- *** FOOD_SKILLS -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingFood" max_level="30" parent="attCrafting" name_key="craftingFoodName" desc_key="craftingFoodDesc" long_desc_key="craftingFoodLongDesc" icon="ui_game_symbol_fork">
+
+			<display_entry icon="foodCornOnTheCob,foodCornBread,foodGrilledMeat,foodBoiledMeat,foodBaconAndEggs" name_key="foodT1-1,foodT1-2,foodT1-3,foodT1-4,foodT1-5" has_quality="false" unlock_level="1,2,3,4,5,6,7,8,9,10" >
+				<unlock_entry item="foodBakedPotato" unlock_tier="1" />
+				<unlock_entry item="foodCornOnTheCob" unlock_tier="2" />
+				<unlock_entry item="drinkJarGoldenRodTea" unlock_tier="3" />
+				<unlock_entry item="foodCornBread" unlock_tier="4" />
+				<unlock_entry item="drinkJarRedTea" unlock_tier="5" />
+				<unlock_entry item="foodGrilledMeat" unlock_tier="6" />
+				<unlock_entry item="drinkJarYuccaJuice" unlock_tier="7" />
+				<unlock_entry item="foodBoiledMeat" unlock_tier="8" />
+				<unlock_entry item="drinkJarCoffee" unlock_tier="9" />
+				<unlock_entry item="foodBaconAndEggs" unlock_tier="10" />
+			</display_entry>
+			<display_entry icon="foodPumpkinBread,foodPumpkinPie,foodPumpkinCheesecake,foodMeatStew,foodSteakAndPotato" name_key="foodT2-1,foodT2-2,foodT2-3,foodT2-4,foodT2-5" has_quality="false" unlock_level="11,12,13,14,15,16,17" >
+				<unlock_entry item="foodPumpkinBread" unlock_tier="1" />
+				<unlock_entry item="foodBlueberryPie" unlock_tier="2" />
+				<unlock_entry item="foodPumpkinPie" unlock_tier="3" />
+				<unlock_entry item="foodPumpkinCheesecake" unlock_tier="4" />
+				<unlock_entry item="foodVegetableStew" unlock_tier="5" />
+				<unlock_entry item="foodMeatStew" unlock_tier="6" />
+				<unlock_entry item="foodSteakAndPotato" unlock_tier="7" />
+			</display_entry>
+			<display_entry icon="drinkYuccaJuiceSmoothie,foodHoboStew,foodFishTacos,foodChiliDog,foodShamChowder" name_key="foodT3-1,foodT3-2,foodT3-3,foodT3-4,foodT3-5" has_quality="false" unlock_level="18,19,20,21,22,23" >
+				<unlock_entry item="drinkYuccaJuiceSmoothie" unlock_tier="1" />
+				<unlock_entry item="drinkJarBeer" unlock_tier="2" />
+				<unlock_entry item="foodHoboStew" unlock_tier="3" />
+				<unlock_entry item="foodFishTacos" unlock_tier="4" />
+				<unlock_entry item="foodChiliDog" unlock_tier="5" />
+				<unlock_entry item="foodShamChowder" unlock_tier="6" />
+			</display_entry>
+			<display_entry icon="foodTunaFishGravyToast,foodShepardsPie,drinkJarGrandpasLearningElixir,foodSpaghetti,foodGumboStew" name_key="foodT4-1,foodT4-2,foodT4-3,foodT4-4,foodT4-5" has_quality="false" unlock_level="24,25,26,27,28,28,29,30" >
+				<unlock_entry item="foodTunaFishGravyToast" unlock_tier="1" />
+				<unlock_entry item="drinkJarGrandpasAwesomeSauce" unlock_tier="2" />
+				<unlock_entry item="foodShepardsPie" unlock_tier="3" />
+				<unlock_entry item="drinkJarGrandpasMoonshine" unlock_tier="4" />
+				<unlock_entry item="drinkJarGrandpasLearningElixir" unlock_tier="5" />
+				<unlock_entry item="foodSpaghetti" unlock_tier="6" />
+				<unlock_entry item="foodGumboStew" unlock_tier="7" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="foodCornOnTheCob"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,30" value="1" tags="foodBakedPotato"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,30" value="1" tags="drinkJarGoldenRodTea"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,30" value="1" tags="foodCornBread"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,30" value="1" tags="drinkJarRedTea"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,30" value="1" tags="foodGrilledMeat"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="drinkJarYuccaJuice"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="foodBoiledMeat"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,30" value="1" tags="drinkJarCoffee"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,30" value="1" tags="foodBaconAndEggs"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,30" value="1" tags="foodPumpkinBread"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,30" value="1" tags="foodBlueberryPie"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,30" value="1" tags="foodPumpkinPie"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="foodPumpkinCheesecake"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,30" value="1" tags="foodVegetableStew"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,30" value="1" tags="foodMeatStew"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="17,30" value="1" tags="foodSteakAndPotato"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,30" value="1" tags="drinkYuccaJuiceSmoothie"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="19,30" value="1" tags="drinkJarBeer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,30" value="1" tags="foodHoboStew"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="foodFishTacos"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,30" value="1" tags="foodChiliDog"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="23,30" value="1" tags="foodShamChowder"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,30" value="1" tags="foodTunaFishGravyToast"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,30" value="1" tags="drinkJarGrandpasAwesomeSauce"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,30" value="1" tags="foodShepardsPie"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,30" value="1" tags="drinkJarGrandpasMoonshine"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,30" value="1" tags="drinkJarGrandpasLearningElixir"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="29,30" value="1" tags="foodSpaghetti"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30" value="1" tags="foodGumboStew"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
+
+
+	<!-- *** SEED_SKILLS -->
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']" name="max_level">10</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry[1]/@unlock_level">1,2,3,4,5</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/display_entry[2]/@unlock_level">6,7,8,9,10</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[1]/@level">1,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[2]/@level">2,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[3]/@level">3,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[4]/@level">4,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[5]/@level">5,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[6]/@level">6,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[7]/@level">7,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[8]/@level">8,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[9]/@level">9,10</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingSeeds']/effect_group/passive_effect[10]/@level">10</set>
 
 
 	<!-- *** ELECTRICIAN_SKILLS -->
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/display_entry[3]/@unlock_level">65,75,85,95,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[5]/@level">55,65,75,85,100</set>
-	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[5]/@value">1,2,3,4,5</set>
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingElectrician" max_level="30" parent="attCrafting" name_key="craftingElectricianName" desc_key="craftingElectricianDesc" long_desc_key="craftingElectricianLongDesc" icon="ui_game_symbol_electric_generator">
 
+			<display_entry icon="generatorBankA" name_key="electricianT1" has_quality="false" unlock_level="2,3,4,5,6" >
+				<unlock_entry item="generatorbank" unlock_tier="1" />
+				<unlock_entry item="electricwirerelay" unlock_tier="2" />
+				<unlock_entry item="switch" unlock_tier="3" />
+				<unlock_entry item="tripwirepost" unlock_tier="4" />
+				<unlock_entry item="ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player" unlock_tier="5" />
+			</display_entry>
+			<display_entry icon="motionsensor" name_key="electricianT2" has_quality="false" unlock_level="7,8,9,10,11,12,13,14,15,16,17,18" >
+				<unlock_entry item="motionsensor" unlock_tier="1" />
+				<unlock_entry item="electrictimerrelay" unlock_tier="2" />
+				<unlock_entry item="pressureplate,pressureplateLong" unlock_tier="3" />
+				<unlock_entry item="spotlightPlayer,peaker" unlock_tier="4" />
+				<unlock_entry item="peaker" unlock_tier="5" />
+				<unlock_entry item="vaultHatch01_Powered" unlock_tier="6" />
+				<unlock_entry item="vaultDoor01_Powered" unlock_tier="7" />
+				<unlock_entry item="vaultDoor01Double_Powered" unlock_tier="8" />
+				<unlock_entry item="ironGarageDoor_PoweredBlockVariantHelper" unlock_tier="9" />
+				<unlock_entry item="woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper" unlock_tier="10" />
+				<unlock_entry item="steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper" unlock_tier="11" />
+				<unlock_entry item="metalReinforcedWoodDrawBridgePowered" unlock_tier="12" />
+			</display_entry>
+			<display_entry icon="batterybank" name_key="electricianT3" has_quality="true" unlock_level="19,20,21,22,23,24,25" >
+				<unlock_entry item="batterybank" unlock_tier="1" />
+				<unlock_entry item="carBattery" unlock_tier="2" />
+			</display_entry>
+			<display_entry icon="Big_Generator" name_key="electricianT4" has_quality="false" unlock_level="19,27,30" >
+				<unlock_entry item="Mid_Generator" unlock_tier="2" />
+				<unlock_entry item="Big_Generator" unlock_tier="3" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,30" value="1" tags="generatorbank"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,30" value="1" tags="electricwirerelay"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,30" value="1" tags="switch"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,30" value="1" tags="tripwirepost"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,30" value="1" tags="ceilingLight01_player,industrialLight01_player,industrialLight02_player,ceilingLight07_player"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,30" value="1" tags="motionsensor"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,30" value="1" tags="electrictimerrelay"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,30" value="1" tags="pressureplate,pressureplateLong"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,30" value="1" tags="spotlightPlayer"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,30" value="1" tags="speaker"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,30" value="1" tags="batterybank"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,30" value="1" tags="vaultHatch01_Powered"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,30" value="1" tags="vaultDoor01_Powered"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,30" value="1" tags="vaultDoor01Double_Powered"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="17,30" value="1" tags="ironGarageDoor_PoweredBlockVariantHelper"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,30" value="1" tags="woodenGarageDoor3x3_PoweredBlockVariantHelper,woodenGarageDoor4x3_PoweredBlockVariantHelper,woodenGarageDoor5x3_PoweredBlockVariantHelper"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="19,30" value="1" tags="steelGarageDoor3x3_PoweredBlockVariantHelper,steelGarageDoor4x3_PoweredBlockVariantHelper,steelGarageDoor5x3_PoweredBlockVariantHelper"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,30" value="1" tags="metalReinforcedWoodDrawBridgePowered"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,30" value="1" tags="Mid_Generator"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,30" value="1" tags="Big_Generator"/>
+
+				<passive_effect name="CraftingTier" operation="base_add" level="21,22,23,24,25,30" value="1,2,3,4,5,5" tags="carBattery"/>
+
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
+	
+	<!-- *** TRAP_SKILLS -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingTraps" max_level="15" parent="attCrafting" name_key="craftingTrapsName" desc_key="craftingTrapsDesc" long_desc_key="craftingTrapsLongDesc" icon="ui_game_symbol_electric_turret">
+
+			<display_entry icon="bladeTrap" name_key="trapsT1" has_quality="false" unlock_level="2,5,8" >
+				<unlock_entry item="electricfencepost" unlock_tier="1" />
+				<unlock_entry item="dartTrap" unlock_tier="2" />
+				<unlock_entry item="bladeTrap" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="shotgunTurret" name_key="trapsT2" has_quality="false" unlock_level="10" >
+				<unlock_entry item="shotgunTurret" unlock_tier="1" />
+			</display_entry>
+			<display_entry icon="autoTurret" name_key="trapsT3" has_quality="false" unlock_level="15" >
+				<unlock_entry item="autoTurret" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,15" value="1" tags="electricfencepost"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,15" value="1" tags="dartTrap"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,15" value="1" tags="bladeTrap"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,15" value="1" tags="shotgunTurret"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15" value="1" tags="autoTurret"/>
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
+	
+	<!-- *** WORKSTATION_SKILLS -->
+	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']" name="max_level">15</setattribute>
+	
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[1]/@unlock_level">2,3</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[2]/@unlock_level">5,7,9,11</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[3]/@unlock_level">13</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[4]/@unlock_level">14</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/display_entry[5]/@unlock_level">15</set>
+
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[1]/@level">2,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[2]/@level">3,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[3]/@level">5,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[4]/@level">7,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[5]/@level">9,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[6]/@level">11,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[7]/@level">13,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[8]/@level">14,15</set>
+	<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']/effect_group/passive_effect[9]/@level">15</set>
+	
+	
+	<!-- *** VEHICLE_SKILLS -->
+	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']" />
+	<append xpath="/progression/crafting_skills">
+		<crafting_skill name="craftingVehicles" max_level="20" parent="attCrafting" name_key="craftingVehiclesName" desc_key="craftingVehiclesDesc" long_desc_key="craftingVehiclesLongDesc" icon="ui_game_symbol_4x4">
+
+			<display_entry icon="vehicleBicyclePlaceable" name_key="vehiclesT1" has_quality="false" unlock_level="2,3,4" >
+				<unlock_entry item="vehicleBicycleChassis" unlock_tier="1" />
+				<unlock_entry item="vehicleBicycleHandlebars" unlock_tier="2" />
+				<unlock_entry item="vehicleWheels" unlock_tier="3" />
+			</display_entry>
+			<display_entry icon="vehicleMinibikePlaceable" name_key="vehiclesT2" has_quality="false" unlock_level="5,6,7,8,9,10" >
+				<unlock_entry item="vehicleMinibikeChassis" unlock_tier="1" />
+				<unlock_entry item="vehicleMinibikeHandlebars" unlock_tier="2" />
+				<unlock_entry item="resourceOil" unlock_tier="3" />
+				<unlock_entry item="ammoGasCan" unlock_tier="4" />
+				<unlock_entry item="carBattery" unlock_tier="5" />
+				<unlock_entry item="smallEngine" unlock_tier="6" />
+			</display_entry>
+			<display_entry icon="vehicleMotorcyclePlaceable" name_key="vehiclesT3" has_quality="false" unlock_level="11,13" >
+				<unlock_entry item="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars" unlock_tier="1" />
+				<unlock_entry item="ammoGasCanBundle" unlock_tier="2" />
+			</display_entry>
+			<display_entry icon="vehicle4x4TruckPlaceable" name_key="vehiclesT4" has_quality="false" unlock_level="15,17" >
+				<unlock_entry item="vehicle4x4TruckChassis" unlock_tier="1" />
+				<unlock_entry item="vehicle4x4TruckAccessories" unlock_tier="2" />
+			</display_entry>
+			<display_entry icon="vehicleGyrocopterPlaceable" name_key="vehiclesT5" has_quality="false" unlock_level="20" >
+				<unlock_entry item="vehicleGyroCopterChassis,vehicleGyroCopterAccessories" unlock_tier="1" />
+			</display_entry>
+
+			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,20" value="1" tags="vehicleBicycleChassis"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,20" value="1" tags="vehicleBicycleHandlebars"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,20" value="1" tags="vehicleWheels"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,20" value="1" tags="vehicleMinibikeChassis"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,20" value="1" tags="vehicleMinibikeHandlebars"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,20" value="1" tags="resourceOil"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,20" value="1" tags="ammoGasCan"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="9,20" value="1" tags="carBattery"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,20" value="1" tags="smallEngine"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,20" value="1" tags="vehicleMotorcycleChassis,vehicleMotorcycleHandlebars"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="13,20" value="1" tags="ammoGasCanBundle"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="15,20" value="1" tags="vehicle4x4TruckChassis"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="17,20" value="1" tags="vehicle4x4TruckAccessories"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="20" value="1" tags="vehicleGyroCopterChassis,vehicleGyroCopterAccessories"/>
+
+			</effect_group>
+		</crafting_skill>
+	</append>
+	
 </basti890>

@@ -4,7 +4,7 @@
 	<setattribute xpath="/blocks/block[@name='mineCandyTin']/property[@name='CanPickup']" name="value">true</setattribute>
 
 
-	<!-- Pickup Flaslights -->
+	<!-- Pickup Flashlights -->
 	<append xpath="/blocks/block[starts-with(@name,'flashlight')]">
 		<drop event="Destroy" name="resourceHeadlight" count="1"/>
 	</append>
@@ -14,7 +14,7 @@
 	</append>
 	
 	
-	<setattribute xpath="/blocks/block[@name='cntCollapsedDewCollector']/drop[@event='Destroy']" name="name">resourceWaterFilter</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">100</setattribute>
 	
 	
 	<!-- traps better -->
@@ -28,10 +28,9 @@
 	<!-- More power Hough Hough hough hough houg -->
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='MaxPower']" name="value">900</setattribute>
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']" name="value">150</setattribute>
-	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='OutputPerFuel']" name="value">22500</setattribute>
-	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='MaxPower']" name="value">24500</setattribute>
-	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='OutputPerStack']" name="value">200</setattribute>
-	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='MaxPower']" name="value">800</setattribute>
+	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='MaxPower']" name="value">1500</setattribute>
+	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='OutputPerStack']" name="value">400</setattribute>
+	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='MaxPower']" name="value">600</setattribute>
 	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='OutputPerStack']" name="value">100</setattribute>
 
 
@@ -48,7 +47,7 @@
 
 
 	<!-- more Gas -->
-	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">10,1500</setattribute>
+	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">100,1500</setattribute>
 	
 	
 	<!-- more resources from Pallets -->
@@ -304,5 +303,29 @@
 			<property name="Group" value="Tools/Traps"/>
 		</block>
 		
+		<!-- Bigger Generator -->
+		<block name="Mid_Generator">
+			<property name="Extends" value="generatorbank"/>
+			<property name="MaxFuel" value="10000"/>
+			<property name="MaxPower" value="50000"/>
+			<property name="OutputPerFuel" value="46000"/>
+			<property name="OutputPerStack" value="1500"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="questGeneratorSmall"/>
+			<property name="Model" value="Entities/Electrical/smallGeneratorPrefab"/>
+			<property name="SortOrder2" value="0024"/>
+		</block>
+		<block name="Big_Generator">
+			<property name="Extends" value="generatorbank"/>
+			<property name="MaxFuel" value="30000"/>
+			<property name="MaxPower" value="50000"/>
+			<property name="OutputPerFuel" value="50000"/>
+			<property name="OutputPerStack" value="5000"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="questGeneratorLarge"/>
+			<property name="Model" value="Entities/Electrical/bigGeneratorPrefab"/>
+			<property name="MultiBlockDim" value="3,2,2"/>
+			<property name="SortOrder2" value="0024"/>
+		</block>
 	</append>
 </basti890>

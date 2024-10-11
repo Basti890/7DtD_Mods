@@ -1,23 +1,27 @@
 <basti890>
 	<!-- Quicker Crafting with Nerd glasses -->
-	<setattribute xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.5</setattribute>
+	<setattribute xpath="/items/item[@name='toolCookingPot']/effect_group/passive_effect" name="value">1</setattribute>
 	<!-- Quicker smelting -->
 	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
+	<!-- Quicker Crafting in the Forge -->
+	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
 	
 	
 	<!--More MOD slots-->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">0,1,2,3,4,5</setattribute>
 	
+	
 	<!-- ammo -->
+	<setattribute xpath="/items/item[@name='ammoBundleMaster']/property/property[@name='Create_item_count']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='ammo9mmBulletBall']/property[@name='Stacknumber']" name="value">1000</setattribute>
 	<append xpath="/items/item[@name='ammo44MagnumBulletBall']">
 		<property name="Stacknumber" value="750"/>
 	</append>
-	<setattribute xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']" name="value">750</setattribute>
+	<setattribute xpath="/items/item[@name='ammo762mmBulletBall']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[contains(@name,'Bullet')]/effect_group/passive_effect[@name='BlockDamage']" name="value">1</setattribute>
-	<setattribute xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']" name="value">500</setattribute>
-	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']" name="value">500</setattribute>
-	<setattribute xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']" name="value">250</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']" name="value">250</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunBreachingSlug']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']" name="value">500</setattribute>
@@ -29,9 +33,9 @@
 	<setattribute xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']" name="value">75</setattribute>
 	<setattribute xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']" name="value">100</setattribute>
-	<setattribute xpath="/items/item[@name='thrownAmmoFlare']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']" name="value">2500</setattribute>
 	<setattribute xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']" name="value">30000</setattribute>
+	
 	
 	<!-- Guns -->
 	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">100</setattribute>
@@ -39,6 +43,7 @@
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">15</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">30</setattribute>
+	
 	
 	<!-- medicals  -->
 	<setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -53,6 +58,7 @@
 	<setattribute xpath="/items/item[@name='drugAntibiotics']/property[@name='Stacknumber']" name="value">200</setattribute>
 	<setattribute xpath="/items/item[@name='drugRecog']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drugAtomJunkies']/property[@name='Stacknumber']" name="value">100</setattribute>
+	
 	
 	<!-- food -->
 	<setattribute xpath="/items/item[@name='foodHoney']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -97,6 +103,7 @@
 			<property name="CustomIconTint" value="9eff99"/>
 			<property name="Stacknumber" value="500"/><!-- STK resource -->
 		</item>
+		
 		
 		<!-- Animal Snares -->
 		<item name="animalFeed">
@@ -164,7 +171,6 @@
 			</effect_group>
 		</item>
 
-		<!--Food Stuffs-->
 		<item name="Fish Pie">
 			<property name="HoldType" value="31"/>
 			<property name="DescriptionKey" value="VMARFishPieDesc"/>
@@ -271,8 +277,6 @@
 			</effect_group>
 		</item>
 		
-		
-		<!--===OTHERS==-->
 		<item name="Candy Bar">
 			<property name="HoldType" value="31"/>
 			<property name="DescriptionKey" value="VMARCANDYBARDesc"/>
@@ -378,8 +382,6 @@
 			</effect_group>
 		</item>
 		
-		
-		<!--Expanded Food Mod -->
 		<item name="bowl">
 			<property name="DescriptionKey" value="bowlDesc"/>
 			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
@@ -393,6 +395,7 @@
 				<property name="Rot" value="90,45,0"/>
 			</property>
 		</item>
+		
 		<item name="blueberryJam">
 			<property name="HoldType" value="31"/>
 			<property name="DisplayType" value="food"/>
@@ -407,7 +410,6 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 				<property name="Create_item" value="drinkJarEmpty"/>
-				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
 			</property>
 			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
            
@@ -417,6 +419,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="canChunkyMeatStew">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -442,6 +445,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="canMeatStew">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -467,6 +471,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="canVegetableStew">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -492,6 +497,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="stewChunkyMeat">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -518,6 +524,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlFruit">
 			<property name="Tags" value="food"/>
 			<property name="DisplayType" value="foodWaterOnly"/>
@@ -544,6 +551,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="cornbreadJam">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -567,6 +575,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="soupChunkyBeef">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -593,6 +602,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="soupChicken">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -619,6 +629,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="soupLamb">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -645,6 +656,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlChili">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -671,6 +683,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlMiso">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -697,6 +710,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="soupPea">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -723,6 +737,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlPasta">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -749,6 +764,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlSoup">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -775,6 +791,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="bowlStock">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -801,6 +818,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="creamedCorn">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -817,7 +835,6 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_eating"/>
 				<property name="Create_item" value="bowl"/>
-				<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
 			</property>
 			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 			<effect_group tiered="false">
@@ -827,6 +844,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="soupMushroom">
 			<property name="CraftingIngredientTime" value="15"/>
 			<property name="Tags" value="food"/>
@@ -853,6 +871,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="Mead">
 			<property name="HoldType" value="3"/>
 			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
@@ -884,6 +903,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrunkGrandpasMoonshine"/>
 			</effect_group>
 		</item>
+		
 		<item name="meadBlueberry">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -910,6 +930,7 @@
 
 			</effect_group>
 		</item>
+		
 		<item name="warmsoupChunkyBeef">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -937,6 +958,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmsoupChicken">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -964,6 +986,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmsoupLamb">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -991,6 +1014,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmbowlChili">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1018,6 +1042,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmbowlMiso">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1045,6 +1070,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmsoupPea">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1072,6 +1098,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmbowlPasta">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1099,6 +1126,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmbowlSoup">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1126,6 +1154,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="warmbowlStock">
 			<property name="DescriptionKey" value="warmBowlDesc"/>
 			<property name="Tags" value="food"/>
@@ -1153,6 +1182,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="honeyHam">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1176,6 +1206,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="scrambledEggs">
 			<property name="CraftingIngredientTime" value="3"/>
 			<property name="Tags" value="food"/>
@@ -1201,6 +1232,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="Omelet">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1225,6 +1257,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="drinkEnergy">
 			<property name="DescriptionKey" value="drinkEnergyDesc"/>
 			<property name="HoldType" value="3"/>
@@ -1253,6 +1286,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMegaCrush"/>
 			</effect_group>
 		</item>
+		
 		<item name="baconEggSandwich">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1278,6 +1312,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="3"/>
 			</effect_group>
 		</item>
+		
 		<item name="grillSteak">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1302,6 +1337,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="Hamburger">
 			<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
@@ -1322,6 +1358,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="mealBreakfast">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1347,6 +1384,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="mealDinner">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1372,6 +1410,7 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
 			</effect_group>
 		</item>
+		
 		<item name="dinnerPlate">
 			<!--    <property name="DescriptionKey" value="dinnerPlateDesc"/>-->
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
@@ -1385,6 +1424,7 @@
 				<property name="Rot" value="90,45,0"/>
 			</property>
 		</item>
+		
 		<item name="steakSandwich">
 			<property name="Tags" value="food"/>
 			<property name="HoldType" value="31"/>
@@ -1411,6 +1451,7 @@
 		</item>
 	</append>
 	
+	
 	<!-- drinks -->
 	<setattribute xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -1426,6 +1467,7 @@
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='SellableToTrader']" name="value">true</setattribute>
+	
 	
 	<!-- resources -->
 	<setattribute xpath="/items/item[@name='resourceAcid']/property[@name='Stacknumber']" name="value">500</setattribute>
