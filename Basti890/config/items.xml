@@ -1497,6 +1497,7 @@
 	<setattribute xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']" name="value">30000</setattribute>
 	
 	
-	<!-- Add ammoGasCan as repair-item to the tools for the firetraps -->
+	<!-- Add ammoGasCan as repair-item to the tools for the firetraps
 	<append xpath="/items/item/property/property[@name='Allowed_upgrade_items']/@value">,ammoGasCan</append>
+	-->
 </basti890>

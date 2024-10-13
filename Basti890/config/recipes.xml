@@ -525,12 +525,12 @@
 		</recipe>
 		
 		
-		<!-- expanded traps -->
+		<!-- expanded traps
 		<recipe name="trapFireEmpty" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting">
 			<ingredient name="resourceForgedSteel" count="10"/>
 			<ingredient name="toolCookingGrill" count="1"/>
 		</recipe>
-		
+		-->
 		
 		<!-- MD Advanced Generator -->
 		<recipe name="Mid_Generator" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">

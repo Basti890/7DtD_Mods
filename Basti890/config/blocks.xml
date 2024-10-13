@@ -35,11 +35,73 @@
 
 
 	<!-- Up- & Downgrade additions -->
+	<append xpath="/blocks">
+		<block name="woodReinforcedShapes" shapes="All">
+			<property name="DescriptionKey" value="woodGroupDesc"/>
+			<property name="Material" value="MwoodReinforced_shapes"/>
+			<property name="Shape" value="New"/>
+			<property name="Texture" value="379"/>
+			<property name="UiBackgroundTexture" value="379"/>
+			<property name="FuelValue" value="500"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="8"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="8" tag="allHarvest,lumberjackHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="woodMetalShapes"/>
+				<property name="Item" value="resourceScrapIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodShapes"/>
+			<property name="UpgradeSound" value="place_block_wood"/>
+			<property name="SortOrder1" value="S000"/>
+			<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="Tags" value="wood"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+		</block>
+		<block name="woodMetalShapes" shapes="All">
+			<property name="DescriptionKey" value="woodGroupDesc"/>
+			<property name="Material" value="MwoodMetal_shapes"/>
+			<property name="Shape" value="New"/>
+			<property name="Texture" value="380"/>
+			<property name="UiBackgroundTexture" value="241"/>
+			<property name="FuelValue" value="500"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property class="RepairItems">
+				<property name="resourceWood" value="8"/>
+				<property name="resourceScrapIron" value="4"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="2" tag="allHarvest,lumberjackHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="7" tag="allHarvest,lumberjackHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="corrugatedMetalShapes"/>
+				<property name="Item" value="resourceScrapIron"/>
+				<property name="ItemCount" value="10"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="woodShapes"/>
+			<property name="UpgradeSound" value="place_block_wood"/>
+			<property name="SortOrder1" value="S000"/>
+			<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="Tags" value="wood"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+		</block>
+	</append>
 	<set xpath="/blocks/block[@name='woodShapes']/property[@class='UpgradeBlock']">
-		<property name="ToBlock" value="corrugatedMetalShapes"/>
-		<property name="Item" value="resourceScrapIron"/>
-		<property name="ItemCount" value="10"/>
-		<property name="UpgradeHitCount" value="4"/>
+		<property name="ToBlock" value="woodReinforcedShapes"/>
+		<property name="Item" value="resourceWood"/>
+		<property name="ItemCount" value="5"/>
+		<property name="UpgradeHitCount" value="2"/>
 	</set>
 	<append xpath="/blocks/block[@name='steelShapes']">
 		<property name="DowngradeBlock" value="concreteShapes"/>
@@ -266,42 +328,6 @@
 			<drop event="Destroy" name="plantedAnimalSnare1" count="1"/>
 		</block>
 		
-		
-		<!-- expanded traps -->
-		<block name="trapFireEmpty">
-			<property name="CustomIcon" value="trapFire"/>
-			<property name="DescriptionKey" value="trapFireEmptyDesc"/>
-			<property name="Material" value="Msteel"/>
-			<property name="Texture" value="356,352,352,352,352,352"/>
-			<property class="UpgradeBlock">
-				<property name="ToBlock" value="trapFire"/>
-				<property name="Item" value="ammoGasCan"/>
-				<property name="ItemCount" value="3000"/>
-				<property name="UpgradeHitCount" value="4"/>
-			</property>
-			<property class="RepairItems">
-				<property name="resourceForgedSteel" value="8"/>
-			</property>
-			<drop event="Destroy" count="0" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
-		</block>
-		<block name="trapFire">
-			<property name="DescriptionKey" value="trapFireDesc"/>
-			<property name="Class" value="Damage"/>
-			<property name="Damage" value="10"/>
-			<!-- <property name="Damage_received" value="30"/> -->
-			<property name="MaxDamage" value="3000"/>
-			<property name="BuffsWhenWalkedOn" value="buffBurningMolotov"/>
-			<property name="Material" value="Msteel"/>
-			<property name="Texture" value="355,352,352,352,352,352"/>
-			<property name="DowngradeBlock" value="trapFireEmpty"/>
-			<property class="RepairItems">
-				<property name="ammoGasCan" value="300"/>
-			</property>
-			<drop event="Destroy" count="0" prob="1"/>
-			<drop event="Fall" name="scrapMetalPile" count="1" prob="1.0" stick_chance="1"/>
-			<property name="Group" value="Tools/Traps"/>
-		</block>
 		
 		<!-- Bigger Generator -->
 		<block name="Mid_Generator">
