@@ -2,7 +2,6 @@
 
 The Basti890 Mods inculde:
 * higher item stacknumbers
-* Valmars fire trap block
 * plantable peas
 * Valmars Foods
 * more skill points per level
