@@ -1,14 +1,22 @@
 <basti890>
 
 	<!-- more Gas in Loot -->
-	<setattribute xpath="/lootcontainers/lootcontainer/item[@name='ammoGasCan']" name="count">100,1500</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup/item[@name='ammoGasCan']" name="count">100,1500</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer/item[@name='ammoGasCan']" name="count">10,1000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup/item[@name='ammoGasCan']" name="count">10,1000</setattribute>
+
 
 	<!-- Appliance Storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigeratorNOPOP']" name="size">6,8</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigeratorNOPOP']" name="size">8,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigerator_retroNOPOP']" name="size">8,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='refrigerator_steelNOPOP']" name="size">8,6</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='dishwasherNOPOP']" name="size">6,6</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='lockersNOPOP']" name="size">6,6</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='beerCooler']" name="size">6,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='playerCooler']" name="size">6,4</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='lockersNOPOP']" name="size">6,8</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='metalDeskNOPOP']" name="size">6,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='playerFileCabinet']" name="size">6,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='cupboard']" name="size">6,6</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='bookcase']" name="size">6,6</setattribute>
+
 
 	<!-- vehicleBicycle storage -->
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']" name="size">9,3</setattribute><!-- Default 9,1 -->
@@ -25,8 +33,94 @@
 	<!-- vehicleGyrocopter storage -->
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']" name="size">9,9</setattribute><!-- Default 9,5 -->
 
+	<!--  DiDi the JunkDrone  -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='roboticDrone']" name="size">8,5</setattribute>
 
-<!-- Animal Snares -->
+
+	<!-- Qeust rewards -->
+	<!-- ammo rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletBall']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunShell']" name="count">125</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletBall']" name="count">250</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoPipeBomb']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoMolotovCocktail']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletHP']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletBall']" name="count">375</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletHP']" name="count">300</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunSlug']" name="count">100</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletHP']" name="count">200</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowFlaming']" name="count">150</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltFlaming']" name="count">150</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownDynamite']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenade']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowExploding']" name="count">100</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltExploding']" name="count">100</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletAP']" name="count">400</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletAP']" name="count">300</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletAP']" name="count">200</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoRocketFrag']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenadeContact']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownTimedCharge']" name="count">20</setattribute>
+
+	<!-- medical rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugVitamins']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='foodHoney']" name="count">10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='medicalFirstAidBandage']" name="count">15</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugPainkillers']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugHerbalAntibiotics']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='medicalFirstAidKit']" name="count">10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugAntibiotics']" name="count">10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugSteroids']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugRecog']" name="count">10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugFortBites']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='toolBeaker']" name="count">2</setattribute>
+	
+	<!-- resource rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceWood']" name="count">4000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceCobblestones']" name="count">2500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceCoal']" name="count">3000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceGunPowder']" name="count">1000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceGlue']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0']/item[@name='resourceLockPick']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceCement']" name="count">3000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceConcreteMix']" name="count">1500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceGunPowder']" name="count">2500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceGlue']" name="count">50</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceDuctTape']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceMechanicalParts']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceRepairKit']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT1']/item[@name='resourceLockPick']" name="count">50</setattribute>
+	
+	<!-- varois rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestArmorResources']/item[@name='resourceArmorCraftingKit']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestArmorResources']/item[@name='armorParts']" name="count">25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestArmorResources']/item[@name='resourceLegendaryParts']" name="count">5</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestGas']/item[@name='ammoGasCan']" name="count">30000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestLockPicks']/item[@name='resourceLockPick']" name="count">50</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestTimedCharges']/item[@name='thrownTimedCharge']" name="count">20</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestForgedIron']/item[@name='resourceForgedIron']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestForgedSteel']/item[@name='resourceForgedSteel']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestSteel01']/item[@name='resourceForgedSteel']" name="count">250</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestSteel02']/item[@name='resourceForgedSteel']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestcasinoCoinT1']/item[@name='casinoCoin']" name="count">5000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestcasinoCoinT2']/item[@name='casinoCoin']" name="count">10000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestcasinoCoinT3']/item[@name='casinoCoin']" name="count">15000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestcasinoCoinT4']/item[@name='casinoCoin']" name="count">20000</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestcasinoCoinT5']/item[@name='casinoCoin']" name="count">30000</setattribute>
+
+	<!-- shapes rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestWoodShapes']/item[@name='woodShapes:VariantHelper']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestCobblestoneShapes']/item[@name='cobblestoneShapes:VariantHelper']" name="count">500</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestConcreteShapes']/item[@name='concreteShapes:VariantHelper']" name="count">250</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestSteelShapes']/item[@name='steelShapes:VariantHelper']" name="count">125</setattribute>
+	
+	<!-- food rewards -->
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestT0Food']/item[@group='cannedfood']" name="count">6</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestFood']/item" name="count">10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestFood']/item[@group='cannedfood']" name="count">6</setattribute>
+
+
+	<!-- Animal Snares -->
 	<append xpath="/lootcontainers/lootgroup[@name='groupWorkingStiffsBooks']">	
 			<item name="recipebookAnimalTraps" loot_prob_template="veryLow" />
 	</append>

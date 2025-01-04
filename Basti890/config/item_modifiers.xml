@@ -1,5 +1,5 @@
 <basti890>
 	<!-- Let's make Tool-Mods more powerfull -->
-	<setattribute xpath="/item_modifiers/item_modifier/effect_group/passive_effect[@name='DamageModifier']" name="value">.30</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier/effect_group/passive_effect[@name='DamageModifier']" name="value">.50</setattribute>
 
 </basti890>

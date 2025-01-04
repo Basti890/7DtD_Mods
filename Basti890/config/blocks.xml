@@ -14,7 +14,7 @@
 	</append>
 	
 	
-	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">100</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">50</setattribute>
 	
 	
 	<!-- traps better -->
@@ -109,7 +109,7 @@
 
 
 	<!-- more Gas -->
-	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">100,1500</setattribute>
+	<setattribute xpath="/blocks/block/drop[@name='ammoGasCan']" name="count">10,1000</setattribute>
 	
 	
 	<!-- more resources from Pallets -->
