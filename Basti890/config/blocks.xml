@@ -9,12 +9,44 @@
 		<drop event="Destroy" name="resourceHeadlight" count="1"/>
 	</append>
 	
-	<append xpath="/blocks/block[starts-with(@name,'lantern')]">
-		<drop event="Destroy" name="lanternDecorLightBlockVariantHelper" count="1"/>
+	
+	<!-- Ammo boxes 14 pile -->
+	<append xpath="/blocks/block[@name='palletCartonMilitaryCap']">
+		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
+		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
+	</append>
+	
+	<!-- Ammo boxes 120 Palet -->
+	<append xpath="/blocks/block[@name='palletCartonMilitaryTile']">
+		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
+		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
+		<drop event="Harvest" name="thrownDynamite" count="0,10" tag="allHarvest" />
+		<drop event="Harvest" name="thrownGrenade" count="0,6" tag="allHarvest" />
+		<drop event="Harvest" name="thrownGrenadeContact" count="0,6" tag="allHarvest" />
+		<drop event="Harvest" name="ammoRocketFrag" count="0,2" tag="allHarvest" />
+		<drop event="Harvest" name="ammoRocketHE" count="0,2" tag="allHarvest" />
+		<drop event="Harvest" name="thrownTimedCharge" count="0,4" tag="allHarvest" />
+	</append>
+	
+	<append xpath="/blocks/block[@name='palletCartonMilitaryTileCovered']">
+		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
+		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
+		<drop event="Harvest" name="thrownDynamite" count="0,10" tag="allHarvest" />
+		<drop event="Harvest" name="thrownGrenade" count="0,6" tag="allHarvest" />
+		<drop event="Harvest" name="thrownGrenadeContact" count="0,6" tag="allHarvest" />
+		<drop event="Harvest" name="ammoRocketFrag" count="0,2" tag="allHarvest" />
+		<drop event="Harvest" name="ammoRocketHE" count="0,2" tag="allHarvest" />
+		<drop event="Harvest" name="thrownTimedCharge" count="0,4" tag="allHarvest" />
 	</append>
 	
 	
-	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">50</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">10</setattribute>
 	
 	
 	<!-- traps better -->
