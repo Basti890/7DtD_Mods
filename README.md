@@ -4,10 +4,9 @@ The Basti890 Mods inculde:
 * higher item stacknumbers
 * plantable peas
 * Valmars Foods
-* more skill points per level
 * craft Tier6
 * more mod slots per Item Level (Level 1,2,3,4,5,6 = 0,1,2,3,4,5 Mod Slots)
-* quicker crafting with Nerdy Glsses and way faster Smelting with Advanced Bellows
+* quicker crafting and way faster Smelting with Advanced Bellows
 * more time before loot drops from Zombies and killed animals disapear
 * faster zombie body disapearing (for performance reasons)
 * tool mods make tools way more powerfull
@@ -22,7 +21,6 @@ The Basti890 Mods inculde:
 * 1 more craftig queue slot
 * 1 more forge smelting slot
 * more crafting output slots
-* lockable inventory slots
 * Bigger Generators
 * faster skilling through the Skill magazines
 * faster dew collector
