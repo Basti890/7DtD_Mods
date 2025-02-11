@@ -25,6 +25,6 @@ The Basti890 Mods inculde:
 * faster skilling through the Skill magazines
 * faster dew collector
 
-Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if iot does not exist).
+Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if it does not exist).
 
 You are free to suggest changes and bugfixes.
