@@ -23,7 +23,10 @@ The Basti890 Mods inculde:
 * more crafting output slots
 * Bigger Generators
 * faster skilling through the Skill magazines
-* faster dew collector
+* more efficient dew collector when using mods
+* Incindiary ammo
+* Casings and Bullet tips for every caliber
+* Ammobundels now drop 500 rounds, as the ammostacknumbers have been increased
 
 Just download the code as ZIP and copy the mods in: %APPDATA%/7DaysToDie/Mods (create the Mods folder if it does not exist).
 
