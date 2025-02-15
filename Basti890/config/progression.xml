@@ -11,9 +11,9 @@
 
 
 	<!-- faster craftig -->
-	<setattribute xpath="/progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
-	<setattribute xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
-	<setattribute xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.75</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkSalvageOperations']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.65</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.65</setattribute>
+	<setattribute xpath="/progression/perks/perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.65</setattribute>
 	
 
 	<!-- more XP from Trap kills -->

@@ -12,37 +12,37 @@
 	
 	<!-- Ammo boxes 14 pile -->
 	<append xpath="/blocks/block[@name='palletCartonMilitaryCap']">
-		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
-		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
-		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
-		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
+		<drop event="Harvest" name="ammo9mmBulletBall" count="10,100" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="5,75" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="5,50" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammoShotgunShell" count="5,25" tag="allHarvest" prob="0.1" />
 	</append>
 	
 	<!-- Ammo boxes 120 Palet -->
 	<append xpath="/blocks/block[@name='palletCartonMilitaryTile']">
-		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
-		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
-		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
-		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
-		<drop event="Harvest" name="thrownDynamite" count="0,10" tag="allHarvest" />
-		<drop event="Harvest" name="thrownGrenade" count="0,6" tag="allHarvest" />
-		<drop event="Harvest" name="thrownGrenadeContact" count="0,6" tag="allHarvest" />
-		<drop event="Harvest" name="ammoRocketFrag" count="0,2" tag="allHarvest" />
-		<drop event="Harvest" name="ammoRocketHE" count="0,2" tag="allHarvest" />
-		<drop event="Harvest" name="thrownTimedCharge" count="0,4" tag="allHarvest" />
+		<drop event="Harvest" name="ammo9mmBulletBall" count="10,100" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="5,75" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="5,50" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammoShotgunShell" count="5,25" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownDynamite" count="1,10" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownGrenade" count="1,6" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownGrenadeContact" count="1,6" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammoRocketFrag" count="1,3" tag="allHarvest" prob="0.01" />
+		<drop event="Harvest" name="ammoRocketHE" count="1,2" tag="allHarvest" prob="0.01" />
+		<drop event="Harvest" name="thrownTimedCharge" count="1,4" tag="allHarvest" prob="0.01" />
 	</append>
 	
 	<append xpath="/blocks/block[@name='palletCartonMilitaryTileCovered']">
-		<drop event="Harvest" name="ammo9mmBulletBall" count="0,100" tag="allHarvest" />
-		<drop event="Harvest" name="ammo44MagnumBulletBall" count="0,75" tag="allHarvest" />
-		<drop event="Harvest" name="ammo762mmBulletBall" count="0,50" tag="allHarvest" />
-		<drop event="Harvest" name="ammoShotgunShell" count="0,25" tag="allHarvest" />
-		<drop event="Harvest" name="thrownDynamite" count="0,10" tag="allHarvest" />
-		<drop event="Harvest" name="thrownGrenade" count="0,6" tag="allHarvest" />
-		<drop event="Harvest" name="thrownGrenadeContact" count="0,6" tag="allHarvest" />
-		<drop event="Harvest" name="ammoRocketFrag" count="0,2" tag="allHarvest" />
-		<drop event="Harvest" name="ammoRocketHE" count="0,2" tag="allHarvest" />
-		<drop event="Harvest" name="thrownTimedCharge" count="0,4" tag="allHarvest" />
+		<drop event="Harvest" name="ammo9mmBulletBall" count="10,100" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo44MagnumBulletBall" count="5,75" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammo762mmBulletBall" count="5,50" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammoShotgunShell" count="5,25" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownDynamite" count="1,10" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownGrenade" count="1,6" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="thrownGrenadeContact" count="1,6" tag="allHarvest" prob="0.1" />
+		<drop event="Harvest" name="ammoRocketFrag" count="1,3" tag="allHarvest" prob="0.01" />
+		<drop event="Harvest" name="ammoRocketHE" count="1,2" tag="allHarvest" prob="0.01" />
+		<drop event="Harvest" name="thrownTimedCharge" count="1,4" tag="allHarvest" prob="0.01" />
 	</append>
 	
 	
@@ -145,6 +145,7 @@
 	
 	
 	<!-- more resources from Pallets -->
+	<setattribute xpath="/blocks/block[starts-with(@name,'palletBag')]/drop[@name='resourceWood']" name="event">Destroy</setattribute>
 	<setattribute xpath="/blocks/block[starts-with(@name,'palletBag')]/drop[@event='Harvest']" name="count">10,500</setattribute>
 	
 	

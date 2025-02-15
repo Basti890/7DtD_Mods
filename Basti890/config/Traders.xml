@@ -1,0 +1,32 @@
+<basti890>
+	<removeattribute xpath="/traders/trader_item_groups/trader_item_group[contains(@name,'ammo')]/item/@prob" />
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']">
+		<item name="ammo9mmBulletFMJINC" count="40,150"/>
+		<item name="ammo44MagnumBulletFMJINC" count="30,125"/>
+		<item name="ammo762mmBulletFMJINC" count="20,100"/>
+	</append>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoHP']">
+		<item name="ammo9mmBulletFMJINC" count="40,150"/>
+		<item name="ammo44MagnumBulletFMJINC" count="30,125"/>
+		<item name="ammo762mmBulletFMJINC" count="20,100"/>
+	</append>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAP']">
+		<item name="ammo9mmBulletFMJINC" count="40,150"/>
+		<item name="ammo44MagnumBulletFMJINC" count="30,125"/>
+		<item name="ammo762mmBulletFMJINC" count="20,100"/>
+	</append>
+	<remove xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']/item[@name='resourceBulletCasing']" />
+	<remove xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']/item[@name='resourceBulletTip']" />
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoSupplies']">
+		<item name="resource9mmBulletCasing" count="20,200"/> <!-- 5 -->
+		<item name="resource762BulletCasing" count="20,200"/> <!-- 5 -->
+		<item name="resource44BulletCasing" count="20,200"/> <!-- 5 -->
+		<item name="resource9mmBulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resource9mmFMJBulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resource762BulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resource762FMJBulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resource44BulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resource44FMJBulletTip" count="20,200"/> <!-- 5 -->
+		<item name="resourceShotgunSlugBulletTip" count="20,200"/> <!-- 5 -->
+	</append>
+</basti890>

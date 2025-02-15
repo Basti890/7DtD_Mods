@@ -7,180 +7,226 @@
 	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoBundleArrow')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
 	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammoArrow')]/ingredient[@name='resourceScrapPolymers']" name="name">resourceWood</setattribute>
 
-	<set xpath="/recipes/recipe[@name='ammo9mmBulletBall']">
-		<ingredient name="resourceBulletTip" count="2"/>
-		<ingredient name="resourceGunPowder" count="1"/>
-		<ingredient name="resourceBulletCasing" count="2"/>
-	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletBall']" name="count">2</setattribute>
+
+	<remove xpath="/recipes/recipe[@name='resourceBulletCasing']" />
+	<remove xpath="/recipes/recipe[@name='resourceBulletTip']" />
+	<append xpath="/recipes">
+		<recipe name="resource9mmBulletCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_brass" count="1"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource9mmBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="1"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource9mmFMJBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="1"/>
+			<ingredient name="unit_iron" count="2"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		
+		<recipe name="resource44BulletCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_brass" count="2"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource44BulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="2"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource44FMJBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="2"/>
+			<ingredient name="unit_iron" count="3"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		
+		<recipe name="resource762BulletCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_brass" count="3"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource762BulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="2"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resource762FMJBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="2"/>
+			<ingredient name="unit_iron" count="3"/>
+			<ingredient name="unit_clay" count="1"/>
+		</recipe>
+		<recipe name="resourceShotgunSlugBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+			<ingredient name="unit_lead" count="3"/>
+			<ingredient name="unit_clay" count="1"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_lead"/>
+			</effect_group>
+		</recipe>
+	</append>
+	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletBall']/ingredient[@name='resourceBulletTip']" name="name">resource9mmBulletTip</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammo9mmBullet')]/ingredient[@name='resourceBulletCasing']" name="name">resource9mmBulletCasing</setattribute>
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletBall']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="400"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
+		<ingredient name="resource9mmBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="350"/>
+		<ingredient name="resource9mmBulletCasing" count="500"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='ammo9mmBulletHP']">
-		<ingredient name="resourceBulletTip" count="2"/>
-		<ingredient name="resourceGunPowder" count="1"/>
-		<ingredient name="resourceBulletCasing" count="2"/>
+		<ingredient name="resource9mmBulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resource9mmBulletCasing" count="1"/>
 	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletHP']" name="count">2</setattribute>
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletHP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="400"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
+		<ingredient name="resource9mmBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="700"/>
+		<ingredient name="resource9mmBulletCasing" count="500"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='ammo9mmBulletAP']">
-		<ingredient name="resourceBulletTip" count="5"/>
-		<ingredient name="resourceGunPowder" count="3"/>
-		<ingredient name="resourceBulletCasing" count="5"/>
-		<ingredient name="resourceForgedSteel" count="1"/>
+		<ingredient name="resource9mmFMJBulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="1"/>
+		<ingredient name="resource9mmBulletCasing" count="1"/>
 	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammo9mmBulletAP']" name="count">5</setattribute>
 	<set xpath="/recipes/recipe[@name='ammoBundle9mmBulletAP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="400"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-		<ingredient name="resourceForgedSteel" count="100"/>
-	</set>
-
-	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletBall']">
-		<ingredient name="resourceBulletTip" count="1"/>
-		<ingredient name="resourceGunPowder" count="1"/>
-		<ingredient name="resourceBulletCasing" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="800"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletHP']">
-		<ingredient name="resourceBulletTip" count="1"/>
-		<ingredient name="resourceGunPowder" count="1"/>
-		<ingredient name="resourceBulletCasing" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="800"/>
-		<ingredient name="resourceBulletCasing" count="100"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletAP']">
-		<ingredient name="resourceBulletTip" count="5"/>
-		<ingredient name="resourceGunPowder" count="5"/>
-		<ingredient name="resourceBulletCasing" count="5"/>
-		<ingredient name="resourceForgedSteel" count="1"/>
-	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammo44MagnumBulletAP']" name="count">5</setattribute>
-	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="800"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-		<ingredient name="resourceForgedSteel" count="1000"/>
-	</set>
-
-	<set xpath="/recipes/recipe[@name='ammo762mmBulletBall']">
-		<ingredient name="resourceBulletTip" count="1"/>
-		<ingredient name="resourceGunPowder" count="2"/>
-		<ingredient name="resourceBulletCasing" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="1600"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammo762mmBulletHP']">
-		<ingredient name="resourceBulletTip" count="1"/>
-		<ingredient name="resourceGunPowder" count="2"/>
-		<ingredient name="resourceBulletCasing" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="1600"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='ammo762mmBulletAP']">
-		<ingredient name="resourceBulletTip" count="5"/>
-		<ingredient name="resourceGunPowder" count="10"/>
-		<ingredient name="resourceBulletCasing" count="5"/>
-		<ingredient name="resourceForgedSteel" count="1"/>
-	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammo762mmBulletAP']" name="count">5</setattribute>
-	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']">
-		<ingredient name="resourceBulletTip" count="1000"/>
-		<ingredient name="resourceGunPowder" count="1600"/>
-		<ingredient name="resourceBulletCasing" count="1000"/>
-		<ingredient name="resourceForgedSteel" count="200"/>
+		<ingredient name="resource9mmFMJBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="350"/>
+		<ingredient name="resource9mmBulletCasing" count="500"/>
 	</set>
 	<append xpath="/recipes">
-		<recipe name="ammo9mmBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="5"/>
-			<ingredient name="resourceForgedSteel" count="1"/>
+		<recipe name="ammo9mmBulletFMJINC" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource9mmFMJBulletTip" count="1"/>
+				<ingredient name="resourceGunPowder" count="2"/>
+				<ingredient name="resource9mmBulletCasing" count="1"/>
 		</recipe>
-		<recipe name="ammoBundle9mmBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="500"/>
-			<ingredient name="resourceForgedSteel" count="100"/>
+
+		<recipe name="ammoBundle9mmBulletFMJINC" count="1" craft_time="360" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource9mmFMJBulletTip" count="500"/>
+				<ingredient name="resourceGunPowder" count="700"/>
+				<ingredient name="resource9mmBulletCasing" count="500"/>
 		</recipe>
-		<recipe name="ammo44MagnumBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="5"/>
-			<ingredient name="resourceForgedSteel" count="1"/>
+	</append>
+	
+	<setattribute xpath="/recipes/recipe[@name='ammo44MagnumBulletBall']/ingredient[@name='resourceBulletTip']" name="name">resource44BulletTip</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammo44MagnumBullet')]/ingredient[@name='resourceBulletCasing']" name="name">resource44BulletCasing</setattribute>
+	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletBall']">
+		<ingredient name="resource44BulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="700"/>
+		<ingredient name="resource44BulletCasing" count="500"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletHP']">
+		<ingredient name="resource44BulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="3"/>
+		<ingredient name="resource44BulletCasing" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletHP']">
+		<ingredient name="resource44BulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="1050"/>
+		<ingredient name="resource44BulletCasing" count="500"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammo44MagnumBulletAP']">
+		<ingredient name="resource44FMJBulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resource44BulletCasing" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammoBundle44MagnumBulletAP']">
+		<ingredient name="resource44FMJBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="700"/>
+		<ingredient name="resource44BulletCasing" count="500"/>
+	</set>
+	<append xpath="/recipes">
+		<recipe name="ammo44MagnumBulletFMJINC" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource44FMJBulletTip" count="1"/>
+				<ingredient name="resourceGunPowder" count="3"/>
+				<ingredient name="resource44BulletCasing" count="1"/>
 		</recipe>
-		<recipe name="ammoBundle44MagnumBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="500"/>
-			<ingredient name="resourceForgedSteel" count="100"/>
+
+		<recipe name="ammoBundle44MagnumBulletFMJINC" count="1" craft_time="360" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource44FMJBulletTip" count="500"/>
+				<ingredient name="resourceGunPowder" count="1050"/>
+				<ingredient name="resource44BulletCasing" count="500"/>
 		</recipe>
-		<recipe name="ammo762mmBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="5"/>
-			<ingredient name="resourceForgedSteel" count="1"/>
+	</append>
+	
+	<setattribute xpath="/recipes/recipe[@name='ammo762mmBulletBall']/ingredient[@name='resourceBulletTip']" name="name">resource762BulletTip</setattribute>
+	<setattribute xpath="/recipes/recipe[starts-with(@name,'ammo762mmBullet')]/ingredient[@name='resourceBulletCasing']" name="name">resource762BulletCasing</setattribute>
+	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletBall']">
+		<ingredient name="resource762BulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="1050"/>
+		<ingredient name="resource762BulletCasing" count="500"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammo762mmBulletHP']">
+		<ingredient name="resource762BulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="4"/>
+		<ingredient name="resource762BulletCasing" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletHP']">
+		<ingredient name="resource762BulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="1550"/>
+		<ingredient name="resource762BulletCasing" count="500"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammo762mmBulletAP']">
+		<ingredient name="resource762FMJBulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="3"/>
+		<ingredient name="resource762BulletCasing" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='ammoBundle762mmBulletAP']">
+		<ingredient name="resource762FMJBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="1050"/>
+		<ingredient name="resource762BulletCasing" count="500"/>
+	</set>
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletFMJINC" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource762FMJBulletTip" count="1"/>
+				<ingredient name="resourceGunPowder" count="4"/>
+				<ingredient name="resource762BulletCasing" count="1"/>
 		</recipe>
-		<recipe name="ammoBundle762mmBulletAP" count="5">
-			<ingredient name="ammo762mmBulletBall" count="500"/>
-			<ingredient name="resourceForgedSteel" count="100"/>
+
+		<recipe name="ammoBundle762mmBulletFMJINC" count="1" craft_time="360" craft_area="workbench" tags="learnable,workbenchCrafting">
+				<ingredient name="resource762FMJBulletTip" count="500"/>
+				<ingredient name="resourceGunPowder" count="1550"/>
+				<ingredient name="resource762BulletCasing" count="500"/>
 		</recipe>
-		<!--
-		<recipe name="modGunMeleeBlessedMetal" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceForgedSteel" count="5"/>
-			<ingredient name="resourceGoldNugget" count="1"/>
-			<ingredient name="resourceMechanicalParts" count="2"/>
-			<ingredient name="resourceSpring" count="5"/>
-		</recipe>
-		-->
 	</append>
 
-	<set xpath="/recipes/recipe[@name='ammoShotgunShell']">
-		<ingredient name="resourceBuckshot" count="1"/>
-		<ingredient name="resourceGunPowder" count="3"/>
-		<ingredient name="resourcePaper" count="1"/>
-	</set>
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunShell']">
-		<ingredient name="resourceBuckshot" count="80"/>
-		<ingredient name="resourceGunPowder" count="240"/>
-		<ingredient name="resourcePaper" count="80"/>
+		<ingredient name="resourceBuckshot" count="500"/>
+		<ingredient name="resourceGunPowder" count="1600"/>
+		<ingredient name="resourcePaper" count="500"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='ammoShotgunSlug']">
-		<ingredient name="resourceBulletTip" count="2"/>
-		<ingredient name="resourceGunPowder" count="3"/>
+		<ingredient name="resourceShotgunSlugBulletTip" count="1"/>
+		<ingredient name="resourceGunPowder" count="4"/>
 		<ingredient name="resourceScrapPolymers" count="1"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunSlug']">
-		<ingredient name="resourceBulletTip" count="160"/>
-		<ingredient name="resourceGunPowder" count="240"/>
-		<ingredient name="resourceScrapPolymers" count="80"/>
+		<ingredient name="resourceShotgunSlugBulletTip" count="500"/>
+		<ingredient name="resourceGunPowder" count="1500"/>
+		<ingredient name="resourceScrapPolymers" count="500"/>
 	</set>
 	<set xpath="/recipes/recipe[@name='ammoShotgunBreachingSlug']">
-		<ingredient name="resourceForgedSteel" count="1"/>
-		<ingredient name="resourceClayLump" count="2"/>
-		<ingredient name="resourceGunPowder" count="15"/>
-		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceBuckshot" count="1"/>
+		<ingredient name="resourceGunPowder" count="7"/>
+		<ingredient name="resourceScrapPolymers" count="1"/>
 	</set>
-	<setattribute xpath="/recipes/recipe[@name='ammoShotgunBreachingSlug']" name="count">5</setattribute>
 	<set xpath="/recipes/recipe[@name='ammoBundleShotgunBreachingSlug']">
-		<ingredient name="resourceForgedSteel" count="80"/>
-		<ingredient name="resourceClayLump" count="160"/>
-		<ingredient name="resourceGunPowder" count="1200"/>
-		<ingredient name="resourceScrapPolymers" count="400"/>
+		<ingredient name="resourceBuckshot" count="500"/>
+		<ingredient name="resourceGunPowder" count="3000"/>
+		<ingredient name="resourceScrapPolymers" count="500"/>
 	</set>
 
-	<setattribute xpath="/recipes/recipe[@name='resourceGunPowder']" name="count">2</setattribute>
-	<setattribute xpath="/recipes/recipe[@name='resourceGunPowderBundle']" name="count">2</setattribute>
+	<remove xpath="/recipes/recipe[@name='resourceGunPowder']" />
+	<remove xpath="/recipes/recipe[@name='resourceGunPowderBundle']" />
+	<append xpath="/recipes">
+		<recipe name="resourceGunPowder" count="6" craft_time="1.5" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceCoal" count="1"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="5"/>
+		</recipe>
+		<recipe name="resourceGunPowderBundle" count="1" craft_time="240" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
+			<ingredient name="resourceCoal" count="100"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="550"/>
+		</recipe>
+
+		<recipe name="resourceGunPowder" count="6">
+			<ingredient name="resourceCoal" count="2"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="6"/>
+		</recipe>
+	</append>
+	
 	<setattribute xpath="/recipes/recipe[@name='resourceOil']/ingredient[@name='resourceOilShale']" name="count">4</setattribute>
 
 	<set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']">
@@ -239,7 +285,10 @@
 	<remove xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']"/>
 	<remove xpath="/recipes/recipe[@name='drugFortBites']/ingredient[@name='medicalBloodBag']"/>
 	
-	
+	<setattribute xpath="/recipes/recipe[@name='drugRecog']/ingredient[@name='resourceAcid']" name="name">resourceGunPowder</setattribute>
+	<append xpath="/recipes/recipe[@name='drinkJarBeer']">
+		<ingredient name="foodCornMeal" count="2"/>
+	</append>
 	<append xpath="/recipes">
 	
 		<!-- Craft Bricks -->
@@ -247,6 +296,9 @@
 			<ingredient name="resourceCobblestones" count="5"/>
 		</recipe>
 
+		<recipe name="resourceCoal" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceWood" count="1"/>
+		</recipe>
 
 		<!-- Extract Gunpowdser from Mines -->
 		<recipe name="resourceGunPowder" count="4">
@@ -524,13 +576,6 @@
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
 		
-		
-		<!-- expanded traps
-		<recipe name="trapFireEmpty" count="1" scrapable="False" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceForgedSteel" count="10"/>
-			<ingredient name="toolCookingGrill" count="1"/>
-		</recipe>
-		-->
 		
 		<!-- MD Advanced Generator -->
 		<recipe name="Mid_Generator" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">

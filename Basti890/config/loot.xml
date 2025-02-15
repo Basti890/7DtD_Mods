@@ -1,5 +1,52 @@
 <basti890>
 
+	<!-- add new ammo to loot -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingSmall']">
+		<item name="resource9mmBulletCasing" count="10,25" loot_prob_template="low" />
+		<item name="resource762BulletCasing" count="10,25" loot_prob_template="low" />
+		<item name="resource44BulletCasing" count="10,25" loot_prob_template="low" />
+	</set>
+	
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingMedium']">
+		<item name="resource9mmBulletCasing" count="20,50" loot_prob_template="low" />
+		<item name="resource762BulletCasing" count="20,50" loot_prob_template="low" />
+		<item name="resource44BulletCasing" count="20,50" loot_prob_template="low" />
+	</set>
+	
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingLarge']">
+		<item name="resource9mmBulletCasing" count="50,100" loot_prob_template="low" />
+		<item name="resource762BulletCasing" count="50,100" loot_prob_template="low" />
+		<item name="resource44BulletCasing" count="50,100" loot_prob_template="low" />
+	</set>
+
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipSmall']">
+		<item name="resource9mmBulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resource9mmFMJBulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resource762BulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resource762FMJBulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resource44BulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resource44FMJBulletTip" count="10,25" loot_prob_template="low" />
+		<item name="resourceShotgunSlugBulletTip" count="10,25" loot_prob_template="low" />
+	</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipMedium']">
+		<item name="resource9mmBulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resource9mmFMJBulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resource762BulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resource762FMJBulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resource44BulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resource44FMJBulletTip" count="20,50" loot_prob_template="low" />
+		<item name="resourceShotgunSlugBulletTip" count="20,50" loot_prob_template="low" />
+	</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipLarge']">
+		<item name="resource9mmBulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resource9mmFMJBulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resource762BulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resource762FMJBulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resource44BulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resource44FMJBulletTip" count="50,100" loot_prob_template="low" />
+		<item name="resourceShotgunSlugBulletTip" count="50,100" loot_prob_template="low" />
+	</set>
+
 	<!-- more Gas in Loot -->
 	<setattribute xpath="/lootcontainers/lootcontainer/item[@name='ammoGasCan']" name="count">10,1000</setattribute>
 	<setattribute xpath="/lootcontainers/lootgroup/item[@name='ammoGasCan']" name="count">10,1000</setattribute>
@@ -39,28 +86,58 @@
 
 	<!-- Qeust rewards -->
 	<!-- ammo rewards -->
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletBall']" name="count">500</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunShell']" name="count">125</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletBall']" name="count">250</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoPipeBomb']" name="count">25</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownAmmoMolotovCocktail']" name="count">25</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletHP']" name="count">500</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletBall']" name="count">375</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletHP']" name="count">300</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoShotgunSlug']" name="count">100</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletHP']" name="count">200</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowFlaming']" name="count">150</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltFlaming']" name="count">150</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownDynamite']" name="count">25</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenade']" name="count">25</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoArrowExploding']" name="count">100</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoCrossbowBoltExploding']" name="count">100</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo9mmBulletAP']" name="count">400</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo44MagnumBulletAP']" name="count">300</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammo762mmBulletAP']" name="count">200</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='ammoRocketFrag']" name="count">20</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownGrenadeContact']" name="count">25</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']/item[@name='thrownTimedCharge']" name="count">20</setattribute>
+	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletTipSmall']">
+		<item name="ammoArrowSteelAP" count="150" loot_prob_template="QuestT0Prob"/>
+		<item name="ammoCrossbowBoltSteelAP" count="150" loot_prob_template="QuestT0Prob"/>
+		<item name="ammo9mmBulletBall" count="300" loot_prob_template="QuestT0Prob"/>
+		<item name="ammoShotgunShell" count="150" loot_prob_template="QuestT0Prob"/>
+		<item name="ammo44MagnumBulletBall" count="200" loot_prob_template="QuestT0Prob"/>
+		<item name="thrownAmmoPipeBomb" count="15" loot_prob_template="QuestT0Prob"/>
+		<item name="thrownAmmoMolotovCocktail" count="15" loot_prob_template="QuestT0Prob"/>
+		
+		<item name="ammoArrowSteelAP" count="1000" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoCrossbowBoltSteelAP" count="1000" loot_prob_template="QuestT1Prob"/>
+		<item name="ammo9mmBulletBall" count="1000" loot_prob_template="QuestT1Prob"/>
+		<item name="ammo9mmBulletHP" count="300" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoShotgunShell" count="500" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoShotgunSlug" count="150" loot_prob_template="QuestT1Prob"/>
+		<item name="ammo44MagnumBulletBall" count="750" loot_prob_template="QuestT1Prob"/>
+		<item name="ammo44MagnumBulletHP" count="200" loot_prob_template="QuestT1Prob"/>
+		<item name="ammo762mmBulletBall" count="150" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoArrowFlaming" count="50" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoCrossbowBoltFlaming" count="50" loot_prob_template="QuestT1Prob"/>
+		<item name="thrownAmmoPipeBomb" count="50" loot_prob_template="QuestT1Prob"/>
+		<item name="thrownAmmoMolotovCocktail" count="50" loot_prob_template="QuestT1Prob"/>
+		
+		<item name="ammo9mmBulletHP" count="300" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo9mmBulletAP" count="300" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo44MagnumBulletHP" count="200" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo44MagnumBulletAP" count="200" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoShotgunSlug" count="500" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoShotgunBreachingSlug" count="150" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo762mmBulletBall" count="500" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo762mmBulletHP" count="150" loot_prob_template="QuestT2Prob"/>
+		<item name="ammo762mmBulletAP" count="150" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoArrowFlaming" count="300" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoArrowExploding" count="150" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoCrossbowBoltFlaming" count="300" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoCrossbowBoltExploding" count="150" loot_prob_template="QuestT2Prob"/>
+		<item name="thrownDynamite" count="15" loot_prob_template="QuestT2Prob"/>
+		<item name="thrownGrenade" count="25"  loot_prob_template="QuestT2Prob"/>
+		
+		<item name="ammo9mmBulletAP" count="1000" loot_prob_template="QuestT3Prob"/>
+		<item name="ammo9mmBulletFMJINC" count="300" loot_prob_template="QuestT3Prob"/>
+		<item name="ammo44MagnumBulletAP" count="750" loot_prob_template="QuestT3Prob"/>
+		<item name="ammo44MagnumBulletFMJINC" count="200" loot_prob_template="QuestT3Prob"/>
+		<item name="ammo762mmBulletAP" count="500" loot_prob_template="QuestT3Prob"/>
+		<item name="ammo762mmBulletFMJINC" count="150" loot_prob_template="QuestT3Prob"/>
+		<item name="ammoShotgunBreachingSlug" count="500" loot_prob_template="QuestT3Prob"/>
+		<item name="ammoArrowExploding" count="300" loot_prob_template="QuestT3Prob"/>
+		<item name="ammoCrossbowBoltExploding" count="300" loot_prob_template="QuestT3Prob"/>
+		<item name="ammoRocketFrag" count="20" loot_prob_template="QuestT3Prob"/>
+		<item name="thrownGrenadeContact" count="25" loot_prob_template="QuestT3Prob"/>
+		<item name="thrownTimedCharge" count="20" loot_prob_template="QuestT3Prob"/>
+	</set>
 
 	<!-- medical rewards -->
 	<setattribute xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']/item[@name='drugVitamins']" name="count">20</setattribute>
