@@ -270,9 +270,17 @@
 		
 		
 	<!-- Food -->
-	<setattribute xpath="/recipes/recipe[@name='foodBaconAndEggs']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
-	<setattribute xpath="/recipes/recipe[@name='foodChiliDog']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
-	<setattribute xpath="/recipes/recipe[@name='foodMeatStew']/ingredient[@name='foodRawMeat']" name="count">4</setattribute>
+	<setattribute xpath="/recipes/recipe/ingredient[@name='foodRawMeat']" name="count">3</setattribute>
+	<set xpath="/recipes/recipe[@name='foodBoiledMeat']">
+		<ingredient name="foodRawMeat" count="1"/>
+		<ingredient name="drinkJarBoiledWater" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='foodCharredMeat']">
+		<ingredient name="foodRawMeat" count="1"/>
+	</set>
+	<set xpath="/recipes/recipe[@name='foodGrilledMeat']">
+		<ingredient name="foodRawMeat" count="1"/>
+	</set>
 	<setattribute xpath="/recipes/recipe[@name='drinkJarGrandpasAwesomeSauce']/ingredient[@name='foodHoney']" name="count">2</setattribute>
 
 	<setattribute xpath="/recipes/recipe[@name='resourceConcreteMix']" name="count">2</setattribute>
@@ -405,7 +413,6 @@
 		</recipe>
 		<recipe name="Omelet" count="1" scrapable="False" craft_area="campfire" craft_tool="toolCookingPot">
 			<ingredient name="foodEgg" count="2"/>
-			<ingredient name="resourceAnimalFat" count="1"/>
 			<ingredient name="foodRawMeat" count="1"/>
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
@@ -530,7 +537,7 @@
 			<ingredient name="foodBoiledMeat" count="1"/>
 		</recipe>
 		<recipe name="grillSteak" count="1" scrapable="False" craft_area="campfire" craft_tool="toolCookingGrill">
-			<ingredient name="foodRawMeat" count="3"/>
+			<ingredient name="foodRawMeat" count="2"/>
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
 		<recipe name="steakSandwich" count="1" scrapable="False">
@@ -543,14 +550,15 @@
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
 		<recipe name="mealBreakfast" count="1" scrapable="False" craft_area="campfire" craft_tool="toolCookingPot">
-			<ingredient name="foodRawMeat" count="3"/>
+			<ingredient name="foodRawMeat" count="1"/>
 			<ingredient name="foodEgg" count="3"/>
+			<ingredient name="foodCropPotato" count="2"/>
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
 		<recipe name="mealDinner" count="1" scrapable="False" craft_area="campfire" craft_tool="toolCookingPot">
-			<ingredient name="foodRawMeat" count="5"/>
+			<ingredient name="foodRawMeat" count="3"/>
 			<ingredient name="foodCropCorn" count="1"/>
-			<ingredient name="foodCropPotato" count="1"/>
+			<ingredient name="foodCropPotato" count="5"/>
 			<ingredient name="dinnerPlate" count="1"/>
 		</recipe>
 		<recipe name="Fish Pie" count="1" craft_time="20" craft_area="campfire" craft_tool="toolCookingPot">
