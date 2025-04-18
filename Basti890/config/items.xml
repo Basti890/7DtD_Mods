@@ -1,13 +1,12 @@
 <basti890>
 	<!-- Quicker Crafting with Nerd glasses -->
 	<setattribute xpath="/items/item[@name='toolCookingPot']/effect_group/passive_effect[@name='CraftingTime']" name="value">1</setattribute>
-	<!-- Quicker smelting 
-	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.33</setattribute>
-	-->
-	<!-- Quicker Crafting in the Forge -->
+	<!-- Quicker smelting -->
+	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
+	<!-- Quicker Crafting in the Forge 
 	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.33</setattribute>
-	
-	<!--More MOD slots-->
+	-->
+	<!-- More MOD slots -->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">0,1,2,3,4,5</setattribute>
 	<!-- Entity damage meele Weapons -->
 	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">27</setattribute>

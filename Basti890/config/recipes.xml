@@ -511,6 +511,17 @@
 			<ingredient name="drinkYuccaJuiceSmoothie" count="5"/>
 			<ingredient name="drinkJarBeer" count="10"/>
 		</recipe>
+		<recipe name="drugVitamins" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceCropGoldenrodPlant" count="4"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="4"/>
+			<ingredient name="foodCropYuccaFruit" count="4"/>
+			<ingredient name="foodCropBlueberries" count="4"/>
+		</recipe>
+		<recipe name="drugPainkillers" count="25" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourcePotassiumNitratePowder" count="250"/>
+			<ingredient name="resourceCropCoffeeBeans" count="25"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
 		<recipe name="foodCanPeas" count="1">
 			<ingredient name="foodCropPeas" count="5"/>
 		</recipe>
