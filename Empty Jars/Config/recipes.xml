@@ -16,4 +16,10 @@
 	<append xpath="/recipes/recipe[@name='drinkYuccaJuiceSmoothie']">
 		<ingredient name="drinkJarEmpty" count="1"/>
 	</append>
+	<append xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']">
+		<ingredient name="drinkJarEmpty" count="1"/>
+	</append>
+	<append xpath="/recipes/recipe[@name='drinkJarGrandpasAwesomeSauce']">
+		<ingredient name="drinkJarEmpty" count="1"/>
+	</append>
 </configs>
