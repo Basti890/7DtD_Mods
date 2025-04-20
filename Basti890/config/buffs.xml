@@ -1,4 +1,9 @@
 <Valmar>
+	<!--<append xpath="/buffs/buff[@name='buffInfectionAddCure']">
+		<effect_group>
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInfectionCatch"/>
+		</effect_group>
+	</append>-->
 	<append xpath="/buffs">
 		<buff name="buffstewWarming" name_key="buffElementHotName" description_key="buffElementHotDesc" tooltip_key="buffElementHotTooltip" icon="ui_game_symbol_hot" icon_color="255,128,0">
 			<damage_type value="heat"/>
