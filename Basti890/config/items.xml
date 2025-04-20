@@ -7,7 +7,7 @@
 	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.33</setattribute>
 	-->
 	<!-- More MOD slots -->
-	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">0,1,2,3,4,5</setattribute>
+	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">2,2,3,3,4,5</setattribute>
 	<!-- Entity damage meele Weapons -->
 	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">27</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
@@ -663,22 +663,26 @@
 	<!-- Guns -->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1.25</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">200</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group">
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkGunslinger"/>
 	</append>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">300</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group">
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.33" tags="perkGunslinger"/>
 	</append>
-	<append xpath="/items/item[@name='gunHandgunT3SMG5']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">25</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/property/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletFMJINC</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']" name="value">12</setattribute>
-	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">450</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1.33</setattribute>
-	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">800</setattribute>
+	<append xpath="/items/item[@name='gunHandgunT3SMG5']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">700</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT2Magnum44']/property/property[@name='Magazine_items']/@value">,ammo44MagnumBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">240</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/property/property[@name='Magazine_items']/@value">,ammo44MagnumBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">180</setattribute>
 	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/effect_group">
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.7" tags="perkBoomstick"/>
 	</append>
@@ -687,7 +691,7 @@
 	</append>
 	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
-	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">300</setattribute>
+	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">450</setattribute>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/effect_group">
 		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkDeadEye"/>
@@ -699,17 +703,18 @@
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletFMJINC</setattribute>
 	<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Tags']/@value">,modGunShotgunTubeExtenderMagazine</append>
-	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
 	<append xpath="/items/item[@name='gunRifleT3SniperRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
-	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">850</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">650</setattribute>
 	<append xpath="/items/item[@name='gunMGT1AK47']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
-	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">600</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">500</setattribute>
 	<append xpath="/items/item[@name='gunMGT2TacticalAR']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
-	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">850</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='BurstRoundCount']" name="value">1000</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">700</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">100</setattribute>
 	<append xpath="/items/item[@name='gunMGT3M60']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
-	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">550</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
