@@ -208,10 +208,11 @@
 		<ingredient name="resourceGunPowder" count="375"/>
 		<ingredient name="resourceScrapPolymers" count="100"/>
 	</set>
+	<remove xpath="/recipes/recipe[starts-with(@name,'armor')]/ingredient[@name='resourceLegendaryParts']" />
+	<remove xpath="/recipes/recipe[starts-with(@name,'armor')]/effect_group/passive_effect[@tags='resourceLegendaryParts']" />
 
 	<remove xpath="/recipes/recipe[@name='resourceGunPowder']" />
 	<remove xpath="/recipes/recipe[@name='resourceGunPowderBundle']" />
-	<remove xpath="/recipes/recipe[@name='resourceForgedSteel']" />
 	<append xpath="/recipes">
 		<recipe name="resourceGunPowder" count="6" craft_time="1.5" craft_area="chemistryStation" tags="chemStationCrafting">
 			<ingredient name="resourceCoal" count="1"/>
@@ -225,72 +226,25 @@
 			<ingredient name="resourceCoal" count="2"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="6"/>
 		</recipe>
-		
-		<recipe name="resourceForgedSteel" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
-			<ingredient name="unit_iron" count="14"/>
-			<ingredient name="unit_clay" count="5"/>
-			<ingredient name="resourceCoal" count="6"/>
-			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="unit_clay,unit_iron"/>
-			</effect_group>
-		</recipe>
 	</append>
 	
-	<setattribute xpath="/recipes/recipe[@name='resourceOil']/ingredient[@name='resourceOilShale']" name="count">4</setattribute>
-
-	<set xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']">
-		<ingredient name="resourceCloth" count="1"/>
-		<ingredient name="ammoGasCan" count="300"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='thrownAmmoPipeBomb']">
-		<ingredient name="resourceYuccaFibers" count="1"/>
-		<ingredient name="resourceGunPowder" count="6"/>
-		<ingredient name="resourceMetalPipe" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='thrownGrenade']">
-		<ingredient name="resourceGunPowder" count="5"/>
-		<ingredient name="resourceForgedIron" count="4"/>
-		<ingredient name="resourceSpring" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='thrownGrenadeContact']">
-		<ingredient name="resourceGunPowder" count="5"/>
-		<ingredient name="resourceForgedIron" count="4"/>
-		<ingredient name="resourceSpring" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='thrownTimedCharge']">
-		<ingredient name="resourceScrapIron" count="20"/>
-		<ingredient name="resourceGunPowder" count="5"/>
-		<ingredient name="resourceElectricParts" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='thrownDynamite']">
-		<ingredient name="resourceYuccaFibers" count="1"/>
-		<ingredient name="resourceGunPowder" count="10"/>
-		<ingredient name="resourceDuctTape" count="1"/>
-		<ingredient name="resourcePaper" count="5"/>
-	</set>
+	<setattribute xpath="/recipes/recipe/ingredient[@name='resourceOil' and @count &gt; 1]" name="count">1</setattribute>
+	
+	<remove xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']/ingredient[@name='resourceOil']" />
+	<setattribute xpath="/recipes/recipe[@name='thrownDynamite']/ingredient[@name='resourceDuctTape']" name="count">1</setattribute>
 
 
-	<set xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']">
-		<ingredient name="resourceForgedIron" count="5"/>
-		<ingredient name="resourceHeadlight" count="1"/>
-		<ingredient name="resourceElectricParts" count="2"/>
-		<ingredient name="resourceDuctTape" count="1"/>
-	</set>
-		
-		
+	<setattribute xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']/ingredient[@name='resourceOil']" name="name">resourceScrapPolymers</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='lanternOldBlockVariantHelper']/ingredient[@name='resourceOil']" name="name">ammoGasCan</setattribute>
+
+
 	<!-- Food -->
-	<setattribute xpath="/recipes/recipe/ingredient[@name='foodRawMeat']" name="count">3</setattribute>
-	<set xpath="/recipes/recipe[@name='foodBoiledMeat']">
-		<ingredient name="foodRawMeat" count="1"/>
-		<ingredient name="drinkJarBoiledWater" count="1"/>
+	<!--<setattribute xpath="/recipes/recipe/ingredient[@name='foodRawMeat']" name="count">3</setattribute>-->
+    <set xpath="/recipes/recipe/effect_group/passive_effect[@tags='foodRawMeat']/..">
+		<passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-2,-3" tags="foodRawMeat"/>
 	</set>
-	<set xpath="/recipes/recipe[@name='foodCharredMeat']">
-		<ingredient name="foodRawMeat" count="1"/>
-	</set>
-	<set xpath="/recipes/recipe[@name='foodGrilledMeat']">
-		<ingredient name="foodRawMeat" count="1"/>
-	</set>
-	<setattribute xpath="/recipes/recipe[@name='drinkJarGrandpasAwesomeSauce']/ingredient[@name='foodHoney']" name="count">2</setattribute>
+
+	<setattribute xpath="/recipes/recipe[@name='drinkJarGrandpasAwesomeSauce']/ingredient[@name='foodHoney']" name="name">drinkJarBeer</setattribute>
 
 	<setattribute xpath="/recipes/recipe[@name='resourceConcreteMix']" name="count">2</setattribute>
 	
@@ -298,8 +252,6 @@
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedSteel']" name="count">2</setattribute>
 
 
-	<remove xpath="/recipes/recipe[@name='resourceScrapPolymers']"/>
-	<remove xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']"/>
 	<remove xpath="/recipes/recipe[@name='drugFortBites']/ingredient[@name='medicalBloodBag']"/>
 	
 	<setattribute xpath="/recipes/recipe[@name='drugRecog']/ingredient[@name='resourceAcid']" name="name">resourceGunPowder</setattribute>
@@ -315,7 +267,7 @@
 		</recipe>
 
 		<recipe name="resourceCoal" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
-			<ingredient name="resourceWood" count="1"/>
+			<ingredient name="resourceWood" count="3"/>
 		</recipe>
 
 		<!-- Extract Gunpowdser from Mines -->
@@ -334,10 +286,26 @@
 		
 		
 		<!-- Additional Resources -->
-		<recipe name="resourceWaterFilter" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<recipe name="toolDewGatherer" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
+			<ingredient name="resourceScrapPolymers" count="400"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+		</recipe>
+		<recipe name="toolDewTarp" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
+			<ingredient name="resourceScrapPolymers" count="400"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+			<ingredient name="resourceDuctTape" count="1"/>
+		</recipe>
+		<recipe name="toolDewFilter" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
+			<ingredient name="resourceWaterFilter" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="40"/>
+			<ingredient name="resourceMetalPipe" count="4"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+		</recipe>
+		<recipe name="resourceWaterFilter" count="1" craft_area="workbench" tags="workbenchCrafting,learnable">
 			<ingredient name="resourceScrapPolymers" count="100"/>
 			<ingredient name="resourceMetalPipe" count="4"/>
-			<ingredient name="resourceDuctTape" count="4"/>
+			<ingredient name="resourceDuctTape" count="1"/>
 			<ingredient name="resourceCoal" count="40"/>
 		</recipe>
 		<recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="workbenchCrafting">
@@ -368,7 +336,7 @@
 			<ingredient name="resourceForgedIron" count="10"/>
 			<ingredient name="resourceSpring" count="5"/>
 			<ingredient name="resourceOil" count="2"/>
-			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
 		</recipe>
 		
 		<recipe name="resourceScrapPolymers" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
@@ -378,7 +346,6 @@
 		<recipe name="gunMGT1AK47Parts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -386,7 +353,6 @@
 		<recipe name="gunHandgunT1PistolParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -394,7 +360,6 @@
 		<recipe name="gunRifleT1HuntingRifleParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -402,7 +367,6 @@
 		<recipe name="gunShotgunT1DoubleBarrelParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -410,7 +374,6 @@
 		<recipe name="gunBowT1WoodenBowParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -418,7 +381,6 @@
 		<recipe name="gunExplosivesT3RocketLauncherParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -426,7 +388,6 @@
 		<recipe name="gunBotRoboticsParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -434,7 +395,6 @@
 		<recipe name="meleeWpnBatonT2StunBatonParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -442,7 +402,6 @@
 		<recipe name="meleeWpnKnucklesT3SteelKnucklesParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -450,7 +409,6 @@
 		<recipe name="meleeWpnBladeT3MacheteParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -458,7 +416,6 @@
 		<recipe name="meleeWpnSpearT3SteelSpearParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -466,7 +423,6 @@
 		<recipe name="meleeWpnClubT3SteelClubParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -474,7 +430,6 @@
 		<recipe name="meleeWpnSledgeT3SteelSledgehammerParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -482,7 +437,6 @@
 		<recipe name="meleeToolAllSteelParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -490,7 +444,6 @@
 		<recipe name="armorParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -498,7 +451,6 @@
 		<recipe name="meleeToolAxeT3ChainsawParts" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="28"/>
 			<ingredient name="unit_clay" count="10"/>
-			<ingredient name="resourceCoal" count="12"/>
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_iron"/>
 			</effect_group>
@@ -514,8 +466,8 @@
 		<recipe name="drugVitamins" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
 			<ingredient name="resourceCropGoldenrodPlant" count="4"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="4"/>
-			<ingredient name="foodCropYuccaFruit" count="4"/>
-			<ingredient name="foodCropBlueberries" count="4"/>
+			<ingredient name="foodCropYuccaFruit" count="3"/>
+			<ingredient name="foodCropBlueberries" count="3"/>
 		</recipe>
 		<recipe name="drugPainkillers" count="25" craft_area="chemistryStation" tags="chemStationCrafting">
 			<ingredient name="resourcePotassiumNitratePowder" count="250"/>
@@ -738,25 +690,20 @@
 		
 		<!-- MD Advanced Generator -->
 		<recipe name="Mid_Generator" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
-			<ingredient name="resourceForgedIron" count="15"/>
-			<ingredient name="resourceMechanicalParts" count="15"/>
+			<ingredient name="resourceForgedIron" count="50"/>
+			<ingredient name="resourceForgedSteel" count="15"/>
+			<ingredient name="resourceMechanicalParts" count="100"/>
 			<ingredient name="resourceElectricParts" count="25"/>
 			<ingredient name="resourceSpring" count="6"/>
 			<ingredient name="resourceOil" count="1"/>
-			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceMechanicalParts,resourceElectricParts"/>
-			</effect_group>
 		</recipe>
 		<recipe name="Big_Generator" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
 			<ingredient name="resourceForgedIron" count="150"/>
-			<ingredient name="resourceForgedSteel" count="15"/>
-			<ingredient name="resourceMechanicalParts" count="15"/>
-			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceMechanicalParts" count="300"/>
+			<ingredient name="resourceElectricParts" count="50"/>
 			<ingredient name="resourceSpring" count="6"/>
 			<ingredient name="resourceOil" count="1"/>
-			<effect_group>
-				<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceMechanicalParts,resourceElectricParts"/>
-			</effect_group>
 		</recipe>
 	</append>
 </basti890>

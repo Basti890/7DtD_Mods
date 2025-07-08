@@ -1,13 +1,67 @@
 <basti890>
-	<!-- Quicker Crafting with Nerd glasses -->
+	<!-- Quicker Crafting -->
 	<setattribute xpath="/items/item[@name='toolCookingPot']/effect_group/passive_effect[@name='CraftingTime']" name="value">1</setattribute>
 	<!-- Quicker smelting -->
 	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
-	<!-- Quicker Crafting in the Forge 
-	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.33</setattribute>
-	-->
+	<!-- Quicker Crafting in the Forge -->
+	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.15</setattribute>
+	
 	<!-- More MOD slots -->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">2,2,3,3,4,5</setattribute>
+	
+	<!-- get craftings skill levels from schematic 
+	substring(@name, string-length(@name) - string-length('schematic') + 1) = 'schematic'
+	ends-with(@name,'schematic')
+	-->
+	<append xpath="/items/item[starts-with(@name,'modGun') and contains(@name,'Schematic')]/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBows" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHandguns" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingShotguns" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRifles" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingMachineGuns" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingExplosives" level="1" show_message="false"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name,'modMelee') and contains(@name,'Schematic')]/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1" show_message="false"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name,'modGunMelee') and contains(@name,'Schematic')]/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1" show_message="false"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name,'modArmor') and contains(@name,'Schematic')]/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingArmor" level="1" show_message="false"/>
+	</append>
+	<append xpath="/items/item[(starts-with(@name, 'modFuelTank') or 
+								starts-with(@name, 'modRoboticDrone') or 
+								starts-with(@name, 'modVehicle')) and contains(@name, 'Schematic')]/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRobotics" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingElectrician" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingTraps" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingWorkstations" level="1" show_message="false"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingVehicles" level="1" show_message="false"/>
+	</append>
+	
+	<append xpath="/items/item[@name='repairToolsSkillMagazine']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" show_message="false"/>
+	</append>
+	<append xpath="/items/item[@name='salvageToolsSkillMagazine']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" show_message="false"/>
+	</append>
+	
+	
 	<!-- Entity damage meele Weapons -->
 	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">27</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">34</setattribute>
@@ -41,6 +95,11 @@
 	<setattribute xpath="/items/item[@name='ammoBundleMaster']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='questRewardAmmoCraftingBundle']/property/property[@name='Create_item']" name="value">resourceGunPowder,resourceBuckshot,resource9mmBulletTip,resource44BulletTip,resource762BulletTip,resourcePaper,resource9mmBulletCasing,resource44BulletCasing,resource762BulletCasing</setattribute>
 	<setattribute xpath="/items/item[@name='questRewardAmmoCraftingBundle']/property/property[@name='Create_item_count']" name="value">1000,100,100,100,100,100,100,100,100</setattribute>
+	<setattribute xpath="/items/item[@name='questRewardPipePistolBundle']/property/property[@name='Create_item_count']" name="value">1,100</setattribute>
+	<setattribute xpath="/items/item[@name='questRewardPipeShotgunBundle']/property/property[@name='Create_item_count']" name="value">1,50</setattribute>
+	<setattribute xpath="/items/item[@name='questRewardPipeRifleBundle']/property/property[@name='Create_item_count']" name="value">1,50</setattribute>
+	<setattribute xpath="/items/item[@name='questRewardPipeMachineGunBundle']/property/property[@name='Create_item']" name="value">unMGT0PipeMachineGun,ammo9mmBulletBall</setattribute>
+	<setattribute xpath="/items/item[@name='questRewardPipeMachineGunBundle']/property/property[@name='Create_item_count']" name="value">1,100</setattribute>
 	<setattribute xpath="/items/item[contains(@name,'Bullet')]/effect_group/passive_effect[@name='BlockDamage']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/property[@name='Stacknumber']" name="value">500</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/property[@name='Stacknumber']" name="value">500</setattribute>
@@ -48,14 +107,14 @@
 	<setattribute xpath="/items/item[@name='ammoRocketHE']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='ammoRocketHE']/effect_group/passive_effect[@name='EntityDamage']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='ammoRocketFrag']/effect_group/passive_effect[@name='EntityDamage']" name="value">2000</setattribute>
-	<setattribute xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']" name="value">1000</setattribute>
-	<setattribute xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='ammoArrowStone']/property[@name='Stacknumber']" name="value">5000</setattribute>
+	<setattribute xpath="/items/item[@name='ammoArrowExploding']/property[@name='Stacknumber']" name="value">2500</setattribute>
 	<setattribute xpath="/items/item[@name='ammoArrowExploding']/property/property[@name='Explosion.EntityDamage']" name="value">350</setattribute>
-	<setattribute xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']" name="value">1000</setattribute>
-	<setattribute xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']" name="value">1000</setattribute>
-	<setattribute xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltStone']/property[@name='Stacknumber']" name="value">5000</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltIron']/property[@name='Stacknumber']" name="value">5000</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltExploding']/property[@name='Stacknumber']" name="value">2500</setattribute>
 	<setattribute xpath="/items/item[@name='ammoCrossbowBoltExploding']/property/property[@name='Explosion.EntityDamage']" name="value">350</setattribute>
-	<setattribute xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']" name="value">100</setattribute>
+	<setattribute xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Explosion.EntityDamage']" name="value">350</setattribute>
 	<setattribute xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Explosion.EntityDamage']" name="value">600</setattribute>
@@ -63,10 +122,10 @@
 	<setattribute xpath="/items/item[@name='thrownTimedCharge']/property[@name='Stacknumber']" name="value">75</setattribute>
 	<setattribute xpath="/items/item[@name='thrownTimedCharge']/property[@name='Explosion.EntityDamage']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='thrownTimedCharge']/property[@name='Explosion.DamageBonus.tags']" name="value">75</setattribute>
-	<setattribute xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']" name="value">100</setattribute>
+	<setattribute xpath="/items/item[@name='thrownDynamite']/property[@name='Stacknumber']" name="value">250</setattribute>
 	<setattribute xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.EntityDamage']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='thrownAmmoMolotovCocktail']/property[@name='Stacknumber']" name="value">100</setattribute>
-	<setattribute xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']" name="value">2500</setattribute>
+	<setattribute xpath="/items/item[@name='ammoDartIron']/property[@name='Stacknumber']" name="value">5000</setattribute>
 	<setattribute xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']" name="value">30000</setattribute>
 	<append xpath="/items">
 		<!-- Ammo Crafting, Tips, 9mm -->
@@ -200,14 +259,14 @@
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mbrass"/>
 		<property name="MeltTimePerUnit" value=".4"/>
-		<property name="Stacknumber" value="1000"/>
+		<property name="Stacknumber" value="4000"/>
 		<property name="EconomicValue" value="9"/>
 		<property name="TraderStageTemplate" value="ammoTier1"/>
 		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="50" tags="perkGunslinger,9mmGun"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,9mmGun"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -219,13 +278,13 @@
 		<property name="Tags" value="ammo44Mag"/>
 		<property name="EconomicValue" value="10"/>
 		<property name="TraderStageTemplate" value="ammoTier1"/>
-		<property name="Stacknumber" value="750"/>
+		<property name="Stacknumber" value="2000"/>
 		<!-- ammo44MagnumBulletBall -->
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletBall" tiered="false">
 			<!-- To split up the revolver and DVulture I'm providing base_set that the specific perk passives can latch on to -->
-			<passive_effect name="EntityDamage" operation="base_set" value="120" tags="perkGunslinger,revolver"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,revolver"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="12" tags="barrelExplosive"/>
 			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger">
@@ -259,7 +318,7 @@
 	<set xpath="/items/item[@name='ammo762mmBulletBall']">
 		<property name="Extends" value="ammo9mmBulletBall"/>
 		<property name="Tags" value="ammo762mm"/>
-		<property name="Stacknumber" value="500"/>
+		<property name="Stacknumber" value="1500"/>
 		<!-- STK ammo low -->
 		<property name="EconomicValue" value="11"/>
 		<property name="TraderStageTemplate" value="ammoTier1"/>
@@ -267,10 +326,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo762mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkDeadEye,perkMachineGunner"/>
-			<passive_effect name="EntityDamage" operation="base_add" value="-1.5">
-				<requirement name="ItemHasTags" tags="perkMachineGunner"/>
-			</passive_effect>
+			<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDeadEye,perkMachineGunner"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkDeadEye,perkMachineGunner"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -290,7 +346,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="50" tags="perkGunslinger,9mmGun"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,9mmGun"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<!-- Not supported at this time. If you ask it will be a long answer. It's complicated. <passive_effect name="PiercingProtection" target="other" operation="perc_set" value=".5"/> -->
@@ -322,7 +378,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="120" tags="perkGunslinger,revolver"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,revolver"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="11" tags="barrelExplosive"/>
 			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger">
@@ -377,7 +433,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo762mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkDeadEye,perkMachineGunner"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDeadEye,perkMachineGunner"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="-1.5">
 				<requirement name="ItemHasTags" tags="perkMachineGunner"/>
 			</passive_effect>
@@ -416,7 +472,7 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo9mmBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="42.5" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="67" tags="perkGunslinger,9mmGun"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/>
@@ -457,7 +513,7 @@
 		<item name="ammoBundle9mmBulletFMJINC">
 			<property name="Extends" value="ammoBundleMaster"/>
 			<property name="CustomIcon" value="ammo9mmBulletFMJINC"/>
-			<property name="Stacknumber" value="100"/><!-- STK ammobundle high -->
+			<property name="Stacknumber" value="50"/><!-- STK ammobundle high -->
 			<property name="EconomicValue" value="1400"/>
 			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle9mmBulletAP -->
 			<property class="Action0">
@@ -477,7 +533,7 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo44MagnumBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="102" tags="perkGunslinger,revolver"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="135" tags="perkGunslinger,revolver"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="1" tags="perkGunslinger"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="barrelExplosive"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/>
@@ -537,7 +593,7 @@
 		<item name="ammoBundle44MagnumBulletFMJINC">
 			<property name="Extends" value="ammoBundleMaster"/>
 			<property name="CustomIcon" value="ammo44MagnumBulletFMJINC"/>
-			<property name="Stacknumber" value="100"/><!-- STK ammobundle high -->
+			<property name="Stacknumber" value="50"/><!-- STK ammobundle high -->
 			<property name="EconomicValue" value="1400"/>
 			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle9mmBulletAP -->
 			<property class="Action0">
@@ -557,7 +613,7 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo762mmBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="127.5" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="170" tags="perkDeadEye,perkMachineGunner"/>
 				<passive_effect name="EntityDamage" operation="base_add" value="-3">
 					<requirement name="ItemHasTags" tags="perkMachineGunner"/>
 				</passive_effect>
@@ -610,9 +666,13 @@
 	
 	
 	<!-- Shot gun Ammo -->
-	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityDamage']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityDamage']" name="value">25</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='MaxRange']" name="value">15</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='DamageFalloffRange']" name="value">10</setattribute>
 
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='EntityDamage']" name="value">300</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='MaxRange']" name="value">100</setattribute>
+	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='DamageFalloffRange']" name="value">50</setattribute>
 	<append xpath="/items/item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']">
 		<passive_effect name="BlockDamage" operation="base_add" value="1000" tags="door,wood,lockedSafe"/>
 		<display_value name="dDamageDoor" value="1000"/>
@@ -632,11 +692,11 @@
 		<property name="SoundPickup" value="shotgunshells_grab"/>
 		<property name="SoundPlace" value="shotgunshells_place"/>
 		<effect_group name="ammoShotgunBreachingSlug" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="18" tags="perkBoomstick"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="22" tags="perkBoomstick"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="5.4" tags="perkBoomstick"/>
 			<passive_effect name="RoundRayCount" operation="base_set" value="10" tags="perkBoomstick"/>
-			<passive_effect name="MaxRange" operation="base_set" value="10" tags="perkBoomstick"/>
-			<passive_effect name="DamageFalloffRange" operation="base_set" value="4" tags="perkBoomstick"/>
+			<passive_effect name="MaxRange" operation="base_set" value="15" tags="perkBoomstick"/>
+			<passive_effect name="DamageFalloffRange" operation="base_set" value="8" tags="perkBoomstick"/>
 			<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/>
 			<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
 			<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4.5" tags="perkBoomstick"/>
@@ -661,60 +721,78 @@
 	</set>
 	
 	<!-- Guns -->
-	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1.25</setattribute>
+	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1,1.25</setattribute>
+	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="tier">1,6</setattribute>
+	<remove xpath="/items/item/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']" />
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">200</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkGunslinger"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.5" tier="1,6" tags="perkGunslinger" />
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.4" tags="perkGunslinger"/>
 	</append>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">300</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.33" tags="perkGunslinger"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.25" tier="1,6" tags="perkGunslinger" />
 	</append>
+	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier) and not(@tier)]" name="value">-.33</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">25</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/property/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletFMJINC</setattribute>
-	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']" name="value">12</setattribute>
+		<append xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group">
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.13" tags="perkMachineGunner"/>
+	</append>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">450</setattribute>
-	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1.33</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1,1.33</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="tier">1,6</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT3SMG5']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">700</setattribute>
+	<setattribute xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">-.06</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT2Magnum44']/property/property[@name='Magazine_items']/@value">,ammo44MagnumBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">240</setattribute>
+	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">-.27</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/property/property[@name='Magazine_items']/@value">,ammo44MagnumBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">180</setattribute>
+	<remove xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" />
 	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.7" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.4,1.7" tier="1,6" tags="perkBoomstick" />
 	</append>
 	<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.4" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1,1.4" tier="1,6" tags="perkBoomstick" />
 	</append>
 	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
 	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">450</setattribute>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.5" tags="perkDeadEye"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.2,1.5" tier="1,6" tags="perkDeadEye" />
+		<passive_effect name="EntityDamage" operation="perc_add" value=".15" tags="perkGunslinger"/>
 	</append>
 	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">5</setattribute>
-	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">.85</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">.8,1</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="tier">1,6</setattribute>
 	<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
+	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.3</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">11</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property/property[@name='Magazine_items']" name="value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletFMJINC</setattribute>
 	<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Tags']/@value">,modGunShotgunTubeExtenderMagazine</append>
+	<setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.2</setattribute>
 	<append xpath="/items/item[@name='gunRifleT3SniperRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
 	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">650</setattribute>
+	<setattribute xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.5</setattribute>
 	<append xpath="/items/item[@name='gunMGT1AK47']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT1AK47']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.3</setattribute>
 	<append xpath="/items/item[@name='gunMGT2TacticalAR']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='BurstRoundCount']" name="value">1000</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">700</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.25</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">100</setattribute>
 	<append xpath="/items/item[@name='gunMGT3M60']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">500</setattribute>
+	<setattribute xpath="/items/item[@name='gunMGT3M60']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">.6</setattribute>
 	<setattribute xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT0PrimitiveBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
@@ -2156,6 +2234,7 @@
 	<setattribute xpath="/items/item[@name='resourcePaper']/property[@name='Stacknumber']" name="value">20000</setattribute>
 	<setattribute xpath="/items/item[@name='resourceCloth']/property[@name='Stacknumber']" name="value">6000</setattribute>
 	<setattribute xpath="/items/item[@name='resourceScrapPolymers']/property[@name='Stacknumber']" name="value">6000</setattribute>
+	<setattribute xpath="/items/item[@name='resourceElectricParts']/property[@name='Stacknumber']" name="Group">Resources,Chemicals,CFChemicals</setattribute>
 	<setattribute xpath="/items/item[@name='resourceSewingKit']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='resourceTestosteroneExtract']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='resourceCobblestones']/property[@name='Stacknumber']" name="value">6000</setattribute>
