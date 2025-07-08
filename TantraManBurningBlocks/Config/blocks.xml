@@ -21,9 +21,14 @@
 			<property name="CanMobsSpawnOn" value="false"/>
 			<property name="Stacknumber" value="500"/>
 			<property name="BuffsWhenWalkedOn" value="buffBurningElement"/>
-			<property name="ParticleName" value="campfire"/>
-			<property name="ParticleOffset" value="0.5,0.15,0.5"/>
-			<property name="Damage_received" value="40" />
+			<!-- <property name="ParticleName" value="campfire"/>
+			<property name="ParticleName" value="ember_pile"/>
+			<property name="ParticleName" value="hotembers"/>
+			<property name="ParticleName" value="forgeWorkstation"/>
+			<property name="ParticleName" value="chemistryStation"/>  -->
+			<property name="ParticleName" value="flame_hazard"/>
+			<property name="ParticleOffset" value="-0.15,-0.51,0.5"/>
+			<property name="Damage_received" value="20" />
 			<property class="RepairItems">
 				<property name="ammoGasCan" value="100"/>
 			</property>
