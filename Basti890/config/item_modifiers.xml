@@ -1,5 +1,6 @@
 <basti890>
 	<!-- Let's make Tool-Mods more powerfull -->
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']" name="modifier_tags">cigar</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier/effect_group/passive_effect[@name='DamageModifier']" name="value">.5</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='LootStage']" name="value">20</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='PlayerExpGain']" name="value">.2</setattribute>
