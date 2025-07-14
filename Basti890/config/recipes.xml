@@ -252,9 +252,11 @@
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedSteel']" name="count">2</setattribute>
 
 
+
+	<remove xpath="/recipes/recipe[@name='chemistryStation']/ingredient[@name='resourceAcid']"/>
 	<remove xpath="/recipes/recipe[@name='drugFortBites']/ingredient[@name='medicalBloodBag']"/>
 	
-	<setattribute xpath="/recipes/recipe[@name='drugRecog']/ingredient[@name='resourceAcid']" name="name">resourceGunPowder</setattribute>
+	<setattribute xpath="/recipes/recipe[@name='drugRecog' or @name='drinkJarGrandpasMoonshine' or @name='foodAtomicSmoothie']/ingredient[@name='resourceAcid']" name="name">resourceGunPowder</setattribute>
 	<append xpath="/recipes/recipe[@name='drinkJarBeer']">
 		<ingredient name="foodCornMeal" count="2"/>
 	</append>
@@ -318,9 +320,6 @@
 		</recipe>
 		<recipe name="resourcePaper" count="1">
 			<ingredient name="resourceYuccaFibers" count="5"/>
-		</recipe>
-		<recipe name="resourceAcid" count="1" craft_area="chemistryStation" tags="chemStationCrafting">
-			<ingredient name="resourceGunPowder" count="10"/>
 		</recipe>
 		<recipe name="resourceMechanicalParts" count="1" craft_area="forge" material_based="true" craft_tool="toolForgeCrucible" tags="perkAdvancedEngineering">
 			<ingredient name="unit_iron" count="20"/>
