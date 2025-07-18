@@ -16,6 +16,8 @@
 		<property name="LootList" value="munitions"/>
 	</append>
 	
+	<append xpath="/blocks/block[@name='cntBuriedLootStashChest']/property[@name='Tags']/@value">,lockedSafe</append>
+	
 	
 	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">10</setattribute>
 	

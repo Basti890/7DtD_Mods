@@ -271,8 +271,8 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,9mmGun"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
@@ -289,10 +289,10 @@
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletBall" tiered="false">
 			<!-- To split up the revolver and DVulture I'm providing base_set that the specific perk passives can latch on to -->
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,revolver"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="12" tags="barrelExplosive"/>
-			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger">
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 				<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
 			</passive_effect>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -351,8 +351,8 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,9mmGun"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<!-- Not supported at this time. If you ask it will be a long answer. It's complicated. <passive_effect name="PiercingProtection" target="other" operation="perc_set" value=".5"/> -->
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -383,10 +383,10 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,revolver"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="11" tags="barrelExplosive"/>
-			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger">
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 				<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
 			</passive_effect>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -477,14 +477,14 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo9mmBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="67" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="67" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dTargetArmor" value="-.5"/>
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dTargetPenetration" value="1"/>
-				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,9mmGun"/>
+				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 					<display_value name="dDegradationPerUse" value=".3"/> -->
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
@@ -501,16 +501,16 @@
 				<display_value name="dDuration" value="14"/>
 			</effect_group>
 			<effect_group name="perkPenetrator" tiered="false">
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/>
 				</passive_effect>
 			</effect_group>
@@ -538,14 +538,14 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo44MagnumBulletAP" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="135" tags="perkGunslinger,revolver"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="135" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="barrelExplosive"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dTargetArmor" value="-.5"/>
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dTargetPenetration" value="1"/>
-				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger"/>
+				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dDegradationPerUse" value=".3"/> -->
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
@@ -563,13 +563,13 @@
 			</effect_group>
 
 			<effect_group name="perkPenetrator" tiered="false">
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
 
 			</effect_group>
@@ -678,11 +678,12 @@
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='EntityDamage']" name="value">300</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='MaxRange']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='DamageFalloffRange']" name="value">50</setattribute>
+	<!-- change this into the Completion Bonus for ShotgunMessiah
 	<append xpath="/items/item[@name='ammoShotgunSlug']/effect_group[@name='ammoShotgunSlug']">
 		<passive_effect name="BlockDamage" operation="base_add" value="1000" tags="door,wood,lockedSafe"/>
 		<display_value name="dDamageDoor" value="1000"/>
 	</append>
-	
+	-->
 	<set xpath="/items/item[@name='ammoShotgunBreachingSlug']">
 		<property name="Tags" value="ammo,shotgun,ammoShells"/>
 		<property name="DisplayType" value="ammoShotgun"/>

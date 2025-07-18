@@ -21,12 +21,15 @@
 	
 
 	<!-- FMJINC Ammo recipe unlock -->
-	<append xpath="//progression/perks/book[@name='perkPistolPeteAPAmmo']/effect_group/passive_effect/@tags">,ammo9mmBulletFMJINC</append>
-	<append xpath="//progression/perks/book[@name='perkPistolPeteComplete']/effect_group/passive_effect/@tags">,ammoBundle9mmBulletFMJINC</append>
-	<append xpath="//progression/perks/book[@name='perkEnforcerAPAmmo']/effect_group/passive_effect/@tags">,ammo44MagnumBulletFMJINC</append>
-	<append xpath="//progression/perks/book[@name='perkEnforcerComplete']/effect_group/passive_effect/@tags">,ammoBundle44MagnumBulletFMJINC</append>
-	<append xpath="//progression/perks/book[@name='perkSniperAPAmmo']/effect_group/passive_effect/@tags">,ammo762mmBulletFMJINC</append>
-	<append xpath="//progression/perks/book[@name='perkSniperComplete']/effect_group/passive_effect/@tags">,ammoBundle762mmBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']/effect_group/passive_effect/@tags">,ammo9mmBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkPistolPeteComplete']/effect_group/passive_effect/@tags">,ammoBundle9mmBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkEnforcerAPAmmo']/effect_group/passive_effect/@tags">,ammo44MagnumBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkEnforcerComplete']/effect_group/passive_effect/@tags">,ammoBundle44MagnumBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkSniperAPAmmo']/effect_group/passive_effect/@tags">,ammo762mmBulletFMJINC</append>
+	<append xpath="/progression/perks/book[@name='perkSniperComplete']/effect_group/passive_effect/@tags">,ammoBundle762mmBulletFMJINC</append>
+	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="tags">door,lockedSafe</setattribute>
+	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="value">5</setattribute>
+	
 
 	<!-- HARVESTING_TOOL_SKILLS -->
 	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingHarvestingTools']" />
