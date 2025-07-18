@@ -58,8 +58,8 @@
 			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 			<property class="UpgradeBlock">
 				<property name="ToBlock" value="brickShapes"/>
-				<property name="Item" value="resourceScrapIron"/>
-				<property name="ItemCount" value="10"/>
+				<property name="Item" value="resourceCobblestones"/>
+				<property name="ItemCount" value="5"/>
 				<property name="UpgradeHitCount" value="4"/>
 			</property>
 			<property name="DowngradeBlock" value="woodShapes"/>
