@@ -459,9 +459,13 @@
 			<display_value name="dDuration" value="14"/>
 		</effect_group>
 	</set>
-	<setattribute xpath="/items/item[@name='ammo9mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">42.5</setattribute>
-	<setattribute xpath="/items/item[@name='ammo44MagnumBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">102</setattribute>
-	<setattribute xpath="/items/item[@name='ammo762mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">127.5</setattribute>
+	
+	<setattribute xpath="/items/item[@name='ammo9mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">67</setattribute>
+	<append xpath="/items/item[@name='ammo9mmBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
+	<setattribute xpath="/items/item[@name='ammo44MagnumBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">135</setattribute>
+	<append xpath="/items/item[@name='ammo44MagnumBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
+	<setattribute xpath="/items/item[@name='ammo762mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">175</setattribute>
+	
 	<append xpath="/items">
 		<item name="ammo9mmBulletFMJINC">
 			<property name="Extends" value="ammo9mmBulletBall"/>
@@ -469,14 +473,14 @@
 			<property name="DisplayType" value="ammoBulletAP"/>
 			<property name="EconomicValue" value="14"/>
 			<property name="TraderStageTemplate" value="ammoTier3"/>
-			<!-- ammo9mmBulletAP -->
+			<!-- ammo9mmBulletFMJINC -->
 			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
 			<property name="CustomIcon" value="ammo9mmBulletFMJINC"/>
 			<property name="UnlockedBy" value="perkPistolPeteAPAmmo"/>
 			<!-- BOOK_PERK -->
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
-			<effect_group name="ammo9mmBulletAP" tiered="false">
+			<effect_group name="ammo9mmBulletFMJINC" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="67" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive"/>
@@ -532,12 +536,12 @@
 			<property name="Tags" value="ammo44Mag"/>
 			<property name="DisplayType" value="ammoBulletAP"/>
 			<property name="EconomicValue" value="15"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo44MagnumBulletAP -->
+			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo44MagnumBulletFMJINC -->
 			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
 			<property name="UnlockedBy" value="perkEnforcerAPAmmo"/><!-- BOOK_PERK -->
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
-			<effect_group name="ammo44MagnumBulletAP" tiered="false">
+			<effect_group name="ammo44MagnumBulletFMJINC" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="135" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="barrelExplosive"/>
@@ -612,12 +616,12 @@
 			<property name="Tags" value="ammo762mm"/>
 			<property name="DisplayType" value="ammoBulletAP"/>
 			<property name="EconomicValue" value="16"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo762mmBulletAP -->
+			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo762mmBulletFMJINC -->
 			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
 			<property name="UnlockedBy" value="perkSniperAPAmmo"/><!-- BOOK_PERK -->
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
-			<effect_group name="ammo762mmBulletAP" tiered="false">
+			<effect_group name="ammo762mmBulletFMJINC" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="170" tags="perkDeadEye,perkMachineGunner"/>
 				<passive_effect name="EntityDamage" operation="base_add" value="-3">
 					<requirement name="ItemHasTags" tags="perkMachineGunner"/>
