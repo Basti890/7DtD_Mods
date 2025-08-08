@@ -1,6 +1,14 @@
 <basti890>
 
 	<!-- add new ammo to loot -->
+	<setattribute xpath="/lootcontainers/lootgroup[starts-with(@name,'group9mm')
+												or starts-with(@name,'group762mm')
+												or starts-with(@name,'group44Magnum')
+												or starts-with(@name,'groupShotgunShell')]/item[@loot_prob_template='ProbT0']" name="loot_prob_template">low</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[starts-with(@name,'group9mm')
+												or starts-with(@name,'group762mm')
+												or starts-with(@name,'group44Magnum')
+												or starts-with(@name,'groupShotgunShell')]/item[@loot_prob_template='ProbT1']" name="loot_prob_template">ProbT1Cap</setattribute>
 	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmSmall']/item" name="count">6,15</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='group9mmSmall']">
 		<item name="ammo9mmBulletFMJINC" count="6,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>

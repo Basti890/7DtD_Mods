@@ -19,15 +19,23 @@
 	<append xpath="/blocks/block[@name='cntBuriedLootStashChest']/property[@name='Tags']/@value">,lockedSafe</append>
 	
 	
+	<setattribute xpath="/blocks/block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']" name="value">0.5</setattribute>
+	<setattribute xpath="/blocks/block[@name='candleWallLightPlayer']/property[@name='HeatMapStrength']" name="value">0.15</setattribute>
+	<setattribute xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']" name="value">2.5</setattribute>
 	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">10</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapStrength']" name="value">0.1</setattribute>
+	<setattribute xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']" name="value">3</setattribute>
+	<setattribute xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']" name="value">1.5</setattribute>
+	<setattribute xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']" name="value">1.5</setattribute>
+	<setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']" name="value">3</setattribute>
 	
 	
 	<!-- traps better -->
 	<setattribute xpath="/blocks/block[@name='bladeTrap']/property[@name='DamageReceived']" name="value">10</setattribute>
 	<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='MaxDistance']" name="value">50</setattribute>
-	<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='RaySpread']" name="value">0.3</setattribute>
+	<setattribute xpath="/blocks/block[@name='autoTurret']/property[@name='RaySpread']" name="value">0.5</setattribute>
 	<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='MaxDistance']" name="value">25</setattribute>
-	<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='RaySpread']" name="value">0.6</setattribute>
+	<setattribute xpath="/blocks/block[@name='shotgunTurret']/property[@name='RaySpread']" name="value">2.5</setattribute>
 	
 	
 	<!-- More power Hough Hough hough hough houg -->
@@ -45,15 +53,15 @@
 			<property name="DescriptionKey" value="woodGroupDesc"/>
 			<property name="Material" value="MwoodReinforced_shapes"/>
 			<property name="Shape" value="New"/>
-			<property name="Texture" value="379"/>
-			<property name="UiBackgroundTexture" value="379"/>
+			<property name="Texture" value="380"/>
+			<property name="UiBackgroundTexture" value="380"/>
 			<property name="FuelValue" value="500"/>
 			<property name="EconomicValue" value="10"/>
 			<property name="EconomicBundleSize" value="20"/>
 			<property class="RepairItems">
-				<property name="resourceWood" value="8"/>
+				<property name="resourceScrapIron" value="8"/>
 			</property>
-			<drop event="Harvest" name="resourceWood" count="8" tag="allHarvest,lumberjackHarvest"/>
+			<drop event="Harvest" name="resourceScrapIron" count="8" tag="allHarvest,lumberjackHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
 			<property class="UpgradeBlock">
@@ -63,7 +71,7 @@
 				<property name="UpgradeHitCount" value="4"/>
 			</property>
 			<property name="DowngradeBlock" value="woodShapes"/>
-			<property name="UpgradeSound" value="place_block_wood"/>
+			<property name="UpgradeSound" value="place_block_metal"/>
 			<property name="SortOrder1" value="S000"/>
 			<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
 			<property name="Group" value="Building,advBuilding"/>
@@ -73,7 +81,7 @@
 	</append>
 	<set xpath="/blocks/block[@name='woodShapes']/property[@class='UpgradeBlock']">
 		<property name="ToBlock" value="woodReinforcedShapes"/>
-		<property name="Item" value="resourceWood"/>
+		<property name="Item" value="resourceScrapIron"/>
 		<property name="ItemCount" value="5"/>
 		<property name="UpgradeHitCount" value="2"/>
 	</set>

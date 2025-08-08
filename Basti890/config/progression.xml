@@ -371,7 +371,7 @@
 	<setattribute xpath="/progression/perks/perk/effect_group/passive_effect/requirement[@progression_name='craftingFood']" name="value">65</setattribute>
 	<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']" name="max_level">65</setattribute>
 	
-	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry/unlock_entry[@unlock_tier='5']/@item">,foodCanSham</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[4]/unlock_entry[@unlock_tier='5']/@item">,foodCanSham</append>
 	
 	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group" />
 	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']">

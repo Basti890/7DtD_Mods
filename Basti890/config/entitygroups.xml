@@ -1,4 +1,5 @@
 <configs>
+<!--
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="remove">zombiePlagueSpitter*</csv>
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesDesert']/text()" delim="\n" op="add">
 		zombiePlagueSpitter, .75
@@ -101,5 +102,5 @@
 	<csv xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/text()" delim="\n" op="add">
 		zombieMutated, .75
 	</csv>
-
+-->
 </configs>
