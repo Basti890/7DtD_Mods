@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<xml>
+		<Name value="Ramos_SkipNewsScreen"/>
+		<DisplayName value="Ramos_SkipNewsScreen" />
+		<Description value="Skip News Screen of 7 days to die"/>
+		<Author value="Djtriplexmr"/>
+		<Version value="1.0.1"/>
+		<Website value="https://discord.gg/wJGjMvFHqV"/>
+		<SkipWithAntiCheat value="true" />
+		<!-- FOR 7 DAYS TO DIE V. 1.4 (b8) -->
+	</xml>
