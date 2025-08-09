@@ -1,6 +1,6 @@
 <Valmar>
-	<setattribute xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='base_add']" name="value">15</setattribute>
-	<setattribute xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='perc_add']" name="value">.25</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='base_add']" name="value">50</setattribute>
+	<remove xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='perc_add']" />
 	<append xpath="/buffs">
 		<buff name="buffstewWarming" name_key="buffElementHotName" description_key="buffElementHotDesc" tooltip_key="buffElementHotTooltip" icon="ui_game_symbol_hot" icon_color="255,128,0">
 			<damage_type value="heat"/>

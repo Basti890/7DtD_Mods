@@ -16,26 +16,55 @@
 
 	<!-- more realistic food from animals -->
 	<!-- Stag -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalStag']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">50</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">50</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">8</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">40</setattribute>
 	<!-- Bambi -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">25</setattribute>	
+	<setattribute xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">25</setattribute>	
+	<setattribute xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">10</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">4</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">20</setattribute>
 	<!-- Roger (Rabbit) -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">2</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">2</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">2</setattribute>
 	<!-- Chicken -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">3</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">2</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
 	<!-- Balu -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">75</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">100</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">30</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">90</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">100</setattribute>
 	<!-- little B -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">25</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">25</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">8</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">18</setattribute>
 	<!-- Wolf -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">12</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">15</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">5</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">9</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">13</setattribute>
 	<!-- Coyote -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">5</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">5</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">2</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">3</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">5</setattribute>
 	<!-- Cugar -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">7</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">23</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">7</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">14</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">20</setattribute>
 	<!-- Ska -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">1</setattribute>
 	<!-- Pumba -->
-	<setattribute xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@tag='butcherHarvest'][@event='Harvest']" name="count">60</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat'][@tag='butcherHarvest'][@event='Harvest']" name="count">41</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceLeather'][@tag='butcherHarvest'][@event='Harvest']" name="count">10</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceAnimalFat'][@tag='butcherHarvest'][@event='Harvest']" name="count">30</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceBone'][@tag='butcherHarvest'][@event='Harvest']" name="count">27</setattribute>
 
 </Basti890>

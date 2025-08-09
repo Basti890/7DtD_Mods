@@ -354,7 +354,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="66" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -434,7 +434,7 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="75" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="66" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
 			<!-- Not supported at this time. If you ask it will be a long answer. It's complicated. <passive_effect name="PiercingProtection" target="other" operation="perc_set" value=".5"/> -->
@@ -543,7 +543,7 @@
 		</effect_group>
 	</set>
 	
-	<setattribute xpath="/items/item[@name='ammo9mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">67</setattribute>
+	<setattribute xpath="/items/item[@name='ammo9mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">60</setattribute>
 	<append xpath="/items/item[@name='ammo9mmBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
 	<setattribute xpath="/items/item[@name='ammo44MagnumBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">135</setattribute>
 	<append xpath="/items/item[@name='ammo44MagnumBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
@@ -564,7 +564,7 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo9mmBulletFMJINC" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="67" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="60" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive"/>
 				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
