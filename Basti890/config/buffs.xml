@@ -1,4 +1,5 @@
 <Valmar>
+	<remove xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@action='ModifyCVar' and @cvar='$PlayerLevelBonus' and @value='100']"/>
 	<setattribute xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='base_add']" name="value">50</setattribute>
 	<remove xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='perc_add']" />
 	<append xpath="/buffs">
