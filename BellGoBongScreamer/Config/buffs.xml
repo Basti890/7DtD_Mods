@@ -1,0 +1,8 @@
+<configs>
+	<append xpath="/buffs/buff[@name='buffStatusCheck02']">
+		<effect_group>
+			<requirement name="TriggerHasTags" tags="bellBong"/>
+				<triggered_effect trigger="onSelfDamagedBlock" action="PlaySound" sound="bellbongNew"/>
+		</effect_group>
+	</append>
+</configs>

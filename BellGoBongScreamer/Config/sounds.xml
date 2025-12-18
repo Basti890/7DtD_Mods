@@ -1,0 +1,16 @@
+<configs>
+	<append xpath="/Sounds">
+		<SoundDataNode name="bellbongNew">
+			<AudioSource name="@:Sounds/Prefabs/AudioSource_Impact.prefab"/>
+			<Noise ID="0" noise="500" time="5" heat_map_strength="100" heat_map_time="200"/>
+			<AudioClip ClipName="#@modfolder:Resources/Bell.unity3d?BellBongNew"/>
+			<LowestPitch name="0.7"/>
+			<HighestPitch name="1.1"/>
+			<LocalCrouchVolumeScale value="1"/>
+			<CrouchNoiseScale value="1"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="3"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+	</append>
+</configs>

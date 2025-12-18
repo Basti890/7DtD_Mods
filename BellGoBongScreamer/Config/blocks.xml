@@ -1,0 +1,8 @@
+<configs>
+	<append xpath="/blocks/block[contains(@name, 'churchBell')]">
+		<property name="Tags" value="bellBong"/>
+		<property class="RepairItems">
+			<property name="resourceScrapBrass" value="10"/>
+		</property>
+	</append>
+</configs>

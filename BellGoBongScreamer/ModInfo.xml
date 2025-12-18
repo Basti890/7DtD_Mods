@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<xml>
+		<Name value="BellGoBongScreamer" />
+		<Author value="bdubyah" />
+		<Description value="Ups the heat strength of the bell sound to call in screamers easier." />
+		<DisplayName value="BellGoBongScreamer" />
+		<Website value="" />
+		<Version value="2.0.0.1" />
+	</xml>
