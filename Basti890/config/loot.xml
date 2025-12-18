@@ -9,53 +9,53 @@
 												or starts-with(@name,'group762mm')
 												or starts-with(@name,'group44Magnum')
 												or starts-with(@name,'groupShotgunShell')]/item[@loot_prob_template='ProbT1']" name="loot_prob_template">ProbT1Cap</setattribute>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmSmall']/item" name="count">6,15</setattribute>
+	<!--<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmSmall']/item" name="count">6,15</setattribute>-->
 	<append xpath="/lootcontainers/lootgroup[@name='group9mmSmall']">
-		<item name="ammo9mmBulletFMJINC" count="6,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammo9mmBulletFMJINC" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmMedium']/item" name="count">20,50</setattribute>
-	<append xpath="/lootcontainers/lootgroup[@name='group9mmMedium']">
-		<item name="ammo9mmBulletFMJINC" count="20,50" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+<!--	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmMedium']/item" name="count">20,50</setattribute>
+-->	<append xpath="/lootcontainers/lootgroup[@name='group9mmMedium']">
+		<item name="ammo9mmBulletFMJINC" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmLarge']/item" name="count">55,100</setattribute>
-	<append xpath="/lootcontainers/lootgroup[@name='group9mmLarge']">
-		<item name="ammo9mmBulletFMJINC" count="55,100" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+<!--	<setattribute xpath="/lootcontainers/lootgroup[@name='group9mmLarge']/item" name="count">55,100</setattribute>
+-->	<append xpath="/lootcontainers/lootgroup[@name='group9mmLarge']">
+		<item name="ammo9mmBulletFMJINC" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmSmall']/item" name="count">5,10</setattribute>
-	<append xpath="/lootcontainers/lootgroup[@name='group762mmSmall']">
-		<item name="ammo762mmBulletFMJINC" count="5,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+<!--	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmSmall']/item" name="count">5,10</setattribute>
+-->	<append xpath="/lootcontainers/lootgroup[@name='group762mmSmall']">
+		<item name="ammo762mmBulletFMJINC" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmMedium']/item" name="count">15,25</setattribute>
-	<append xpath="/lootcontainers/lootgroup[@name='group762mmMedium']">
-		<item name="ammo762mmBulletFMJINC" count="15,25" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+<!--	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmMedium']/item" name="count">15,25</setattribute>
+-->	<append xpath="/lootcontainers/lootgroup[@name='group762mmMedium']">
+		<item name="ammo762mmBulletFMJINC" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmLarge']/item" name="count">35,50</setattribute>
-	<append xpath="/lootcontainers/lootgroup[@name='group762mmLarge']">
-		<item name="ammo762mmBulletFMJINC" count="35,50" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+<!--	<setattribute xpath="/lootcontainers/lootgroup[@name='group762mmLarge']/item" name="count">35,50</setattribute>
+-->	<append xpath="/lootcontainers/lootgroup[@name='group762mmLarge']">
+		<item name="ammo762mmBulletFMJINC" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumSmall']/item" name="count">6,12</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumSmall']/item" name="count">5,7</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='group44MagnumSmall']">
-		<item name="ammo44MagnumBulletFMJINC" count="6,12" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammo44MagnumBulletFMJINC" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumMedium']/item" name="count">18,40</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumMedium']/item" name="count">8,15</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='group44MagnumMedium']">
-		<item name="ammo44MagnumBulletFMJINC" count="18,40" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammo44MagnumBulletFMJINC" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumLarge']/item" name="count">45,75</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='group44MagnumLarge']/item" name="count">20,30</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='group44MagnumLarge']">
-		<item name="ammo44MagnumBulletFMJINC" count="45,75" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammo44MagnumBulletFMJINC" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellSmall']/item" name="count">5,10</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellSmall']/item" name="count">3,6</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellSmall']">
-		<item name="ammoShotgunBreachingSlug" count="5,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammoShotgunBreachingSlug" count="3,6" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellMedium']/item" name="count">15,25</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellMedium']/item" name="count">7,11</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellMedium']">
-		<item name="ammoShotgunBreachingSlug" count="15,25" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammoShotgunBreachingSlug" count="7,11" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
-	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellLarge']/item" name="count">35,50</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupShotgunShellLarge']/item" name="count">15,25</setattribute>
 	<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellLarge']">
-		<item name="ammoShotgunBreachingSlug" count="35,50" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
+		<item name="ammoShotgunBreachingSlug" count="15,25" loot_stage_count_mod="0.01" loot_prob_template="ProbT3"/>
 	</append>
 	
 	<set xpath="/lootcontainers/lootgroup[@name='groupResourceBulletCasingSmall']">
@@ -122,20 +122,11 @@
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='bookcase']" name="size">6,6</setattribute>
 
 
-	<!-- vehicleBicycle storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleBicycle']" name="size">9,3</setattribute><!-- Default 9,1 -->
-	
-	<!-- vehicleMinibike storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleMinibike']" name="size">9,5</setattribute><!-- Default 9,3 -->
-
 	<!-- vehicleMotorcycle storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']" name="size">9,7</setattribute><!-- Default 9,4 -->
-
-	<!-- vehicle4x4Truck storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicle4x4Truck']" name="size">9,10</setattribute><!-- Default 9,9 -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleMotorcycle']" name="size">10,5</setattribute><!-- Default 10,4 -->
 
 	<!-- vehicleGyrocopter storage -->
-	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']" name="size">9,9</setattribute><!-- Default 9,5 -->
+	<setattribute xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']" name="size">10,7</setattribute><!-- Default 10,5 -->
 
 	<!--  DiDi the JunkDrone  -->
 	<setattribute xpath="/lootcontainers/lootcontainer[@name='roboticDrone']" name="size">8,5</setattribute>

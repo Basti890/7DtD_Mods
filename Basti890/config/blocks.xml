@@ -18,16 +18,18 @@
 	
 	<append xpath="/blocks/block[@name='cntBuriedLootStashChest']/property[@name='Tags']/@value">,lockedSafe</append>
 	
-	
-	<setattribute xpath="/blocks/block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']" name="value">0.5</setattribute>
-	<setattribute xpath="/blocks/block[@name='candleWallLightPlayer']/property[@name='HeatMapStrength']" name="value">0.15</setattribute>
-	<setattribute xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']" name="value">2.5</setattribute>
-	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='ModdedConvertCount']" name="value">10</setattribute>
-	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapStrength']" name="value">0.1</setattribute>
-	<setattribute xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']" name="value">3</setattribute>
-	<setattribute xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']" name="value">1.5</setattribute>
-	<setattribute xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']" name="value">1.5</setattribute>
-	<setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']" name="value">3</setattribute>
+	<!-- 20% less Heat -->
+	<setattribute xpath="/blocks/block[@name='wallTorchLightPlayer']/property[@name='HeatMapStrength']" name="value">0.75</setattribute>
+	<setattribute xpath="/blocks/block[@name='candleWallLightPlayer']/property[@name='HeatMapStrength']" name="value">0.35</setattribute>
+	<setattribute xpath="/blocks/block[@name='campfire']/property[@name='HeatMapStrength']" name="value">3</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntDewCollector']/property[@name='HeatMapStrength']" name="value">0.5</setattribute>
+	<setattribute xpath="/blocks/block[@name='cntApiary']/property[@name='MinConvertTime']" name="value">86400</setattribute> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<setattribute xpath="/blocks/block[@name='cntApiary']/property[@name='MaxConvertTime']" name="value">86400</setattribute> <!-- 172800 Game Seconds = 48 Game Hours -->
+	<setattribute xpath="/blocks/block[@name='cntApiary']/property[@name='HeatMapStrength']" name="value">0.5</setattribute>
+	<setattribute xpath="/blocks/block[@name='forge']/property[@name='HeatMapStrength']" name="value">4</setattribute>
+	<setattribute xpath="/blocks/block[@name='workbench']/property[@name='HeatMapStrength']" name="value">3</setattribute>
+	<setattribute xpath="/blocks/block[@name='cementMixer']/property[@name='HeatMapStrength']" name="value">3</setattribute>
+	<setattribute xpath="/blocks/block[@name='chemistryStation']/property[@name='HeatMapStrength']" name="value">4</setattribute>
 	
 	
 	<!-- traps better -->
@@ -111,6 +113,10 @@
 	<setattribute xpath="/blocks/block[@name='clothPillar100']/drop[@event='Harvest']" name="count">2500</setattribute>
 	<setattribute xpath="/blocks/block[@name='clothPillar50']/drop[@event='Harvest']" name="count">500</setattribute>
 
+	<!-- more resources from Bells -->
+	<setattribute xpath="/blocks/block[starts-with(@name,'churchBell')]/drop[@event='Harvest']" name="name">resourceScrapBrass</setattribute>
+	<setattribute xpath="/blocks/block[starts-with(@name,'churchBell')]/drop[@event='Harvest']" name="count">1250,5000</setattribute>
+	
 
 	<!-- Make Player Ovens usable as Campfire -->
 	<append xpath="/blocks/block[@name='cntStoveModernVer1Closed_Player']">

@@ -5,10 +5,8 @@
 	<setattribute xpath="/items/item[@name='toolBellows']/effect_group/passive_effect[@name='CraftingSmeltTime']" name="value">-.75</setattribute>
 	<!-- Quicker Crafting in the Forge -->
 	<setattribute xpath="/items/item[@name='toolAnvil']/effect_group/passive_effect[@name='CraftingTime']" name="value">-.15</setattribute>
-	
 	<!-- More MOD slots -->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ModSlots' and @tier='1,2,3,4,5,6']" name="value">2,2,3,3,4,5</setattribute>
-	
 	<!-- get craftings skill levels from schematic 
 	substring(@name, string-length(@name) - string-length('schematic') + 1) = 'schematic'
 	ends-with(@name,'schematic')
@@ -16,101 +14,101 @@
 	<append xpath="/items/item[starts-with(@name,'modGun') and contains(@name,'Schematic')]">
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBows" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBows" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHandguns" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHandguns" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingShotguns" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingShotguns" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRifles" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRifles" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingMachineGuns" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingMachineGuns" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingExplosives" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingExplosives" level="1"/>
 		</effect_group>
 	</append>
 	<append xpath="/items/item[starts-with(@name,'modMelee') and contains(@name,'Schematic')]">
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1"/>
 		</effect_group>
 	</append>
 	<append xpath="/items/item[starts-with(@name,'modGunMelee') and contains(@name,'Schematic')]">
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingHarvestingTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingKnuckles" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingBlades" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingClubs" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSledgehammers" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSpears" level="1"/>
 		</effect_group>
 	</append>
 	<append xpath="/items/item[starts-with(@name,'modArmor') and contains(@name,'Schematic')]">
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingArmor" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingArmor" level="1"/>
 		</effect_group>
 	</append>
 	<append xpath="/items/item[(starts-with(@name, 'modFuelTank') or 
@@ -118,34 +116,31 @@
 								starts-with(@name, 'modVehicle')) and contains(@name, 'Schematic')]">
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRobotics" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRobotics" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingElectrician" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingElectrician" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingTraps" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingTraps" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingWorkstations" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingWorkstations" level="1"/>
 		</effect_group>
 		<effect_group tiered="false">
 			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="5"/>
-			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingVehicles" level="1" />
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingVehicles" level="1"/>
 		</effect_group>
 	</append>
-	
 	<append xpath="/items/item[@name='repairToolsSkillMagazine']/effect_group">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingSalvageTools" level="1"/>
 	</append>
 	<append xpath="/items/item[@name='salvageToolsSkillMagazine']/effect_group">
-		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1" />
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddProgressionLevel" progression_name="craftingRepairTools" level="1"/>
 	</append>
-	
-	
 	<!-- Entity damage meele Weapons -->
 	<setattribute xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or @name='meleeToolRepairT0TazasStoneAxe']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">26</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">27</setattribute>
@@ -176,9 +171,11 @@
 	<setattribute xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">45</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolFlashlight02']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">33</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolTorch']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_set']" name="value">25</setattribute>
+	<!--
 	<setattribute xpath="/items/item[@name='ammoProjectileZombieBoulder']/property/property[@name='Explosion.RadiusBlocks']" name="value">1.5</setattribute>
 	<setattribute xpath="/items/item[@name='ammoProjectileZombieBoulder']/property/property[@name='Explosion.RadiusEntities']" name="value">2</setattribute>
 	<setattribute xpath="/items/item[@name='ammoProjectileZombieBoulder']/property/property[@name='Explosion.BlockDamage']" name="value">250</setattribute>
+	-->
 	<!-- ammo -->
 	<setattribute xpath="/items/item[@name='ammoBundleMaster']/property[@name='Stacknumber']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='questRewardAmmoCraftingBundle']/property/property[@name='Create_item']" name="value">resourceGunPowder,resourceBuckshot,resource9mmBulletTip,resource44BulletTip,resource762BulletTip,resourcePaper,resource9mmBulletCasing,resource44BulletCasing,resource762BulletCasing</setattribute>
@@ -313,7 +310,6 @@
 			<property name="SoundPickup" value="bullettips_grab"/>
 			<property name="SoundPlace" value="bullettips_place"/>
 		</item>
-		
 		<!-- Ammo Crafting, Brass Casings -->
 		<item name="resource9mmBulletCasing">
 			<property name="HoldType" value="45"/>
@@ -354,9 +350,9 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="66" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="66"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 		</effect_group>
@@ -372,10 +368,10 @@
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletBall" tiered="false">
 			<!-- To split up the revolver and DVulture I'm providing base_set that the specific perk passives can latch on to -->
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="12" tags="barrelExplosive"/>
-			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
+			<passive_effect name="EntityDamage" operation="base_set" value="150"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1">
 				<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
 			</passive_effect>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -414,9 +410,9 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo762mmBulletBall" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDeadEye,perkMachineGunner"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkDeadEye,perkMachineGunner"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="200"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 		</effect_group>
@@ -434,9 +430,9 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo9mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="66" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="66"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
 			<!-- Not supported at this time. If you ask it will be a long answer. It's complicated. <passive_effect name="PiercingProtection" target="other" operation="perc_set" value=".5"/> -->
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
@@ -466,9 +462,9 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo44MagnumBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="150" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="11" tags="barrelExplosive"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="150"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
 			<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
 				<requirement name="ProgressionLevel" progression_name="perkEnforcerComplete" operation="Equals" value="1"/>
 			</passive_effect>
@@ -521,12 +517,12 @@
 		<property name="SoundPickup" value="bullets_grab"/>
 		<property name="SoundPlace" value="bullets_place"/>
 		<effect_group name="ammo762mmBulletHP" tiered="false">
-			<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDeadEye,perkMachineGunner"/>
+			<passive_effect name="EntityDamage" operation="base_set" value="200"/>
 			<passive_effect name="EntityDamage" operation="base_add" value="-1.5">
 				<requirement name="ItemHasTags" tags="perkMachineGunner"/>
 			</passive_effect>
-			<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkDeadEye,perkMachineGunner"/>
-			<passive_effect name="BlockDamage" operation="base_add" value="17" tags="barrelExplosive"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 			<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 			<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="$buffBurningFlamingArrowDuration" operation="set" value="14">
@@ -542,13 +538,10 @@
 			<display_value name="dDuration" value="14"/>
 		</effect_group>
 	</set>
-	
 	<setattribute xpath="/items/item[@name='ammo9mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">60</setattribute>
-	<append xpath="/items/item[@name='ammo9mmBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
 	<setattribute xpath="/items/item[@name='ammo44MagnumBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">135</setattribute>
-	<append xpath="/items/item[@name='ammo44MagnumBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags">,perkMachineGunner,perkDeadEye</append>
+	<removeattribute xpath="/items/item[@name='ammo44MagnumBulletAP']//passive_effect[contains(@tags,'perkGunslinger')]/@tags"/>
 	<setattribute xpath="/items/item[@name='ammo762mmBulletAP']/effect_group/passive_effect[@name='EntityDamage']" name="value">175</setattribute>
-	
 	<append xpath="/items">
 		<item name="ammo9mmBulletFMJINC">
 			<property name="Extends" value="ammo9mmBulletBall"/>
@@ -564,12 +557,12 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo9mmBulletFMJINC" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="60" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="16" tags="barrelExplosive"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="60"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
 				<display_value name="dTargetArmor" value="-.5"/>
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<display_value name="dTargetPenetration" value="1"/>
 				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun"/>
 					<display_value name="dDegradationPerUse" value=".3"/> -->
@@ -588,16 +581,16 @@
 				<display_value name="dDuration" value="14"/>
 			</effect_group>
 			<effect_group name="perkPenetrator" tiered="false">
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.1">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.15">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/>
 				</passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,perkMachineGunner,perkDeadEye,9mmGun">
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.3">
 					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/>
 				</passive_effect>
 			</effect_group>
@@ -605,32 +598,35 @@
 		<item name="ammoBundle9mmBulletFMJINC">
 			<property name="Extends" value="ammoBundleMaster"/>
 			<property name="CustomIcon" value="ammo9mmBulletFMJINC"/>
-			<property name="Stacknumber" value="50"/><!-- STK ammobundle high -->
+			<property name="Stacknumber" value="50"/>
+			<!-- STK ammobundle high -->
 			<property name="EconomicValue" value="1400"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle9mmBulletAP -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<!-- ammoBundle9mmBulletAP -->
 			<property class="Action0">
 				<property name="Create_item" value="ammo9mmBulletFMJINC"/>
 			</property>
 		</item>
-
 		<item name="ammo44MagnumBulletFMJINC">
 			<property name="CustomIcon" value="ammo44MagnumBulletFMJINC"/>
 			<property name="Extends" value="ammo44MagnumBulletBall"/>
 			<property name="Tags" value="ammo44Mag"/>
 			<property name="DisplayType" value="ammoBulletAP"/>
 			<property name="EconomicValue" value="15"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo44MagnumBulletFMJINC -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<!-- ammo44MagnumBulletFMJINC -->
 			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
-			<property name="UnlockedBy" value="perkEnforcerAPAmmo"/><!-- BOOK_PERK -->
+			<property name="UnlockedBy" value="perkEnforcerAPAmmo"/>
+			<!-- BOOK_PERK -->
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo44MagnumBulletFMJINC" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="135" tags="perkGunslinger,perkMachineGunner,perkDeadEye,revolver"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="6" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="10" tags="barrelExplosive"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="135"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
 				<display_value name="dTargetArmor" value="-.5"/>
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<display_value name="dTargetPenetration" value="1"/>
 				<!-- <passive_effect name="DegradationPerUse" operation="perc_add" value=".3" tags="perkGunslinger,perkMachineGunner,perkDeadEye"/>
 				<display_value name="dDegradationPerUse" value=".3"/> -->
@@ -648,17 +644,19 @@
 				<display_value name="dEntityDamageFire" value="120"/>
 				<display_value name="dDuration" value="14"/>
 			</effect_group>
-
 			<effect_group name="perkPenetrator" tiered="false">
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkGunslinger,perkMachineGunner,perkDeadEye">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
-
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.1">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.15">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.3">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/>
+				</passive_effect>
 			</effect_group>
 			<effect_group tiered="false">
 				<requirement name="HasBuff" buff="buffEnforcerSetBonus"/>
@@ -685,33 +683,33 @@
 		<item name="ammoBundle44MagnumBulletFMJINC">
 			<property name="Extends" value="ammoBundleMaster"/>
 			<property name="CustomIcon" value="ammo44MagnumBulletFMJINC"/>
-			<property name="Stacknumber" value="50"/><!-- STK ammobundle high -->
+			<property name="Stacknumber" value="50"/>
+			<!-- STK ammobundle high -->
 			<property name="EconomicValue" value="1400"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle9mmBulletAP -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<!-- ammoBundle9mmBulletAP -->
 			<property class="Action0">
 				<property name="Create_item" value="ammo44MagnumBulletFMJINC"/>
 			</property>
 		</item>
-
 		<item name="ammo762mmBulletFMJINC">
 			<property name="CustomIcon" value="ammo762mmBulletFMJINC"/>
 			<property name="Extends" value="ammo762mmBulletBall"/>
 			<property name="Tags" value="ammo762mm"/>
 			<property name="DisplayType" value="ammoBulletAP"/>
 			<property name="EconomicValue" value="16"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammo762mmBulletFMJINC -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<!-- ammo762mmBulletFMJINC -->
 			<property name="DescriptionKey" value="ammoAPGroupDesc"/>
-			<property name="UnlockedBy" value="perkSniperAPAmmo"/><!-- BOOK_PERK -->
+			<property name="UnlockedBy" value="perkSniperAPAmmo"/>
+			<!-- BOOK_PERK -->
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="ammo762mmBulletFMJINC" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="170" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="EntityDamage" operation="base_add" value="-3">
-					<requirement name="ItemHasTags" tags="perkMachineGunner"/>
-				</passive_effect>
-				<passive_effect name="BlockDamage" operation="base_set" value="10" tags="perkDeadEye,perkMachineGunner"/>
-				<passive_effect name="BlockDamage" operation="base_add" value="14" tags="barrelExplosive"/>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.5" tags="perkDeadEye,perkMachineGunner"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="170"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="100" tags="barrelExplosive"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.5"/>
 				<display_value name="dTargetArmor" value="-.5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
 				<display_value name="dTargetPenetration" value="1"/>
@@ -734,34 +732,37 @@
 			<property name="SoundPickup" value="bullets_grab"/>
 			<property name="SoundPlace" value="bullets_place"/>
 			<effect_group name="perkPenetrator" tiered="false">
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
-				<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
-					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.1">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.15">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.2">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/>
+				</passive_effect>
+				<passive_effect name="TargetArmor" operation="perc_add" value="-.3">
+					<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/>
+				</passive_effect>
 			</effect_group>
 		</item>
 		<item name="ammoBundle762mmBulletFMJINC">
 			<property name="Extends" value="ammoBundleMaster"/>
 			<property name="CustomIcon" value="ammo762mmBulletFMJINC"/>
-			<property name="Stacknumber" value="50"/><!-- STK ammobundle high -->
+			<property name="Stacknumber" value="50"/>
+			<!-- STK ammobundle high -->
 			<property name="EconomicValue" value="1400"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle9mmBulletAP -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
+			<!-- ammoBundle9mmBulletAP -->
 			<property class="Action0">
 				<property name="Create_item" value="ammo762mmBulletFMJINC"/>
 			</property>
 		</item>
 	</append>
-	
-	
 	<!-- Shot gun Ammo -->
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='EntityDamage']" name="value">25</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='MaxRange']" name="value">15</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunShell']/effect_group/passive_effect[@name='DamageFalloffRange']" name="value">10</setattribute>
-
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='EntityDamage']" name="value">300</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='MaxRange']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='ammoShotgunSlug']/effect_group/passive_effect[@name='DamageFalloffRange']" name="value">50</setattribute>
@@ -778,9 +779,11 @@
 		<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 		<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 		<property name="Material" value="Mlead_scrap"/>
-		<property name="Stacknumber" value="500"/><!-- STK ammo low -->
+		<property name="Stacknumber" value="500"/>
+		<!-- STK ammo low -->
 		<property name="EconomicValue" value="11"/>
-		<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoShotgunShell -->
+		<property name="TraderStageTemplate" value="ammoTier3"/>
+		<!-- ammoShotgunShell -->
 		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
 		<property name="SoundPickup" value="shotgunshells_grab"/>
 		<property name="SoundPlace" value="shotgunshells_place"/>
@@ -812,27 +815,25 @@
 			<display_value name="dDuration" value="14"/>
 		</effect_group>
 	</set>
-	
 	<!-- Guns -->
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1,1.25</setattribute>
 	<setattribute xpath="/items/item/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="tier">1,6</setattribute>
-	<remove xpath="/items/item/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']" />
+	<remove xpath="/items/item/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']"/>
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">200</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT0PipePistol']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.5" tier="1,6" tags="perkGunslinger" />
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.5" tier="1,6" tags="perkGunslinger"/>
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.4" tags="perkGunslinger"/>
 	</append>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/property/property[@name='Magazine_items']/@value">,ammo9mmBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">300</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.25" tier="1,6" tags="perkGunslinger" />
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1,1.25" tier="1,6" tags="perkGunslinger"/>
 	</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier) and not(@tier)]" name="value">-.33</setattribute>
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">25</setattribute>
 	<!-- Why only 1 DMG with 9mmAmmo ??? -->
 	<setattribute xpath="/items/item[@name='gunMGT0PipeMachineGun']/property/property[@name='Magazine_items']" name="value">ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletFMJINC</setattribute>
-
 	<append xpath="/items/item[@name='gunMGT0PipeMachineGun']/effect_group">
 		<passive_effect name="EntityDamage" operation="perc_add" value="-.13" tags="perkMachineGunner"/>
 	</append>
@@ -847,19 +848,19 @@
 	<setattribute xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" name="value">-.27</setattribute>
 	<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/property/property[@name='Magazine_items']/@value">,ammo44MagnumBulletFMJINC</append>
 	<setattribute xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">180</setattribute>
-	<remove xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]" />
+	<remove xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group/passive_effect[@name='EntityDamage' and @operation='perc_add' and not(@tier)]"/>
 	<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.4,1.7" tier="1,6" tags="perkBoomstick" />
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.4,1.7" tier="1,6" tags="perkBoomstick"/>
 	</append>
 	<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1,1.4" tier="1,6" tags="perkBoomstick" />
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1,1.4" tier="1,6" tags="perkBoomstick"/>
 	</append>
 	<setattribute xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">20</setattribute>
 	<setattribute xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']" name="value">450</setattribute>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/property/property[@name='Magazine_items']/@value">,ammo762mmBulletFMJINC</append>
 	<append xpath="/items/item[@name='gunRifleT0PipeRifle']/effect_group">
-		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.2,1.5" tier="1,6" tags="perkDeadEye" />
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.2,1.5" tier="1,6" tags="perkDeadEye"/>
 		<passive_effect name="EntityDamage" operation="perc_add" value=".15" tags="perkGunslinger"/>
 	</append>
 	<setattribute xpath="/items/item[@name='gunRifleT1HuntingRifle']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']" name="value">5</setattribute>
@@ -893,7 +894,6 @@
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
-	
 	<!-- medicals  -->
 	<setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']" name="value">50</setattribute>
@@ -909,7 +909,8 @@
 		<display_value name="dDuration" value="1020"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="add" value="1020"/>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="3036">
-			<requirement name="CVarCompare" cvar="$buffDrugVitaminsDuration" operation="GT" value="3036"/></triggered_effect>
+			<requirement name="CVarCompare" cvar="$buffDrugVitaminsDuration" operation="GT" value="3036"/>
+		</triggered_effect>
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugVitamins"/>
 	</set>
 	<setattribute xpath="/items/item[@name='drugPainkillers']/property[@name='Stacknumber']" name="value">200</setattribute>
@@ -2305,7 +2306,6 @@
 			</effect_group>
 		</item>
 	</append>
-	
 	<!-- drinks -->
 	<setattribute xpath="/items/item[@name='drinkJarRiverWater']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarBoiledWater']/property[@name='Stacknumber']" name="value">100</setattribute>
@@ -2321,7 +2321,6 @@
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@name='SellableToTrader']" name="value">true</setattribute>
-	
 	<!-- resources -->
 	<setattribute xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']" name="value">90000</setattribute>
 	<setattribute xpath="/items/item[@name='resourceAcid']/property[@name='Stacknumber']" name="value">500</setattribute>

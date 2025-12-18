@@ -399,13 +399,14 @@
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="42,65" value="1" tags="foodFishTacos"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="44,65" value="1" tags="foodChiliDog"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="46,65" value="1" tags="foodShamChowder"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="48,65" value="1" tags="foodTunaFishGravyToast"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,65" value="1" tags="drinkJarGrandpasAwesomeSauce"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="52,65" value="1" tags="foodShepardsPie"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="54,65" value="1" tags="drinkJarGrandpasMoonshine"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="56,65" value="1" tags="drinkJarGrandpasLearningElixir"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="58,65" value="1" tags="foodSpaghetti"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,65" value="1" tags="foodGumboStew"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="48,65" value="1" tags="foodHoneyGlazedSham"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,65" value="1" tags="foodTunaFishGravyToast"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="52,65" value="1" tags="drinkJarGrandpasAwesomeSauce"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="54,65" value="1" tags="foodShepardsPie"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="56,65" value="1" tags="drinkJarGrandpasMoonshine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="58,65" value="1" tags="drinkJarGrandpasLearningElixir"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,65" value="1" tags="foodSpaghetti"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="62,65" value="1" tags="foodGumboStew"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="65" value="1" tags="foodCanSham"/>
 		</effect_group>
 	</append>
@@ -532,7 +533,7 @@
 	</append>
 
 	
-	<!-- *** WORKSTATION_SKILLS  -->
+	<!-- *** WORKSTATION_SKILLS  TODO: Later when Chicken Coop ist comming in Stable
 	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingWorkstations']" />
 	<setattribute xpath="/progression/perks/perk/effect_group/passive_effect/requirement[@progression_name='craftingWorkstations']" name="value">60</setattribute>
 	<append xpath="/progression/crafting_skills">
@@ -578,7 +579,7 @@
 			</effect_group>
 		</crafting_skill>
 	</append>
-	
+	-->
 	<!-- *** VEHICLE_SKILLS  -->
 	<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingVehicles']" />
 	<setattribute xpath="/progression/perks/perk/effect_group/passive_effect/requirement[@progression_name='craftingVehicles']" name="value">60</setattribute>
