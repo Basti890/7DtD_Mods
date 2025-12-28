@@ -43,7 +43,6 @@
 	<!-- More power Hough Hough hough hough houg -->
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='MaxPower']" name="value">900</setattribute>
 	<setattribute xpath="/blocks/block[@name='batterybank']/property[@name='OutputPerStack']" name="value">150</setattribute>
-	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='MaxPower']" name="value">1500</setattribute>
 	<setattribute xpath="/blocks/block[@name='generatorbank']/property[@name='OutputPerStack']" name="value">400</setattribute>
 	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='MaxPower']" name="value">600</setattribute>
 	<setattribute xpath="/blocks/block[@name='solarbank']/property[@name='OutputPerStack']" name="value">100</setattribute>

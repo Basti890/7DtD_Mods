@@ -215,6 +215,9 @@
 		<ingredient name="resourceGunPowder" count="375"/>
 		<ingredient name="resourceScrapPolymers" count="100"/>
 	</set>
+	
+	
+	
 	<remove xpath="/recipes/recipe[starts-with(@name,'armor')]/ingredient[@name='resourceLegendaryParts']" />
 	<remove xpath="/recipes/recipe[starts-with(@name,'armor')]/effect_group/passive_effect[@tags='resourceLegendaryParts']" />
 
@@ -235,6 +238,15 @@
 		</recipe>
 	</append>
 	
+	<set xpath="/recipes/recipe[@name='modGunCrippleEm']">
+		<ingredient name="resourceShotgunSlugBulletTip" count="1000"/>
+		<ingredient name="resource762FMJBulletTip" count="1000"/>
+		<ingredient name="resource44FMJBulletTip" count="1000"/>
+		<ingredient name="resource9mmFMJBulletTip" count="1000"/>
+	</set>
+	
+	<remove xpath="/recipes/recipe[starts-with(@name, 'modGun')]/ingredient[@name='resourceGlue']" />
+	
 	<setattribute xpath="/recipes/recipe[@name='resourceConcreteMix']" name="count">2</setattribute>
 	
 	<setattribute xpath="/recipes/recipe[@name='resourceForgedIron']" name="count">2</setattribute>
@@ -245,7 +257,11 @@
 	
 	<remove xpath="/recipes/recipe[@name='thrownAmmoMolotovCocktail']/ingredient[@name='resourceOil']" />
 	<setattribute xpath="/recipes/recipe[@name='thrownDynamite']/ingredient[@name='resourceDuctTape']" name="count">1</setattribute>
-
+	<remove xpath="/recipes/recipe[@name='modArmorAdvancedMuffledConnectors' or
+								   @name='modArmorMuffledConnectors' or
+								   @name='modArmorCustomizedFittings' or
+								   @name='modArmorWaterPurifier' or
+								   @name='toolDewTarp']/ingredient[@name='resourceSewingKit']" />
 
 	<setattribute xpath="/recipes/recipe[@name='lanternDecorLightBlockVariantHelper']/ingredient[@name='resourceOil']" name="name">resourceScrapPolymers</setattribute>
 	<setattribute xpath="/recipes/recipe[@name='lanternOldBlockVariantHelper']/ingredient[@name='resourceOil']" name="name">ammoGasCan</setattribute>
@@ -295,7 +311,7 @@
 		
 		<!-- Additional Resources -->
 		<recipe name="resourceSewingKit" count="1" craft_area="workbench" tags="workbenchCrafting">
-			<ingredient name="resourceCropCottonPlant" count="5"/>
+			<ingredient name="resourceYuccaFibers" count="5"/>
 			<ingredient name="resourceNail" count="1"/>
 		</recipe>
 		<recipe name="medicalFirstAidBandage" count="1" tags="learnable">

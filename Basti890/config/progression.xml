@@ -28,7 +28,8 @@
 	<append xpath="/progression/perks/book[@name='perkSniperAPAmmo']/effect_group/passive_effect/@tags">,ammo762mmBulletFMJINC</append>
 	<append xpath="/progression/perks/book[@name='perkSniperComplete']/effect_group/passive_effect/@tags">,ammoBundle762mmBulletFMJINC</append>
 	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="tags">door,lockedSafe</setattribute>
-	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="value">5</setattribute>
+	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="operation">base_set</setattribute>
+	<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']/effect_group/passive_effect[@name='BlockDamage']" name="value">500</setattribute>
 	
 
 	<!-- HARVESTING_TOOL_SKILLS -->
