@@ -2,6 +2,14 @@
 	<remove xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@action='ModifyCVar' and @cvar='$PlayerLevelBonus' and @value='100']"/>
 	<setattribute xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='base_add']" name="value">50</setattribute>
 	<remove xpath="/buffs/buff[@name='buffDrugEyeKandy']/effect_group/passive_effect[@operation='perc_add']" />
+	
+	<setattribute xpath="/buffs/buff[@name='buffElementHot']/effect_group/passive_effect[@name='WaterLossPerStaminaPointGained']" name="value">1</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffElementHot']/effect_group/passive_effect[@operation='perc_subtract']" name="value">.05</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffElementSweltering']/effect_group/passive_effect[@name='WaterLossPerStaminaPointGained']" name="value">3</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffElementSweltering']/effect_group/passive_effect[@operation='perc_subtract']" name="value">.1</setattribute>
+	
+	<setattribute xpath="/buffs/buff[@name='buffElementCold']/effect_group/passive_effect[@operation='perc_subtract']" name="value">.05</setattribute>
+	<setattribute xpath="/buffs/buff[@name='buffElementFreezing']/effect_group/passive_effect[@operation='perc_subtract']" name="value">.1</setattribute>
 	<append xpath="/buffs">
 		<buff name="buffstewWarming" name_key="buffElementHotName" description_key="buffElementHotDesc" tooltip_key="buffElementHotTooltip" icon="ui_game_symbol_hot" icon_color="255,128,0">
 			<damage_type value="heat"/>

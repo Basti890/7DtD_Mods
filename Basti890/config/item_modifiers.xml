@@ -7,7 +7,9 @@
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']" name="value">-2</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/display_value[@name='dTreasureBlocksPerReduction']" name="value">-2</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/display_value[@name='dPlayerExpGain']" name="value">.2</setattribute>
-	
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT1']/effect_group/passive_effect" name="value">3</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT2']/effect_group/passive_effect" name="value">5</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT3']/effect_group/passive_effect" name="value">7</setattribute>
 	<!-- Doesn't work, maybe in V2 ? 
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGun9mmCalConversion" installable_tags="gun,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
