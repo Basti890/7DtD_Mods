@@ -1,13 +1,3 @@
 <Basti890>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='pine_forest']" name="lootstage_modifier">0.1</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='pine_forest']" name="lootstage_bonus">5</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='pine_forest']" name="gamestage_modifier">0.1</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='burnt_forest']" name="lootstage_modifier">0.5</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='burnt_forest']" name="lootstage_bonus">10</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='desert']" name="lootstage_modifier">0.75</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='desert']" name="lootstage_bonus">15</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='snow']" name="lootstage_modifier">1</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='snow']" name="lootstage_bonus">20</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='wasteland']" name="lootstage_modifier">1.25</setattribute>
-	<setattribute xpath="/worldgeneration/biomes/biome[@name='wasteland']" name="lootstage_bonus">30</setattribute>
+	<setattribute xpath="/gameevents/action_sequence[@name='challenge_group_reward_basics']/action/property[@name='skill_points']" name="value">40</setattribute>
 </Basti890>
