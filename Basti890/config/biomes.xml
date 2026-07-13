@@ -1,0 +1,4 @@
+<B890>
+	<removeattribute xpath="/worldgeneration/biomes/biome[@buff='buffDesert_Hazard']/@buff" />
+	<removeattribute xpath="/worldgeneration/biomes/biome[@buff='buffSnow_Hazard']/@buff" />
+</B890>

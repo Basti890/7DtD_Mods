@@ -1,0 +1,58 @@
+<basti890>
+	<remove xpath="/windows/window[@name='HUDLeftStatBars']/rect/rect/label[@text]"/>
+	<remove xpath="/windows/window[@name='HUDRightStatBars']/rect/rect[@stat_type='VehicleFuel']/label[@text]"/>
+	<remove xpath="/windows/window[@name='HUDRightStatBars']/rect/rect[@stat_type='VehicleHealth']/label[@text]"/>
+	
+	<!-- Expanding Output Queue -->
+    <set xpath="/windows/window[@name='windowOutput']/rect/grid/@rows">5</set>
+	
+	<append xpath="/windows">
+		<!-- Expanding Output Queue -->
+		<window name="B890WindowOutput" width="243" height="288" anchor="CenterTop" panel="Right" cursor_area="true" controller="WorkstationOutputWindow" >
+			<rect style="header.panel">
+				<headerbg />
+				<sprite style="header.icon" sprite="ui_game_symbol_loot_sack"/>
+				<label style="header.name.iconright" text="OUTPUT" text_key="xuiOutput" />
+				
+				<rect pos="0,0" controller="ContainerStandardControls" visible="{buttons_visible}">
+					<button   depth="3" name="btnMoveAll"          sprite="ui_game_symbol_store_all_up"     tooltip="{take_all_tooltip}"          pos="203, -22" style="icon32px, press, hover" pivot="center" sound="[paging_click]" />
+				</rect>
+			</rect>
+			<rect name="content" depth="0" pos="0,-46" height="241" width="241" disablefallthrough="true">
+<!--				<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" height="241" width="241" color="[black]" type="sliced" fillcenter="false" />
+-->				<grid depth="10" name="inventory" rows="4" cols="4" pos="3,-3" cell_width="67" cell_height="67" controller="WorkstationOutputGrid" repeat_content="true">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<!-- Extra Crafting an Queue Slot -->
+		<window name="B890windowCraftingQueue" width="397" height="78" panel="Left" cursor_area="true">
+			<rect depth="0" pos="96,0" width="378" controller="CraftingQueue">
+				<grid name="queue" rows="1" cols="5" pos="-78,-13" cell_width="75" cell_height="75" repeat_content="true">
+					<recipe_stack name="0"/>
+				</grid>
+			</rect>
+		</window>
+		
+		<!-- Extra Forge Input -->
+		<window name="B890windowForgeInput" width="228" height="254" panel="Right" controller="WorkstationMaterialInputWindow" materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[green]" invalid_materials_color="[red]" cursor_area="true">
+			<panel style="header.panel">
+				<sprite style="header.icon" sprite="ui_game_symbol_forge"/>
+				<label style="header.name" text="INPUT" text_key="xuiSmelting"/>
+			</panel>
+			<sprite depth="2" name="backgroundMain" sprite="menu_empty3px" pos="0,-46" height="205" color="[black]" type="sliced" fillcenter="false" on_press="true"/>
+			<rect name="content" depth="1" pos="0,-46" height="205">
+				<grid depth="7" rows="3" cols="1" pos="3,-3" cell_width="67" cell_height="67" controller="WorkstationMaterialInputGrid" repeat_content="true">
+					<item_stack name="0"/>
+				</grid>
+			</rect>
+			<rect name="content2" depth="0" pos="69, -48" width="157" height="202">
+				<sprite depth="1" color="[mediumGrey]" type="sliced" on_press="true"/>
+				<grid rows="6" cols="1" pos="6,-10" cell_width="155" cell_height="32" repeat_content="true">
+					<forge_material name="0"/>
+				</grid>
+			</rect>
+		</window>
+	</append>
+</basti890>

@@ -1,0 +1,104 @@
+<basti890>
+	<!-- Crafting Outputs -->
+	<!-- Campfire crafting Outputs 
+	<set xpath="/xui/window_group[@name='workstation_campfire']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	-->
+	<!-- Forge crafting Outputs 
+	<set xpath="/xui/window_group[@name='workstation_forge_nosmelting']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	-->
+	<set xpath="/xui/window_group[@name='workstation_forge']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	<!-- Cement mixer crafting Outputs 
+	<set xpath="/xui/window_group[@name='workstation_cementMixer']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	-->
+	<!-- Workbench crafting Outputs 
+	<set xpath="/xui/window_group[@name='workstation_workbench']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	-->
+	<!-- Chemistry station crafting Outputs 
+	<set xpath="/xui/window_group[@name='workstation_chemistryStation']/window[@name='windowOutput']/@name">B890WindowOutput</set>
+	-->
+	
+	<!-- Crafting Queue -->
+	<!-- Bagpack Crafting Queue -->
+	<set xpath="/xui/window_group[@name='crafting']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	<!-- Campfire crafting Queue -->
+	<set xpath="/xui/window_group[@name='workstation_campfire']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	<!-- Forge crafting Queue -->
+	<set xpath="/xui/window_group[@name='workstation_forge']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	<set xpath="/xui/window_group[@name='workstation_forge_nosmelting']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	<!-- Cement mixer crafting Queue -->
+	<set xpath="/xui/window_group[@name='workstation_cementMixer']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	<!-- Workbench crafting Queue -->
+	<set xpath="/xui/window_group[@name='workstation_workbench']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	<!-- Chemistry station crafting Queue -->
+	<set xpath="/xui/window_group[@name='workstation_chemistryStation']/window[@name='windowCraftingQueue']/@name">B890windowCraftingQueue</set>
+	
+	
+	
+	<!-- Forge input slots -->
+	<set xpath="/xui/window_group[@name='workstation_forge']/window[@name='windowForgeInput']/@name">B890windowForgeInput</set>
+	
+	<!-- Working Oven -->
+	<append xpath="/xui">
+		<window_group name="workstation_cntStoveModernVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntStoveOldVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntMicrowaveOvenVer1Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntMicrowaveOvenVer2Closed_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullWhite_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullGrey_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+		<window_group name="workstation_cntwallOvenFullBlack_Player" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="B890windowCraftingQueue"/>
+			<window name="windowToolsCampfire" />
+			<window name="windowOutput" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+	</append>
+</basti890>

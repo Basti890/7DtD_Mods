@@ -1,8 +1,5 @@
 <basti890>
-	<setattribute xpath="/traders" name="buy_markup">2</setattribute>
 	<setattribute xpath="/traders/trader_info[@id='4' or @id='10']" name="override_buy_markup">1.5</setattribute>
-	<setattribute xpath="/traders/trader_info" name="open_time">0:01</setattribute>
-	<setattribute xpath="/traders/trader_info" name="close_time">23:59</setattribute>
 	<removeattribute xpath="/traders/trader_item_groups/trader_item_group[contains(@name,'ammo')]/item/@prob" />
 	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']">
 		<item name="ammo9mmBulletFMJINC" count="40,150"/>

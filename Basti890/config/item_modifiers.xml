@@ -2,15 +2,29 @@
 	<!-- Let's make Tool-Mods more powerfull -->
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']" name="modifier_tags">cigar</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier/effect_group/passive_effect[@name='DamageModifier']" name="value">.5</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='LootStage']" name="value">10</setattribute>
+	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='LootStage']" name="value">25</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='PlayerExpGain']" name="value">.2</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']" name="value">-2</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/display_value[@name='dTreasureBlocksPerReduction']" name="value">-2</setattribute>
 	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorTreasureHunter']/effect_group/display_value[@name='dPlayerExpGain']" name="value">.2</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT1']/effect_group/passive_effect" name="value">3</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT2']/effect_group/passive_effect" name="value">5</setattribute>
-	<setattribute xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT3']/effect_group/passive_effect" name="value">7</setattribute>
+	
 	<!-- Doesn't work, maybe in V2 ? 
+	<remove xpath="/item_modifiers/item_modifier[starts-with(@name,'modArmorInsulatedLiner')]/effect_group" />
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT1']">
+		<effect_group tiered="false">
+			<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+		</effect_group>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT2']">
+		<effect_group tiered="false">
+			<passive_effect name="WetnessProtection" operation="base_add" value="1"/>
+		</effect_group>
+	</append>
+	<append xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLinerT3']">
+		<effect_group tiered="false">
+			<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+		</effect_group>
+	</append>
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGun9mmCalConversion" installable_tags="gun,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
 			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -19,7 +33,7 @@
 			<property name="TraderStageTemplate" value="modsTier1"/>
 			
 			<item_property_overrides name="*">
-				<property name="Magazine_items" operation="base_set" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletFMJINC"/>
+				<property name="MagazineItems" operation="base_set" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP,ammo9mmBulletFMJINC"/>
 			</item_property_overrides>
 		</item_modifier>
 		<item_modifier name="modGun44MagnumCalConversion" installable_tags="gun,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
@@ -29,7 +43,7 @@
 			<property name="TraderStageTemplate" value="modsTier1"/>
 			
 			<item_property_overrides name="*">
-				<property name="Magazine_items" operation="base_set" value="ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletFMJINC"/>
+				<property name="MagazineItems" operation="base_set" value="ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammo44MagnumBulletFMJINC"/>
 			</item_property_overrides>
 		</item_modifier>
 		<item_modifier name="modGun762mmCalConversion" installable_tags="gun,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
@@ -39,7 +53,7 @@
 			<property name="TraderStageTemplate" value="modsTier1"/>
 			
 			<item_property_overrides name="*">
-				<property name="Magazine_items" operation="base_set" value="ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammo762mmBulletFMJINC"/>
+				<property name="MagazineItems" operation="base_set" value="ammo762mmBulletBall,ammo762mmBulletHP,ammo762mmBulletAP,ammo762mmBulletFMJINC"/>
 			</item_property_overrides>
 		</item_modifier>
 	</append>
