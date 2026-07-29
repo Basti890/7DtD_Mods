@@ -942,6 +942,7 @@
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundBow']/effect_group/passive_effect[@name='SpreadMultiplierCrouching' and @operation='base_set']" name="value">.2</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT1IronCrossbow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='gunBowT3CompoundCrossbow']/effect_group/passive_effect[@name='ReloadSpeedMultiplier']" name="value">1</setattribute>
+	
 	<!-- medicals  -->
 	<setattribute xpath="/items/item[@name='medicalAloeCream']/property[@name='Stacknumber']" name="value">100</setattribute>
 	<setattribute xpath="/items/item[@name='medicalBandage']/property[@name='Stacknumber']" name="value">50</setattribute>
